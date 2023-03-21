@@ -1,0 +1,21 @@
+<header class="row" id="header">
+  <div class="col-4">
+    <h1>{{miPorfolio.encabezado.name}}</h1>
+  </div>
+
+  <div class="col">
+    <nav>
+      <ul>
+        <li><a href="{{miPorfolio.encabezado.linkig.link}}"><img [src]="miPorfolio.encabezado.linkig.img"
+              alt="{{miPorfolio.encabezado.linkig.logo}}" class="img-fluid"></a>
+        </li>
+        <li><a href="{{miPorfolio.encabezado.linkGmail.link}}"><img [src]="miPorfolio.encabezado.linkGmail.img"
+              alt="{{miPorfolio.encabezado.linkGmail.logo}}" class="img-fluid"></a></li>
+        <li><a href="{{miPorfolio.encabezado.linkGithub.link}}"><img [src]="miPorfolio.encabezado.linkGithub.img"
+              alt="{{miPorfolio.encabezado.linkGithub.logo}}" class="img-fluid"></a>
+        </li>
+        <li><button (click)="login()">{{miPorfolio.encabezado.buton}}</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>

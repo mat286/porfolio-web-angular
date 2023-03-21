@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-11">
+        <h2>{{miPorfolio.cuenta4.titulo}}</h2>
+    </div>
+    <div class="col-1">
+        <h1 class="fotoLapizGeneral" (click)="onClick()">+</h1>
+    </div>
+
+    <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
+
+        <div class="row" *ngFor="let proye of miPorfolio.cuenta4.proyecto">
+
+            <div class="col-8">
+                <h3>{{proye.nombreProyecto}}</h3>
+                <h5 style="text-align: center;">{{proye.puesto}}</h5>
+
+                <p>{{proye.info}}</p>
+                <h5 style="text-align: center;">Herramientas utilizadas</h5>
+                <ul *ngFor="let herra of proye.herramientas">
+                    <li>{{herra}}</li>
+                </ul>
+
+                <div>
+
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseWidthExample" aria-expanded="false"
+                        aria-controls="collapseWidthExample">Visitar Pagina Web
+                    </button>
+                    <div style="min-height: 120px;">
+                        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                            <div class="card card-body" style="width: 100%;color: black;">
+                                <a href="{{proye.url}}">{{proye.url}}</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <img [src]="proye.img" alt="" style="width: 100%;">
+            </div>
+            <div class="col-1">
+                <img src="./assets/images.png" class="fotoLapiz" alt="cambiar" (click)="onClick()">
+            </div>
+
+        </div>
+    </div>
+
+</div>

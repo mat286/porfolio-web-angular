@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-11">
+        <h2>{{miPorfolio.cuenta1.titulo}}</h2>
+    </div>
+    <div class="col-1">
+        <h1 class="fotoLapizGeneral" (click)="onClick()">+</h1>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-12 deMi">
+
+        <div class="row">
+
+            <div class="col-8">
+                <P>{{miPorfolio.cuenta1.presentacion}}</P>
+            </div>
+
+            <div class="col-4">
+                <h4>{{miPorfolio.cuenta1.titulocv}}</h4>
+                <a href="{{miPorfolio.cuenta1.CV.href}}"><img [src]="miPorfolio.cuenta1.CV.img" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+
+</div>

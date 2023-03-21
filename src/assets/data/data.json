@@ -1,0 +1,217 @@
+{
+    "encabezado": {
+        "name": "Mateo Rivera",
+        "linkig": {
+            "Logo": "instagram",
+            "link": "https://www.instagram.com/_mate__o/",
+            "img": "./assets/fotos/ig.jpg"
+        },
+        "linkGmail": {
+            "Logo": "gmail",
+            "link": "https://mail.google.com/mail/u/0/#inbox",
+            "img": "./assets/fotos/Gmail.png"
+        },
+        "linkGithub": {
+            "Logo": "github",
+            "link": "https://github.com/mat286/Back-End.git",
+            "img": "./assets/github.png"
+        },
+        "buton": "login"
+    },
+    "fotosini": {
+        "img": "./assets/IMG-20220215-WA0096.jpg",
+        "buton": "login",
+        "fotos": [
+            "./assets/imagen1.jpg",
+            "./assets/imagen2.jpg",
+            "./assets/utn.jpg",
+            "./fotos/shutterstock_518160529-1250x625.jpg"
+        ]
+    },
+    "barralateral": {},
+    "contenido": {
+        "cuenta1": {
+            "titulo": "Acerca de mi",
+            "presentacion": "¡Hola! Mi nombre es Facundo Mateo Rivera, nací en Argentina el 13 de Febrero de 2002 y actualmente trabajo en el Ministerio de Economia en departamento de presupuesto en el area de Coordinación de Sistemas Operativos, donde aplico mis conocimientos en programación y diseño para mejorar el funcionamiento de la oficina. En mi tiempo libre, me gusta estar al día con las tecnologías emergentes como criptomonedas, blockchain y web3, y seguir aprendiendo nuevos lenguajes de programación. Actualmente, estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN) y, a la vez, estoy tomando cursos y aprendiendo por mi cuenta para ampliar mis habilidades en el campo de la programación.Creo que el aprendizaje continuo es fundamental para el crecimiento profesional y personal. Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y mejorar mis habilidades. Me encanta estar en constante evolución y desarrollar soluciones innovadoras para enfrentar los retos del mundo actual.Gracias por conocer un poco más sobre mí. ¡Espero poder compartir mis habilidades y conocimientos con aquellos que lo necesiten!",
+            "titulocv": "Haciendo click aquí se mostrara el CV ",
+            "CV": {
+                "href": "https://www.canva.com/design/DAEUkK7gW1Y/kUAPFA5k9EADCkHgpMkWeg/view?utm_content=DAEUkK7gW1Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+                "img": "./assets/Black Professional Resume (3).jpg"
+            }
+        },
+        "cuenta2": {
+            "titulo": "Educacion",
+            "educacion": [
+                {
+                    "titulo": "Ingenieria Electronica",
+                    "href": "https://www.utn.edu.ar/es/",
+                    "img": "./assets/utn.jpg",
+                    "tipo": "Universitario",
+                    "estado": "En curso",
+                    "info": "Actualmente estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN). La carrera proporciona una base sólida en los fundamentos de la electrónica, incluyendo circuitos eléctricos, sistemas digitales, análisis de señales y sistemas, comunicaciones y electrónica analógica y digital. Además, se cubren temas más avanzados, como la instrumentación electrónica, el procesamiento de señales, la ingeniería de control, la microelectrónica y la robótica. Este conocimiento puede ser útil en una variedad de áreas, como la electrónica de consumo, la industria de la tecnología y la investigación y desarrollo de productos electrónicos."
+                },
+                {
+                    "titulo": "Robotica e imprecion 3D",
+                    "href": "https://aprendeprogramando.bue.edu.ar/",
+                    "img": "./assets/aprende programando.png",
+                    "tipo": "Curso",
+                    "estado": "finalizado",
+                    "info": "Obtuve un título en robótica e impresión 3D a través del programa ´Aprende Programando Virtual 3.0´, el cual proporciona conocimientos teóricos y prácticos en diseño e impresión 3D, robótica, automatización, sensores y actuadores, interfaz humano-robot y seguridad. En este curso, se utiliza la plataforma Arduino para programar y controlar los dispositivos robóticos e impresoras 3D. Este conocimiento puede ser útil en áreas como la ingeniería, la investigación y el desarrollo de productos."
+                },
+                {
+                    "titulo": "#YoProgramo",
+                    "href": "",
+                    "img": "./assets/seProgramar.png",
+                    "tipo": "Curso",
+                    "estado": "finalizado",
+                    "info": "Obtuve un título en Programación Full Stack Jr a través del programa Argentina Programa 4.0. El curso proporciona conocimientos teóricos y prácticos en el desarrollo de aplicaciones web, utilizando lenguajes de programación como HTML, CSS, JavaScript, TypeScript, Angular, Java y SQL. Además, se cubren temas como DevOps, control de versiones, metodologías ágiles y desarrollo de aplicaciones móviles. Este conocimiento puede ser útil en áreas como el desarrollo de aplicaciones web y móviles, la creación de productos digitales y la ingeniería de software."
+                },
+                {
+                    "titulo": "Curso introductorio de python",
+                    "href": "",
+                    "img": "./assets/itba_logo.jpg",
+                    "tipo": "Curso",
+                    "estado": "finalizado",
+                    "info": "Obtuve un título introductorio en Python a través del programa de formación del IEEE - ITBA. El curso proporciona una introducción a los conceptos básicos de programación en Python, incluyendo variables, operadores, estructuras de control de flujo, funciones, módulos y manejo de excepciones. También se cubren temas más avanzados, como programación orientada a objetos, uso de librerías y módulos de Python para aplicaciones científicas y de datos, y desarrollo web con Python. Este conocimiento puede ser útil en una variedad de áreas, como la ingeniería, la ciencia de datos, la programación de aplicaciones y el desarrollo web."
+                },
+                {
+                    "titulo": "Tecnico en diseño de interior",
+                    "href": "https://www.escuelatecnicafader.com.ar/",
+                    "img": "https://billetto.imgix.net/m8pscns05rgmi906m3klf6ow62gv?s=8d15e8dc4759e53666153ba644c2910e",
+                    "tipo": "Secundario",
+                    "estado": "finalizado",
+                    "info": "Obtuve un título de Técnico en Diseño de Interiores en la Escuela Técnica Nº6 Fernando Fader. El programa de estudio proporcionó conocimientos en áreas como el diseño de espacios interiores, la elección de materiales y acabados, la iluminación, la planificación de proyectos y la presentación de proyectos a clientes. También se cubrieron temas como la historia del diseño de interiores y la teoría del color. Este conocimiento puede ser útil en una variedad de áreas, como el diseño de interiores para viviendas, negocios, oficinas y otros espacios comerciales."
+                }
+            ]
+        },
+        "cuenta7": {
+            "titulo": "Conocimiento",
+            "conocimiento": [
+                {
+                    "titulo": "HTML",
+                    "img": "./assets/html.avif",
+                    "saber": "Avanzado",
+                    "porcentaje": "90"
+                },
+                {
+                    "titulo": "CSS",
+                    "img": "./assets/css.svg",
+                    "saber": "Avanzado",
+                    "porcentaje": "75"
+                },
+                {
+                    "titulo": "Bootstrap",
+                    "img": "./assets/Bootstrap.svg.png",
+                    "saber": "Intermedio",
+                    "porcentaje": "60"
+                },
+                {
+                    "titulo": "JavaScript",
+                    "img": "./assets/js.svg.png",
+                    "saber": "Intermedio",
+                    "porcentaje": "60"
+                },
+                {
+                    "titulo": "TypeScript",
+                    "img": "./assets/Typescript.svg",
+                    "saber": "Básico",
+                    "porcentaje": "30"
+                },
+                {
+                    "titulo": "Python",
+                    "img": "./assets/Python.svg.png",
+                    "saber": "Básico",
+                    "porcentaje": "30"
+                },
+                {
+                    "titulo": "Arduino",
+                    "img": "./assets/Arduino.svg.png",
+                    "saber": "Intermedio",
+                    "porcentaje": "60"
+                },
+                {
+                    "titulo": "GitHub",
+                    "img": "./assets/github.png",
+                    "saber": "Intermedio",
+                    "porcentaje": "60"
+                },
+                {
+                    "titulo": "Angular",
+                    "img": "./assets/fotos/angular.png",
+                    "saber": "Avanzado",
+                    "porcentaje": "80"
+                }
+            ]
+        },
+        "cuenta3": {
+            "titulo": "Experiencia",
+            "experiencia": [
+                {
+                    "nombreEmpresa": "Ministerio de Economia",
+                    "tituloTrabajo": "Coordinacion de Sistemas Operativos",
+                    "fotoEmpresa": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Ministerio_de_Econom%C3%ADa_arg.png",
+                    "fechaInicio": "01/03/2023",
+                    "fechaFin": "la Actualidad",
+                    "tipoEmpleo": "fulltime",
+                    "info": "Trabajo en la coordinación de sistemas operativos del departamento de presupuesto en el Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva."
+                },
+                {
+                    "nombreEmpresa": "Inmigrantes Digitales",
+                    "tituloTrabajo": "Desarrollador Web",
+                    "fotoEmpresa": "https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/298556216_501067352019101_8086982295521106766_n.png?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=3tIf7HfUVrEAX9mAB4y&_nc_oc=AQmqsUQfMBAnHvOBP9o9urBiH1GBu9EPGbEB6k0YYwDmHOnKYJVirR7PXJfBWP3JLjg&_nc_ht=scontent.faep9-2.fna&oh=00_AfD9P4Z7Ff94U5op3NSJskReyAqxSs0a000i_0-NTf-Ahg&oe=641BCA27",
+                    "fechaInicio": "24/05/2021",
+                    "fechaFin": "03/09/2021",
+                    "tipoEmpleo": "fulltime",
+                    "info": "Trabajo en la coordinación de sistemas operativos del departamento de presupuesto en el Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva."
+                }
+            ]
+        },
+        "cuenta4": {
+            "titulo": "Proyectos",
+            "proyecto": [
+                {
+                    "nombreProyecto": "Portafolio Web",
+                    "puesto": "Principal desarrollador Full Stack",
+                    "url":"http://localhost:4200/inicio",
+                    "equipo":"",
+                    "img": "./assets/fotos/pagina.png",
+                    "info": "Un portafolio web es una colección de trabajos, proyectos y logros profesionales presentados en un sitio web. Generalmente, está diseñado para demostrar tus habilidades, conocimientos y experiencia en un área específica y permite a los posibles empleadores o clientes ver tu trabajo y habilidades de una manera visualmente atractiva e interactiva. Un portafolio web puede incluir proyectos, diseños, habilidades técnicas y certificaciones, además de información personal y de contacto.",
+                    "herramientas": ["HTML","CSS","TypeScript","Java", "Bootstrap","SQL","Spring Boot", "DevOps"]
+                },
+                {
+                    "nombreProyecto": "Pagina ecommerce de cervezas",
+                    "puesto": "Principal desarrollador Full Stack",
+                    "url":"https://www.youtube.com/watch?v=lqQ_UfTbyyQ",
+                    "equipo":"",
+                    "img": "https://images.unsplash.com/photo-1586993451228-09818021e309?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2VydmV6YXxlbnwwfHwwfHw%3D&w=1000&q=80",
+                    "info": "Como principal desarrollador Full Stack, lideré el proyecto de creación de una página de ecommerce de cervezas. Utilizamos tecnologías como Angular para el frontend y Java para el backend, implementando una base de datos SQL para el almacenamiento de información de productos y clientes. Además, integré funcionalidades de pago en línea y seguimiento de envíos para una experiencia de compra fluida. El proyecto fue exitoso y resultó en un aumento significativo en las ventas en línea de la empresa.",
+                    "herramientas": ["HTML","CSS","TypeScript","Java", "Bootstrap","SQL","Spring Boot", "DevOps","api mercado pago","javaScript","Angular"]
+                }
+            ]            
+        },
+        "cuenta6": {
+            "titulo": "Contacto",
+            "contacto": {
+                "nombre": "Nombre",
+                "email": "Email",
+                "apellido": "Apellido",
+                "motivo": "Motivo",
+                "contacto1": "propuesta laboral",
+                "contacto2": "conslta de presupuesto",
+                "contacto3": "proyecto",
+                "mensaje": "Mensaje",
+                "enviar": "Enviar"
+            },
+            "info": {
+                "telefono": "Teleforno: 1165161480",
+                "email": "Gmail: riveramateo10432@gmail.com",
+                "informacionvara": ""
+            }
+        }
+    },
+    "footer": {
+        "info": "La elavoracion del proyecto fue llevada acabo por facundo mateo rivera",
+        "info2": "para cualquier tipo de consulta escribime a mi gmail: riveramateo10432@gmail.com",
+        "info3": "la otra paginaaaaa"
+    }
+}

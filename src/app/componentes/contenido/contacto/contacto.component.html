@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-11">
+        <h2>{{miPorfolio.cuenta6.titulo}}</h2>
+    </div>
+    <div class="col-1">
+        <h1 class="fotoLapizGeneral" (click)="onClick()">+</h1>
+    </div>
+
+</div>
+
+<div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
+
+    <div class="row rectangular">
+        <div class="col-9">
+
+            <div class="row rectangular">
+                <div class="col-6">
+                    <h5>{{miPorfolio.cuenta6.contacto.nombre}}</h5>
+                    <input type="text">
+                    <h5 class="rectangular">{{miPorfolio.cuenta6.contacto.email}}</h5>
+                    <input type="email">
+
+                </div>
+
+                <div class="col-6">
+                    <h5>{{miPorfolio.cuenta6.contacto.apellido}}</h5>
+                    <input type="text">
+                    <h5 class="rectangular">{{miPorfolio.cuenta6.contacto.motivo}}</h5>
+                    <div>
+                        <select class="form-select" id="floatingSelect">
+                            <option selected>motivo</option>
+                            <option value="1">{{miPorfolio.cuenta6.contacto.contacto1}}</option>
+                            <option value="2">{{miPorfolio.cuenta6.contacto.contacto2}}</option>
+                            <option value="3">{{miPorfolio.cuenta6.contacto.contacto3}}</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+                <div class="rectangular">
+                    <h5>{{miPorfolio.cuenta6.contacto.mensaje}}</h5>
+
+                    <textarea name="message"></textarea>
+                    <button class="buttonC">{{miPorfolio.cuenta6.contacto.enviar}}</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-3">
+            <p>{{miPorfolio.cuenta6.info.email}}<br>{{miPorfolio.cuenta6.info.telefono}}<br>{{miPorfolio.cuenta6.info.informacionvara}}
+            </p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                <img src="miPorfolio.encabezado.linkGmail.img"
+                    class="img-fluid">
+            </button>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 260px;color: black;">
+                        riveramateo10432@gmail.com
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
