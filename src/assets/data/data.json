@@ -1,6 +1,7 @@
 {
     "encabezado": {
-        "name": "Mateo Rivera el mas capo",
+        "name": "",
+        "img":"https://campusvirtual.ing.unlpam.edu.ar/pluginfile.php/37478/coursecat/description/FONDO%20JPG-%20sin%20espacios.png",
         "linkig": {
             "Logo": "instagram",
             "link": "https://www.instagram.com/_mate__o/",
@@ -32,7 +33,7 @@
     "contenido": {
         "cuenta1": {
             "titulo": "Acerca de mi",
-            "presentacion": "¡Hola! Mi nombre es Facundo Mateo Rivera, nací en Argentina el 13 de Febrero de 2002 y actualmente trabajo en el Ministerio de Economia en departamento de presupuesto en el area de Coordinación de Sistemas Operativos, donde aplico mis conocimientos en programación y diseño para mejorar el funcionamiento de la oficina. En mi tiempo libre, me gusta estar al día con las tecnologías emergentes como criptomonedas, blockchain y web3, y seguir aprendiendo nuevos lenguajes de programación. Actualmente, estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN) y, a la vez, estoy tomando cursos y aprendiendo por mi cuenta para ampliar mis habilidades en el campo de la programación.Creo que el aprendizaje continuo es fundamental para el crecimiento profesional y personal. Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y mejorar mis habilidades. Me encanta estar en constante evolución y desarrollar soluciones innovadoras para enfrentar los retos del mundo actual.Gracias por conocer un poco más sobre mí. ¡Espero poder compartir mis habilidades y conocimientos con aquellos que lo necesiten!",
+            "presentacion": "¡Hola! Mi nombre es Facundo Mateo Rivera, nací en Argentina el 13 de Febrero de 2002 y actualmente trabajo en el Ministerio de Economia en departamento de presupuesto en el area de Coordinación de Sistemas Operativos, donde aplico mis conocimientos en programación y diseño para mejorar el funcionamiento de la oficina. /n En mi tiempo libre, me gusta estar al día con las tecnologías emergentes como criptomonedas, blockchain y web3, y seguir aprendiendo nuevos lenguajes de programación. Actualmente, estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN) y, a la vez, estoy tomando cursos y aprendiendo por mi cuenta para ampliar mis habilidades en el campo de la programación.Creo que el aprendizaje continuo es fundamental para el crecimiento profesional y personal. Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y mejorar mis habilidades. Me encanta estar en constante evolución y desarrollar soluciones innovadoras para enfrentar los retos del mundo actual.Gracias por conocer un poco más sobre mí. ¡Espero poder compartir mis habilidades y conocimientos con aquellos que lo necesiten!",
             "titulocv": "Haciendo click aquí se mostrara el CV ",
             "CV": {
                 "href": "https://www.canva.com/design/DAEUkK7gW1Y/kUAPFA5k9EADCkHgpMkWeg/view?utm_content=DAEUkK7gW1Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
@@ -90,56 +91,80 @@
                 {
                     "titulo": "HTML",
                     "img": "./assets/html.avif",
-                    "saber": "Avanzado",
+                    "saber": "",
                     "porcentaje": "90"
                 },
                 {
                     "titulo": "CSS",
                     "img": "./assets/css.svg",
-                    "saber": "Avanzado",
+                    "saber": "",
                     "porcentaje": "75"
                 },
                 {
                     "titulo": "Bootstrap",
                     "img": "./assets/Bootstrap.svg.png",
-                    "saber": "Intermedio",
+                    "saber": "",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "JavaScript",
                     "img": "./assets/js.svg.png",
-                    "saber": "Intermedio",
+                    "saber": "",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "TypeScript",
                     "img": "./assets/Typescript.svg",
-                    "saber": "Básico",
+                    "saber": "",
                     "porcentaje": "30"
                 },
                 {
                     "titulo": "Python",
                     "img": "./assets/Python.svg.png",
-                    "saber": "Básico",
+                    "saber": "",
                     "porcentaje": "30"
                 },
                 {
                     "titulo": "Arduino",
                     "img": "./assets/Arduino.svg.png",
-                    "saber": "Intermedio",
+                    "saber": "",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "GitHub",
                     "img": "./assets/github.png",
-                    "saber": "Intermedio",
+                    "saber": "",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "Angular",
                     "img": "./assets/fotos/angular.png",
-                    "saber": "Avanzado",
+                    "saber": "",
                     "porcentaje": "80"
+                },
+                {
+                    "titulo": "Ingles",
+                    "img": "https://www.magisnet.com/wp-content/uploads/2020/11/ingle%CC%81s.jpg",
+                    "saber": "",
+                    "porcentaje": "30"
+                },
+                {
+                    "titulo": "Pensamiento Crítico",
+                    "img": "https://fundacioncemar.org/wp-content/uploads/2019/03/pensamiento-critico.png",
+                    "saber": "",
+                    "porcentaje": "80"
+                },
+                {
+                    "titulo": "Trabajo en Equipo",
+                    "img": "https://st.depositphotos.com/1007449/2201/i/600/depositphotos_22011245-stock-photo-teamwork-concept.jpg",
+                    "saber": "",
+                    "porcentaje": "60"
+                },
+                {
+                    "titulo": "Adaptación al Cambio",
+                    "img": "https://www.escueladenegociosydireccion.com/revista/wp-content/uploads/2015/12/b2ap3_thumbnail_adaptacionalcambio.jpg",
+                    "saber": "",
+                    "porcentaje": "95"
                 }
             ]
         },
@@ -156,13 +181,13 @@
                     "info": "Trabajo en la coordinación de sistemas operativos del departamento de presupuesto en el Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva."
                 },
                 {
-                    "nombreEmpresa": "Inmigrantes Digitales",
+                    "nombreEmpresa": "Empresa Importante",
                     "tituloTrabajo": "Desarrollador Web",
-                    "fotoEmpresa": "https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/298556216_501067352019101_8086982295521106766_n.png?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=3tIf7HfUVrEAX9mAB4y&_nc_oc=AQmqsUQfMBAnHvOBP9o9urBiH1GBu9EPGbEB6k0YYwDmHOnKYJVirR7PXJfBWP3JLjg&_nc_ht=scontent.faep9-2.fna&oh=00_AfD9P4Z7Ff94U5op3NSJskReyAqxSs0a000i_0-NTf-Ahg&oe=641BCA27",
+                    "fotoEmpresa": "",
                     "fechaInicio": "24/05/2021",
                     "fechaFin": "03/09/2021",
                     "tipoEmpleo": "fulltime",
-                    "info": "Trabajo en la coordinación de sistemas operativos del departamento de presupuesto en el Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva."
+                    "info": "loremaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
                 }
             ]
         },
@@ -175,6 +200,7 @@
                     "url":"http://localhost:4200/inicio",
                     "equipo":"",
                     "img": "./assets/fotos/pagina.png",
+                    "fecha": "14/05/2023",
                     "info": "Un portafolio web es una colección de trabajos, proyectos y logros profesionales presentados en un sitio web. Generalmente, está diseñado para demostrar tus habilidades, conocimientos y experiencia en un área específica y permite a los posibles empleadores o clientes ver tu trabajo y habilidades de una manera visualmente atractiva e interactiva. Un portafolio web puede incluir proyectos, diseños, habilidades técnicas y certificaciones, además de información personal y de contacto.",
                     "herramientas": ["HTML","CSS","TypeScript","Java", "Bootstrap","SQL","Spring Boot", "DevOps"]
                 },
@@ -184,6 +210,7 @@
                     "url":"https://www.youtube.com/watch?v=lqQ_UfTbyyQ",
                     "equipo":"",
                     "img": "https://images.unsplash.com/photo-1586993451228-09818021e309?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2VydmV6YXxlbnwwfHwwfHw%3D&w=1000&q=80",
+                    "fecha": "15/06/2023",
                     "info": "Como principal desarrollador Full Stack, lideré el proyecto de creación de una página de ecommerce de cervezas. Utilizamos tecnologías como Angular para el frontend y Java para el backend, implementando una base de datos SQL para el almacenamiento de información de productos y clientes. Además, integré funcionalidades de pago en línea y seguimiento de envíos para una experiencia de compra fluida. El proyecto fue exitoso y resultó en un aumento significativo en las ventas en línea de la empresa.",
                     "herramientas": ["HTML","CSS","TypeScript","Java", "Bootstrap","SQL","Spring Boot", "DevOps","api mercado pago","javaScript","Angular"]
                 }
@@ -196,16 +223,21 @@
                 "email": "Email",
                 "apellido": "Apellido",
                 "motivo": "Motivo",
-                "contacto1": "propuesta laboral",
-                "contacto2": "conslta de presupuesto",
-                "contacto3": "proyecto",
+                "contacto1": "Propuesta Laboral",
+                "contacto2": "Conslta de Presupuesto",
+                "contacto3": "Proyecto",
+                "contacto4": "Algo personal",
                 "mensaje": "Mensaje",
                 "enviar": "Enviar"
             },
             "info": {
                 "telefono": "Teleforno: 1165161480",
                 "email": "Gmail: riveramateo10432@gmail.com",
-                "informacionvara": ""
+                "informacionvara": "",
+                "fotoMail":"./assets/fotos/Gmail.png",
+                "imgtelefono":"https://assets.stickpng.com/images/5a4525cd546ddca7e1fcbc84.png",
+                "imagenUbiico":"https://media2.giphy.com/media/PiztBShfDTJwUQDLbT/giphy.gif?cid=6c09b952c4lfl8e36rkl6bzsffih377ufx1yya8snwr1texu&rid=giphy.gif&ct=s",
+                "dire":"Liniers, Ciudad Autónoma de Buenos Aires, CABA"
             }
         }
     },

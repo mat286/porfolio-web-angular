@@ -21,6 +21,12 @@ header {
     z-index: 100;
 }
 
+.imagenArg{
+    height: 100%;
+    width: 200px;
+}
+
+
 .todo {
     margin-top: 80px;
     padding: 30px;
@@ -224,7 +230,8 @@ footer {
 /*-----------------------------------------------------barra lateral------------------------------------*/
 
 .rectangular {
-    margin-bottom: 30px;
+    margin-top: 30px;
+/*     margin-bottom: 30px; */  
     text-align: center;
 }
 
@@ -244,7 +251,7 @@ footer {
     justify-content: center;
     color: black;
     z-index: 100;
-    display: none;
+
 }
 .caja{
     background-color: rgb(255, 255, 255);
@@ -272,6 +279,10 @@ footer {
 .center{
     text-align: center;
     margin-top: 30px;
+}
+
+.error{
+    color: brown;
 }
 
 

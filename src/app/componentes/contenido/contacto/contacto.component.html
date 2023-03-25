@@ -10,62 +10,101 @@
 
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
+
     <div class="row rectangular">
-        <div class="col-9">
+            <div class="col-9">
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                    <div class="row ">
+                        <div class="col-6">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" formControlName="nombre">
 
-            <div class="row rectangular">
-                <div class="col-6">
-                    <h5>{{miPorfolio.cuenta6.contacto.nombre}}</h5>
-                    <input type="text">
-                    <h5 class="rectangular">{{miPorfolio.cuenta6.contacto.email}}</h5>
-                    <input type="email">
+                            <div *ngIf="nombre?.errors  && nombre?.touched">
+                                <p *ngIf="nombre?.hasError('required')" class="error">
+                                    El Nombre es requerido.
+                                </p>
+                            </div>
 
+                            <label for="email" class="rectangular">Email</label>
+                            <input type="email" formControlName="email">
+
+                            <div *ngIf="email?.errors  && email?.touched">
+                                <p *ngIf="email?.hasError('required')" class="error">
+                                    El email es requerido.
+                                </p>
+                                <p *ngIf="email?.hasError('email')" class="error">
+                                    El formato del email debe ser válido.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" formControlName="apellido">
+
+                            <div *ngIf="apellido?.errors  && apellido?.touched">
+                                <p *ngIf="apellido?.hasError('required')" class="error">
+                                    El apellido es requerido.
+                                </p>
+                            </div>
+
+                            <label for="motivo" class="rectangular">Motivo</label>
+                            <select class="form-select" formControlName="motivo"
+                                style="border-radius: 0;padding: 1px 2px;;">
+                                <option selected>{{miPorfolio.cuenta6.contacto.contacto1}}</option>
+                                <option value="1">{{miPorfolio.cuenta6.contacto.contacto2}}</option>
+                                <option value="2">{{miPorfolio.cuenta6.contacto.contacto3}}</option>
+                                <option value="3">{{miPorfolio.cuenta6.contacto.contacto4}}</option>
+                            </select>
+
+                            <div *ngIf="apellido?.errors  && apellido?.touched">
+                                <p *ngIf="apellido?.hasError('required')" class="error">
+                                    El motivo es requerido.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="rectangular">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea formControlName="mensaje" name="textarea">daaaadd</textarea>
+                            <div *ngIf="mensaje?.errors  && mensaje?.touched">
+                                <p *ngIf="mensaje?.hasError('required')" class="error">
+                                    El mensaje es requerido.
+                                </p>
+                            </div>
+                            <button type="submit" class="buttonC">Enviar</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-3">
+                <div>
+                    <img [src]="miPorfolio.cuenta6.info.imgtelefono">
+                    <p>{{miPorfolio.cuenta6.info.telefono}}</p>
+                </div>
+                <div>
+                    <img [src]="miPorfolio.cuenta6.info.imagenUbiico">
+                    <p>{{miPorfolio.cuenta6.info.dire}}</p>
                 </div>
 
-                <div class="col-6">
-                    <h5>{{miPorfolio.cuenta6.contacto.apellido}}</h5>
-                    <input type="text">
-                    <h5 class="rectangular">{{miPorfolio.cuenta6.contacto.motivo}}</h5>
-                    <div>
-                        <select class="form-select" id="floatingSelect">
-                            <option selected>motivo</option>
-                            <option value="1">{{miPorfolio.cuenta6.contacto.contacto1}}</option>
-                            <option value="2">{{miPorfolio.cuenta6.contacto.contacto2}}</option>
-                            <option value="3">{{miPorfolio.cuenta6.contacto.contacto3}}</option>
-                        </select>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                    <img [src]="miPorfolio.cuenta6.info.fotoMail">
+                </button>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                        <div class="card card-body" style="width: 260px;color: black;">
+                            riveramateo10432@gmail.com
+                        </div>
                     </div>
                 </div>
 
-
-
-
-                <div class="rectangular">
-                    <h5>{{miPorfolio.cuenta6.contacto.mensaje}}</h5>
-
-                    <textarea name="message"></textarea>
-                    <button class="buttonC">{{miPorfolio.cuenta6.contacto.enviar}}</button>
-                </div>
             </div>
 
-        </div>
-
-        <div class="col-3">
-            <p>{{miPorfolio.cuenta6.info.email}}<br>{{miPorfolio.cuenta6.info.telefono}}<br>{{miPorfolio.cuenta6.info.informacionvara}}
-            </p>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                <img src="miPorfolio.encabezado.linkGmail.img"
-                    class="img-fluid">
-            </button>
-            <div style="min-height: 120px;">
-                <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                    <div class="card card-body" style="width: 260px;color: black;">
-                        riveramateo10432@gmail.com
-                    </div>
-                </div>
-            </div>
-
-        </div>
 
     </div>
 
