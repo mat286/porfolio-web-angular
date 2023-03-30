@@ -17,6 +17,8 @@ import { ExperienciaComponent } from './componentes/contenido/experiencia/experi
 import { ProyectoComponent } from './componentes/contenido/proyecto/proyecto.component';
 import { ContactoComponent } from './componentes/contenido/contacto/contacto.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { CuentaNuevaComponent } from './componentes/login/cuenta-nueva/cuenta-nueva.component';
+import { CuentaExistenteComponent } from './componentes/login/cuenta-existente/cuenta-existente.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { LoginComponent } from './componentes/login/login.component';
     ExperienciaComponent,
     ProyectoComponent,
     ContactoComponent,
-    LoginComponent
+    LoginComponent,
+    CuentaNuevaComponent,
+    CuentaExistenteComponent
   ],
   imports: [
     BrowserModule,

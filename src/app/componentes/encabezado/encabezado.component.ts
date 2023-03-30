@@ -8,10 +8,11 @@ import { LoginComponent } from '../login/login.component';
   selector: 'app-encabezado',
   templateUrl: './encabezado.component.html',
   styleUrls: ['./encabezado.component.css']
-})
+}) 
 
 export class EncabezadoComponent {
   miPorfolio:any;
+  botton:string= "none";
   constructor(private datosPorfolio: PorfolioService, private datoEstilo: LoginComponent) { }
 
   ngOnInit(): void {
@@ -23,8 +24,12 @@ export class EncabezadoComponent {
 
   }
 
-  login(): void {
-    this.datoEstilo.mostrarCaja();
+  onclick():void {
+    this.botton= "flex"
+  }
+
+  cerrar():void {
+    this.botton= "none"
   }
 
 

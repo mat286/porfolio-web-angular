@@ -14,8 +14,10 @@
         <li><a href="{{miPorfolio.encabezado.linkGithub.link}}"><img [src]="miPorfolio.encabezado.linkGithub.img"
               alt="{{miPorfolio.encabezado.linkGithub.logo}}" class="img-fluid"></a>
         </li>
-        <li><button (click)="login()">{{miPorfolio.encabezado.buton}}</button></li>
+        <li><button (click)="onclick()">{{miPorfolio.encabezado.buton}}</button></li>
       </ul>
     </nav>
   </div>
+
+  <app-login estilo="{{botton}}" (salida)="cerrar()"></app-login>
 </header>

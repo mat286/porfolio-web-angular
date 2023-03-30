@@ -285,5 +285,8 @@ footer {
     color: brown;
 }
 
-
+.cerradoBoton{
+    cursor: pointer;
+    float: right;
+}
 
