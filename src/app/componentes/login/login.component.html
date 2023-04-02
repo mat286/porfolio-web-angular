@@ -3,6 +3,11 @@
 
         <div class="col-2" class="cerradoBoton" (click)="salir()">X</div>
 
+        
+
+        <app-cuenta-existente mostrar="{{existe}}" ></app-cuenta-existente>
+        <app-cuenta-nueva mostrar="{{nueva}}"></app-cuenta-nueva>
+
         <div class="row">
 
             <div class="col-6">
@@ -14,8 +19,5 @@
             </div>
             
         </div>
-
-        <app-cuenta-existente mostrar="{{existe}}" ></app-cuenta-existente>
-        <app-cuenta-nueva mostrar="{{nueva}}"></app-cuenta-nueva>
     </div>
 </div>

@@ -44,11 +44,13 @@ export class LoginComponent {
   }
 
   nuevaExistente(parametro:string):void{
-    if (parametro="nueva") {
+    if (parametro=="nueva") {
       this.nueva="block"
+      this.existe="none"
     } 
     else{
       this.existe="block"
+      this.nueva="none"
     }
   }
 

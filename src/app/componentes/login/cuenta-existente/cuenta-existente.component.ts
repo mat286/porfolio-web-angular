@@ -28,6 +28,19 @@ export class CuentaExistenteComponent {
     /* console.log(this.datosPorfolio.loginV); */
 
   }  
+
+  mostrare(){
+
+  }  
+
+
+
+
+
+
+
+
+
   public get nombre(): any {
     return this.form.get("nombre");
   }

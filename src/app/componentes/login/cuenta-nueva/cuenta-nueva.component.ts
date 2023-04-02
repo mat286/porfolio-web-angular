@@ -29,6 +29,16 @@ export class CuentaNuevaComponent {
     /* console.log(this.datosPorfolio.loginV); */
 
   }  
+
+
+
+
+
+
+
+
+
+  
   public get nombre(): any {
     return this.form.get("nombre");
   }
