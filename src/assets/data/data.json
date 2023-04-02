@@ -31,7 +31,7 @@
     },
     "barralateral": {},
     "contenido": {
-        "cuenta1": {
+        "Acerca": {
             "titulo": "Acerca de mi",
             "presentacion": "¡Hola! Mi nombre es Facundo Mateo Rivera, nací en Argentina el 13 de Febrero de 2002 y actualmente trabajo en el Ministerio de Economia en departamento de presupuesto en el area de Coordinación de Sistemas Operativos, donde aplico mis conocimientos en programación y diseño para mejorar el funcionamiento de la oficina. /n En mi tiempo libre, me gusta estar al día con las tecnologías emergentes como criptomonedas, blockchain y web3, y seguir aprendiendo nuevos lenguajes de programación. Actualmente, estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN) y, a la vez, estoy tomando cursos y aprendiendo por mi cuenta para ampliar mis habilidades en el campo de la programación.Creo que el aprendizaje continuo es fundamental para el crecimiento profesional y personal. Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y mejorar mis habilidades. Me encanta estar en constante evolución y desarrollar soluciones innovadoras para enfrentar los retos del mundo actual.Gracias por conocer un poco más sobre mí. ¡Espero poder compartir mis habilidades y conocimientos con aquellos que lo necesiten!",
             "titulocv": "Haciendo click aquí se mostrara el CV ",
@@ -40,7 +40,7 @@
                 "img": "./assets/Black Professional Resume (3).jpg"
             }
         },
-        "cuenta2": {
+        "Educacion": {
             "titulo": "Educacion",
             "educacion": [
                 {
@@ -85,7 +85,7 @@
                 }
             ]
         },
-        "cuenta7": {
+        "conocimiento": {
             "titulo": "Conocimiento",
             "conocimiento": [
                 {
@@ -168,10 +168,11 @@
                 }
             ]
         },
-        "cuenta3": {
+        "Experiencia": {
             "titulo": "Experiencia",
             "experiencia": [
                 {
+                    "id":1,
                     "nombreEmpresa": "Ministerio de Economia",
                     "tituloTrabajo": "Coordinacion de Sistemas Operativos",
                     "fotoEmpresa": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Ministerio_de_Econom%C3%ADa_arg.png",
@@ -181,6 +182,7 @@
                     "info": "Trabajo en la coordinación de sistemas operativos del departamento de presupuesto en el Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva."
                 },
                 {
+                    "id":2,
                     "nombreEmpresa": "Empresa Importante",
                     "tituloTrabajo": "Desarrollador Web",
                     "fotoEmpresa": "",
@@ -191,7 +193,7 @@
                 }
             ]
         },
-        "cuenta4": {
+        "Proyectos": {
             "titulo": "Proyectos",
             "proyecto": [
                 {
@@ -216,7 +218,7 @@
                 }
             ]            
         },
-        "cuenta6": {
+        "Contacto": {
             "titulo": "Contacto",
             "contacto": {
                 "nombre": "Nombre",

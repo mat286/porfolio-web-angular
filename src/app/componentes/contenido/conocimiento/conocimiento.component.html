@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-11">
-    <h2>{{miPorfolio.cuenta7.titulo}}</h2>
+    <h2>{{miPorfolio.titulo}}</h2>
   </div>
   <div class="col-1">
     <h1 class="fotoLapizGeneral">+</h1>
@@ -39,7 +39,7 @@
   </div>
 
 
-  <div class="row rectangular" *ngFor="let conocimientos of miPorfolio.cuenta7.conocimiento">
+  <div class="row rectangular" *ngFor="let conocimientos of miPorfolio.conocimiento">
     <div class="col-3">
       <h6>{{conocimientos.titulo}}</h6>
       <img [src]="conocimientos.img">

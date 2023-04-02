@@ -14,7 +14,7 @@ export class ConocimientoComponent {
 
     this.datosPorfolio.obtenerdatos().subscribe(data=>{ 
       console.log(data);
-      this.miPorfolio=data.contenido;
+      this.miPorfolio=data.contenido.conocimiento;
     });
 
   }

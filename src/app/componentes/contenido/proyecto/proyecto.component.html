@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-11">
-        <h2>{{miPorfolio.cuenta4.titulo}}</h2>
+        <h2>{{miPorfolio.titulo}}</h2>
     </div>
     <div class="col-1">
         <h1 class="fotoLapizGeneral" (click)="onClick()">+</h1>
@@ -8,7 +8,7 @@
 
     <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
-        <div class="row" *ngFor="let proye of miPorfolio.cuenta4.proyecto">
+        <div class="row" *ngFor="let proye of miPorfolio.proyecto">
 
             <div class="col-8">
                 <h3>{{proye.nombreProyecto}}</h3>

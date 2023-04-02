@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-11">
-        <h2>{{miPorfolio.cuenta6.titulo}}</h2>
+        <h2>{{miPorfolio.titulo}}</h2>
     </div>
     <div class="col-1">
         <h1 class="fotoLapizGeneral" (click)="onClick()">+</h1>
@@ -51,10 +51,10 @@
                             <label for="motivo" class="rectangular">Motivo</label>
                             <select class="form-select" formControlName="motivo"
                                 style="border-radius: 0;padding: 1px 2px;;">
-                                <option selected>{{miPorfolio.cuenta6.contacto.contacto1}}</option>
-                                <option value="1">{{miPorfolio.cuenta6.contacto.contacto2}}</option>
-                                <option value="2">{{miPorfolio.cuenta6.contacto.contacto3}}</option>
-                                <option value="3">{{miPorfolio.cuenta6.contacto.contacto4}}</option>
+                                <option selected>{{miPorfolio.contacto.contacto1}}</option>
+                                <option value="1">{{miPorfolio.contacto.contacto2}}</option>
+                                <option value="2">{{miPorfolio.contacto.contacto3}}</option>
+                                <option value="3">{{miPorfolio.contacto.contacto4}}</option>
                             </select>
 
                             <div *ngIf="apellido?.errors  && apellido?.touched">
@@ -83,17 +83,17 @@
 
             <div class="col-3">
                 <div>
-                    <img [src]="miPorfolio.cuenta6.info.imgtelefono">
-                    <p>{{miPorfolio.cuenta6.info.telefono}}</p>
+                    <img [src]="miPorfolio.info.imgtelefono">
+                    <p>{{miPorfolio.info.telefono}}</p>
                 </div>
                 <div>
-                    <img [src]="miPorfolio.cuenta6.info.imagenUbiico">
-                    <p>{{miPorfolio.cuenta6.info.dire}}</p>
+                    <img [src]="miPorfolio.info.imagenUbiico">
+                    <p>{{miPorfolio.info.dire}}</p>
                 </div>
 
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                    <img [src]="miPorfolio.cuenta6.info.fotoMail">
+                    <img [src]="miPorfolio.info.fotoMail">
                 </button>
                 <div style="min-height: 120px;">
                     <div class="collapse collapse-horizontal" id="collapseWidthExample">

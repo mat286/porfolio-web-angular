@@ -19,6 +19,7 @@ import { ContactoComponent } from './componentes/contenido/contacto/contacto.com
 import { LoginComponent } from './componentes/login/login.component';
 import { CuentaNuevaComponent } from './componentes/login/cuenta-nueva/cuenta-nueva.component';
 import { CuentaExistenteComponent } from './componentes/login/cuenta-existente/cuenta-existente.component';
+import { ExperienciaUniComponent } from './componentes/contenido/experiencia/experiencia-uni/experiencia-uni.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CuentaExistenteComponent } from './componentes/login/cuenta-existente/c
     ContactoComponent,
     LoginComponent,
     CuentaNuevaComponent,
-    CuentaExistenteComponent
+    CuentaExistenteComponent,
+    ExperienciaUniComponent
   ],
   imports: [
     BrowserModule,

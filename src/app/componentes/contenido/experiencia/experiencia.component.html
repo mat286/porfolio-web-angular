@@ -1,39 +1,19 @@
 <div class="row">
     <div class="col-11">
-        <h2>{{miPorfolio.cuenta3.titulo}}</h2>
+        <h2>{{miPorfolio.titulo}}</h2>
     </div>
     <div class="col-1">
-        <h1 class="fotoLapizGeneral" (click)="onClick()">+</h1>
+        <h1 class="fotoLapizGeneral" (click)="onClick()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </svg>
+        </h1>
     </div>
 
 </div>
 
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);"> 
-    <div class="row" *ngFor="let expe of miPorfolio.cuenta3.experiencia" style="margin-bottom: 50px;">
 
-        <div class="col-4">
-            <h2>{{expe.nombreEmpresa}}</h2>
-            <img [src]="expe.fotoEmpresa" style="width: 100%;">
-        </div>
-        <div class="col-8 center">
-            <h4>{{expe.tituloTrabajo}}</h4>
-
-            <div class="row">
-                <div class="col-5 center">
-                    <h4>Desde {{expe.fechaInicio}}</h4>
-                </div>
-                <div class="col-2 center">
-                    <h4>-----</h4>
-                </div>
-                <div class="col-5 center">
-                    <h4>Hasta {{expe.fechaFin}}</h4>
-                </div>
-            </div>
-            <h4 class="center">Trabajo {{expe.tipoEmpleo}}</h4>
-        </div>
-        <p class="center">{{expe.info}}</p>
-        <hr>
-    </div>
-    
+    <app-experiencia-uni *ngFor="let expe of experi" [experiencia]= "expe" style="margin-bottom: 50px;" ></app-experiencia-uni>    
     
 </div>

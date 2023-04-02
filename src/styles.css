@@ -113,8 +113,6 @@ input {
 }
 
 .fotoLapizGeneral {
-    width: 40px;
-    height: 40px;
     cursor: pointer;
     border-radius: 50%;
 }
@@ -129,12 +127,12 @@ input {
     right: 0;
 }
 
-.fotoLapiz:hover,
+/* .fotoLapiz:hover,
 .fotoLapizP:hover,
 .fotoLapizGeneral:hover {
     width: 55px;
     height: 55px;
-}
+} */
 
 
 .deMi {

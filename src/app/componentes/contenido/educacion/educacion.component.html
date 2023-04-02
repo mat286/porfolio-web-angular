@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-11">
-        <h2>{{miPorfolio.cuenta2.titulo}}</h2>
+        <h2>{{miPorfolio.titulo}}</h2>
     </div>
     <div class="col-1">
         <h1 class="fotoLapizGeneral" (click)="onClick()">+</h1>
@@ -9,7 +9,7 @@
 </div>
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
-    <div class="row rectangular" *ngFor="let educacions of miPorfolio.cuenta2.educacion">
+    <div class="row rectangular" *ngFor="let educacions of miPorfolio.educacion">
         <div class="col-3">
             <h3>{{educacions.titulo}}</h3>
             <a href="{{educacions.href}}"><img [src]="educacions.img" style="width: 100%;" alt=""></a>
