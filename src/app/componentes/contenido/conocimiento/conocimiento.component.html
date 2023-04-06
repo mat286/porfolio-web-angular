@@ -3,7 +3,13 @@
     <h2>{{miPorfolio.titulo}}</h2>
   </div>
   <div class="col-1">
-    <h1 class="fotoLapizGeneral">+</h1>
+    <h1 class="fotoLapizGeneral">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill"
+        viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+      </svg>
+    </h1>
   </div>
 
 </div>
@@ -14,17 +20,20 @@
       <div class="container-fluid">
 
         <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked
+            ng-change="lenguajeProgrmacion()">
           <label class="form-check-label" for="flexSwitchCheckChecked" style="color: rgb(255, 255, 255);">Lenguaje de
             Programacion</label>
         </div>
         <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2" checked>
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
+            ng-model="confirmed" ng-change="herramientas()" checked>
           <label class="form-check-label" for="flexSwitchCheckChecked2"
             style="color: rgb(255, 255, 255);">Herramientas</label>
         </div>
         <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+            ng-change="habilidadesBlandas()">
           <label class="form-check-label" for="flexSwitchCheckDefault" style="color: rgb(255, 255, 255);">Habilidades
             Blandas</label>
         </div>
@@ -39,29 +48,48 @@
   </div>
 
 
-  <div class="row rectangular" *ngFor="let conocimientos of miPorfolio.conocimiento">
-    <div class="col-3">
-      <h6>{{conocimientos.titulo}}</h6>
-      <img [src]="conocimientos.img">
-    </div>
+  <div class="rectangular" *ngFor="let conocimientos of conocimiento">
 
-    <div class="col" style="margin-top: 60px;">
-      <div class="progress">
-        <div class="progress-bar conocimiento" role="progressbar"
-          [ngStyle]="{'width': conocimientos.porcentaje + '%', 'background-color': conocimientos.porcentaje >= 70 ? 'green' : conocimientos.porcentaje >= 35 ? 'yellow' : 'red'}"
-          aria-valuemin="0" aria-valuemax="100">
-          <p *ngIf="conocimientos.porcentaje >= 70">Avanzado {{conocimientos.porcentaje}}%</p>
-          <p *ngIf="conocimientos.porcentaje >= 35 && conocimientos.porcentaje <= 70">Intermedio
-            {{conocimientos.porcentaje}}%</p>
-          <p *ngIf="conocimientos.porcentaje <= 35">Básico {{conocimientos.porcentaje}}%</p>
+    <div class="row" *ngIf="conocimientos.saber != 'lenguajeProgrmacion'">
+
+      <div class="col-3">
+        <h6>{{conocimientos.titulo}}</h6>
+        <img [src]="conocimientos.img">
+      </div>
+
+      <div class="col" style="margin-top: 60px;">
+        <div class="progress">
+          <div class="progress-bar conocimiento" role="progressbar"
+            [ngStyle]="{'width': conocimientos.porcentaje + '%', 'background-color': conocimientos.porcentaje >= 70 ? 'green' : conocimientos.porcentaje >= 35 ? 'yellow' : 'red'}"
+            aria-valuemin="0" aria-valuemax="100">
+            <p *ngIf="conocimientos.porcentaje >= 70">Avanzado {{conocimientos.porcentaje}}%</p>
+            <p *ngIf="conocimientos.porcentaje >= 35 && conocimientos.porcentaje <= 70">Intermedio
+              {{conocimientos.porcentaje}}%</p>
+            <p *ngIf="conocimientos.porcentaje <= 35">Básico {{conocimientos.porcentaje}}%</p>
+          </div>
+
         </div>
 
       </div>
+      <div class="col-1" style="cursor: pointer;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-square"
+          viewBox="0 0 16 16">
+          <path
+            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+          <path fill-rule="evenodd"
+            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+        </svg>
 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash3"
+          viewBox="0 0 16 16">
+          <path
+            d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+        </svg>
+
+      </div>
     </div>
-    <div class="col-1">
-      <img src="./assets/images.png" class="fotoLapiz" alt="cambiar">
-    </div>
+
 
   </div>
+
 </div>

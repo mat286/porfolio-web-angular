@@ -1,9 +1,6 @@
 <div class="row">
-    <div class="col-11">
+    <div class="col-12">
         <h2>{{miPorfolio.titulo}}</h2>
-    </div>
-    <div class="col-1">
-        <h1 class="fotoLapizGeneral" (click)="onClick()">+</h1>
     </div>
 
 </div>
@@ -12,98 +9,136 @@
 
 
     <div class="row rectangular">
-            <div class="col-9">
-                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-                    <div class="row ">
-                        <div class="col-6">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" formControlName="nombre">
+        <div class="col-9">
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                
+                <div class="row ">
 
-                            <div *ngIf="nombre?.errors  && nombre?.touched">
-                                <p *ngIf="nombre?.hasError('required')" class="error">
-                                    El Nombre es requerido.
-                                </p>
-                            </div>
+                    <div class="col-6">
+                        <!-- <label for="nombre">Nombre</label> -->
+                        <input type="text" formControlName="nombre" placeholder="Nombre">
 
-                            <label for="email" class="rectangular">Email</label>
-                            <input type="email" formControlName="email">
-
-                            <div *ngIf="email?.errors  && email?.touched">
-                                <p *ngIf="email?.hasError('required')" class="error">
-                                    El email es requerido.
-                                </p>
-                                <p *ngIf="email?.hasError('email')" class="error">
-                                    El formato del email debe ser válido.
-                                </p>
-                            </div>
+                        <div *ngIf="nombre?.errors  && nombre?.touched">
+                            <p *ngIf="nombre?.hasError('required')" class="error">
+                                El Nombre es requerido.
+                            </p>
                         </div>
 
-                        <div class="col-6">
-                            <label for="apellido">Apellido</label>
-                            <input type="text" formControlName="apellido">
+                        <!-- <label for="email" class="rectangular">Email</label> -->
+                        <input type="email" formControlName="email" placeholder="Email" class="rectangular">
 
-                            <div *ngIf="apellido?.errors  && apellido?.touched">
-                                <p *ngIf="apellido?.hasError('required')" class="error">
-                                    El apellido es requerido.
-                                </p>
-                            </div>
-
-                            <label for="motivo" class="rectangular">Motivo</label>
-                            <select class="form-select" formControlName="motivo"
-                                style="border-radius: 0;padding: 1px 2px;;">
-                                <option selected>{{miPorfolio.contacto.contacto1}}</option>
-                                <option value="1">{{miPorfolio.contacto.contacto2}}</option>
-                                <option value="2">{{miPorfolio.contacto.contacto3}}</option>
-                                <option value="3">{{miPorfolio.contacto.contacto4}}</option>
-                            </select>
-
-                            <div *ngIf="apellido?.errors  && apellido?.touched">
-                                <p *ngIf="apellido?.hasError('required')" class="error">
-                                    El motivo es requerido.
-                                </p>
-                            </div>
-
+                        <div *ngIf="email?.errors  && email?.touched">
+                            <p *ngIf="email?.hasError('required')" class="error">
+                                El email es requerido.
+                            </p>
+                            <p *ngIf="email?.hasError('email')" class="error">
+                                El formato del email debe ser válido.
+                            </p>
                         </div>
 
-                        <div class="rectangular">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea formControlName="mensaje" name="textarea">daaaadd</textarea>
-                            <div *ngIf="mensaje?.errors  && mensaje?.touched">
-                                <p *ngIf="mensaje?.hasError('required')" class="error">
-                                    El mensaje es requerido.
-                                </p>
-                            </div>
-                            <button type="submit" class="buttonC">Enviar</button>
+                        <!-- <label for="telefono" class="rectangular">Telefono</label> -->
+                        <input type="number" formControlName="telefono" class="rectangular" placeholder="Telefono">
+
+                        <div *ngIf="telefono?.errors  && telefono?.touched">
+                            <p *ngIf="telefono?.hasError('required')" class="error">
+                                El telefono es requerido.
+                            </p>
                         </div>
                     </div>
 
-                </form>
+                    <div class="col-6">
+                        <!-- <label for="apellido">Apellido</label> -->
+                        <input type="text" formControlName="apellido" placeholder="Apellido">
 
+                        <div *ngIf="apellido?.errors  && apellido?.touched">
+                            <p *ngIf="apellido?.hasError('required')" class="error">
+                                El apellido es requerido.
+                            </p>
+                        </div>
+
+                        <input type="text" formControlName="apellido" class="rectangular" placeholder="otro">
+
+                        <div *ngIf="apellido?.errors  && apellido?.touched">
+                            <p *ngIf="apellido?.hasError('required')" class="error">
+                                El apellido es requerido.
+                            </p>
+                        </div>
+
+                        <div *ngIf="motivo?.errors  && motivo?.touched">
+                            <p *ngIf="motivo?.hasError('required')" class="error">
+                                El motivo es requerido.
+                            </p>
+                        </div>
+
+                        <label for="motivo">Motivo</label>
+                        <select class="form-select" formControlName="motivo"
+                            style="border-radius: 0;padding: 1px 2px;;" placeholder="otro">
+                            <option selected placeholder="otro">{{miPorfolio.contacto.contacto1}}</option>
+                            <option value="{{miPorfolio.contacto.contacto2}}">{{miPorfolio.contacto.contacto2}}
+                            </option>
+                            <option value="{{miPorfolio.contacto.contacto3}}">{{miPorfolio.contacto.contacto3}}
+                            </option>
+                            <option value="{{miPorfolio.contacto.contacto4}}">{{miPorfolio.contacto.contacto4}}
+                            </option>
+                        </select>
+                        <div *ngIf="motivo?.errors  && motivo?.touched">
+                            <p *ngIf="motivo?.hasError('required')" class="error">
+                                El motivo es requerido.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="rectangular">
+                        <!-- <label for="mensaje">Mensaje</label>
+                         <textarea formControlName="mensaje" name="textarea" rows="5" cols="33"><p>{{form.value.nombre}} {{form.value.apellido}}como estas?</p>
+                        </textarea> -->
+
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="textarea" rows="8" cols="33">Estimado Rivera Mateo,
+Me dirijo a usted en relación a una consulta de {{form.value.motivo}}. Mi nombre es {{form.value.apellido}} {{form.value.nombre}} y quisiera solicitar información sobre los servicios.
+Agradezco de antemano su tiempo y consideración en este asunto. Por favor, siéntase libre de ponerse en contacto conmigo a través de mi dirección de correo electrónico {{form.value.email}} o llamándome al {{form.value.telefono}}.
+                                                
+Atentamente,                  
+{{form.value.apellido}} {{form.value.nombre}}</textarea>
+
+                        <div *ngIf="mensaje?.errors  && mensaje?.touched">
+                            <p *ngIf="mensaje?.hasError('required')" class="error">
+                                El mensaje es requerido.
+                            </p>
+                        </div>
+                        <button type="submit" class="buttonC">Enviar</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="col-3">
+            <div>
+                <img [src]="miPorfolio.info.imgtelefono">
+                <p>{{miPorfolio.info.telefono}}</p>
+            </div>
+            <div>
+                <img [src]="miPorfolio.info.imagenUbiico">
+                <p>{{miPorfolio.info.dire}}</p>
             </div>
 
-            <div class="col-3">
-                <div>
-                    <img [src]="miPorfolio.info.imgtelefono">
-                    <p>{{miPorfolio.info.telefono}}</p>
-                </div>
-                <div>
-                    <img [src]="miPorfolio.info.imagenUbiico">
-                    <p>{{miPorfolio.info.dire}}</p>
-                </div>
-
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                    <img [src]="miPorfolio.info.fotoMail">
-                </button>
-                <div style="min-height: 120px;">
-                    <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                        <div class="card card-body" style="width: 260px;color: black;">
-                            riveramateo10432@gmail.com
-                        </div>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                <img [src]="miPorfolio.info.fotoMail">
+            </button>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 260px;color: black;">
+                        riveramateo10432@gmail.com
                     </div>
                 </div>
-
             </div>
+
+        </div>
 
 
     </div>

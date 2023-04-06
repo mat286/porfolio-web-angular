@@ -17,7 +17,8 @@ export class ContactoComponent {
       apellido: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       motivo: ['', [Validators.required]],
-      mensaje: ['', [Validators.required]]
+      telefono: ['', [Validators.required,] ],
+      mensaje: ['']
     });
   }
 
@@ -45,6 +46,9 @@ export class ContactoComponent {
   public get motivo(): any {
     return this.form.get("motivo");
   }
+  public get telefono(): any {
+    return this.form.get("telefono");
+  }
   public get mensaje(): any {
     return this.form.get("mensaje");
   }
@@ -53,10 +57,8 @@ export class ContactoComponent {
     event.preventDefault;
 
     if (this.form.valid) {
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formuario!");
-/*       alert(`hola ${this.form.nombre}como estas?`); */
+      this.form.value.mensaje += (document.getElementById("mensaje"))?.innerHTML;
+      alert(this.form.value.mensaje);
     } else {
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched();

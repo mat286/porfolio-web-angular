@@ -91,79 +91,79 @@
                 {
                     "titulo": "HTML",
                     "img": "./assets/html.avif",
-                    "saber": "",
+                    "saber": "lenguajeProgrmacion",
                     "porcentaje": "90"
                 },
                 {
                     "titulo": "CSS",
                     "img": "./assets/css.svg",
-                    "saber": "",
+                    "saber": "lenguajeProgrmacion",
                     "porcentaje": "75"
                 },
                 {
                     "titulo": "Bootstrap",
                     "img": "./assets/Bootstrap.svg.png",
-                    "saber": "",
+                    "saber": "herramientas",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "JavaScript",
                     "img": "./assets/js.svg.png",
-                    "saber": "",
+                    "saber": "lenguajeProgrmacion",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "TypeScript",
                     "img": "./assets/Typescript.svg",
-                    "saber": "",
+                    "saber": "lenguajeProgrmacion",
                     "porcentaje": "30"
                 },
                 {
                     "titulo": "Python",
                     "img": "./assets/Python.svg.png",
-                    "saber": "",
+                    "saber": "lenguajeProgrmacion",
                     "porcentaje": "30"
                 },
                 {
                     "titulo": "Arduino",
                     "img": "./assets/Arduino.svg.png",
-                    "saber": "",
+                    "saber": "lenguajeProgrmacion",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "GitHub",
                     "img": "./assets/github.png",
-                    "saber": "",
+                    "saber": "herramientas",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "Angular",
                     "img": "./assets/fotos/angular.png",
-                    "saber": "",
+                    "saber": "herramientas",
                     "porcentaje": "80"
                 },
                 {
                     "titulo": "Ingles",
                     "img": "https://www.magisnet.com/wp-content/uploads/2020/11/ingle%CC%81s.jpg",
-                    "saber": "",
+                    "saber": "herramientas",
                     "porcentaje": "30"
                 },
                 {
                     "titulo": "Pensamiento Crítico",
                     "img": "https://fundacioncemar.org/wp-content/uploads/2019/03/pensamiento-critico.png",
-                    "saber": "",
+                    "saber": "habilidadesBlandas",
                     "porcentaje": "80"
                 },
                 {
                     "titulo": "Trabajo en Equipo",
                     "img": "https://st.depositphotos.com/1007449/2201/i/600/depositphotos_22011245-stock-photo-teamwork-concept.jpg",
-                    "saber": "",
+                    "saber": "habilidadesBlandas",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "Adaptación al Cambio",
                     "img": "https://www.escueladenegociosydireccion.com/revista/wp-content/uploads/2015/12/b2ap3_thumbnail_adaptacionalcambio.jpg",
-                    "saber": "",
+                    "saber": "habilidadesBlandas",
                     "porcentaje": "95"
                 }
             ]

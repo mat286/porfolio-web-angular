@@ -20,6 +20,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { CuentaNuevaComponent } from './componentes/login/cuenta-nueva/cuenta-nueva.component';
 import { CuentaExistenteComponent } from './componentes/login/cuenta-existente/cuenta-existente.component';
 import { ExperienciaUniComponent } from './componentes/contenido/experiencia/experiencia-uni/experiencia-uni.component';
+import { ConoUniComponent } from './componentes/contenido/conocimiento/cono-uni/cono-uni.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ExperienciaUniComponent } from './componentes/contenido/experiencia/exp
     LoginComponent,
     CuentaNuevaComponent,
     CuentaExistenteComponent,
-    ExperienciaUniComponent
+    ExperienciaUniComponent,
+    ConoUniComponent
   ],
   imports: [
     BrowserModule,

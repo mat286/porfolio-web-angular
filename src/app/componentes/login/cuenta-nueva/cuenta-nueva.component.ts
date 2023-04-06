@@ -11,7 +11,7 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 })
 export class CuentaNuevaComponent {
 
-  @Input() mostrar:String="";
+  @Input() mostrar: String = "";
 
   form: FormGroup;
   constructor(private formBuilder: FormBuilder) {
@@ -19,7 +19,7 @@ export class CuentaNuevaComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       nombre: ['', [Validators.required]],
-      motivo: ['', [Validators.required]],
+      passwordconfirm: ['', [Validators.required],[Validators.composeAsync]],
       mensaje: ['', [Validators.required]]
     });
   }
@@ -28,7 +28,7 @@ export class CuentaNuevaComponent {
 
     /* console.log(this.datosPorfolio.loginV); */
 
-  }  
+  }
 
 
 
@@ -38,7 +38,7 @@ export class CuentaNuevaComponent {
 
 
 
-  
+
   public get nombre(): any {
     return this.form.get("nombre");
   }
@@ -60,14 +60,23 @@ export class CuentaNuevaComponent {
     }
 
   }
-  get Password(){
+  get Password() {
     return this.form.get("password");
   }
-  get PasswordValid(){
+  get PasswordValid() {
     return this.Password?.touched && !this.Password?.valid;
   }
   get MailValid() {
     return false
   }
+  get passwordconfirm() {
+    return this.form.get("passwordconfirm");
+  }
+
+  ppasswordconfirm() {
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+    return this.Password != this.passwordconfirm;
+  }
+
 
 }

@@ -1,0 +1,25 @@
+<div class="row" *ngIf="conocimientos.saber != 'lenguajeProgrmacion'">
+
+    <div class="col-3">
+        <h6>{{conocimientos.titulo}}</h6>
+        <img [src]="conocimientos.img">
+    </div>
+
+    <div class="col" style="margin-top: 60px;">
+        <div class="progress">
+            <div class="progress-bar conocimiento" role="progressbar"
+                [ngStyle]="{'width': conocimientos.porcentaje + '%', 'background-color': conocimientos.porcentaje >= 70 ? 'green' : conocimientos.porcentaje >= 35 ? 'yellow' : 'red'}"
+                aria-valuemin="0" aria-valuemax="100">
+                <p *ngIf="conocimientos.porcentaje >= 70">Avanzado {{conocimientos.porcentaje}}%</p>
+                <p *ngIf="conocimientos.porcentaje >= 35 && conocimientos.porcentaje <= 70">Intermedio
+                    {{conocimientos.porcentaje}}%</p>
+                <p *ngIf="conocimientos.porcentaje <= 35">Básico {{conocimientos.porcentaje}}%</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-1">
+        <img src="./assets/images.png" class="fotoLapiz" alt="cambiar">
+    </div>
+</div>

@@ -15,7 +15,7 @@ export class ExperienciaComponent {
 
 
   miPorfolio:any;
-  constructor(private datosPorfolio: PorfolioService) { }
+  constructor(private datosPorfolio: PorfolioService) { } 
 
   ngOnInit(): void {
 

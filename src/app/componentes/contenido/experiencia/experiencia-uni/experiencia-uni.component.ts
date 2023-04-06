@@ -13,7 +13,7 @@ export class ExperienciaUniComponent {
   constructor() {  }
 
   eliminar(id:Number){
-
-    alert("tocaste el de id: "+id+" y se va a borrar");
+    console.log(id+"este es el id que tocasteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+    alert("tocaste el de id: "+id+" y se va a borrar ");
   }
 }
