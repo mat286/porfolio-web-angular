@@ -21,10 +21,8 @@ body {
 
 /*-*/
 header {
-    border: 1px solid black;
     height: 80px;
     padding: 10px;
-    background-color: rgb(158, 158, 158);
     align-items: center;
     left: 0;
     top: 0;
@@ -198,7 +196,7 @@ p {
 footer {
     bottom: 0;
     text-align: center;
-    min-height: 60px;
+    min-height: 70px;
     padding: 10px;
     width: 100%;
 
@@ -229,10 +227,6 @@ footer {
 
 /*-----------------------------------------------------barra lateral------------------------------------*/
 .barra {
-    background-color: rgb(131, 131, 131);
-    height: 100%;
-    padding-bottom: 50px;
-
     border: 1px solid #ccc;
     color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -334,4 +328,16 @@ footer {
     border: 1px solid #333;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border: 1px solid #ccc;
+}
+
+.barra.fixed {
+    position: fixed;
+    top: 0;
+    margin-top: 72px;
+    padding: 0px;
+    width: 290px;
+    
+    /* no esta bien lo del tamaño
+    cuidadooooooooooooooooooooooooo
+    */
 }

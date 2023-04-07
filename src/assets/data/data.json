@@ -15,18 +15,18 @@
         "linkGithub": {
             "Logo": "github",
             "link": "https://github.com/mat286/Back-End.git",
-            "img": "./assets/github.png"
+            "img": "./assets/fotos/github.png"
         },
         "buton": "login"
     },
     "fotosini": {
-        "img": "./assets/IMG-20220215-WA0096.jpg",
+        "img": "./assets/fotos/IMG-20220215-WA0096.jpg",
         "buton": "login",
         "fotos": [
-            "./assets/imagen1.jpg",
-            "./assets/imagen2.jpg",
-            "./assets/utn.jpg",
-            "./fotos/shutterstock_518160529-1250x625.jpg"
+            "./assets/fotos/imagen1.jpg",
+            "./assets/fotos/imagen2.jpg",
+            "./assets/fotos/utn.jpg",
+            "./assets/fotos/imagenfondo3.jpg"
         ]
     },
     "barralateral": {},
@@ -37,7 +37,7 @@
             "titulocv": "Haciendo click aquí se mostrara el CV ",
             "CV": {
                 "href": "https://www.canva.com/design/DAEUkK7gW1Y/kUAPFA5k9EADCkHgpMkWeg/view?utm_content=DAEUkK7gW1Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-                "img": "./assets/Black Professional Resume (3).jpg"
+                "img": "./assets/fotos/Black Professional Resume (3).jpg"
             }
         },
         "Educacion": {
@@ -46,7 +46,7 @@
                 {
                     "titulo": "Ingenieria Electronica",
                     "href": "https://www.utn.edu.ar/es/",
-                    "img": "./assets/utn.jpg",
+                    "img": "./assets/fotos/utn.jpg",
                     "tipo": "Universitario",
                     "estado": "En curso",
                     "info": "Actualmente estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN). La carrera proporciona una base sólida en los fundamentos de la electrónica, incluyendo circuitos eléctricos, sistemas digitales, análisis de señales y sistemas, comunicaciones y electrónica analógica y digital. Además, se cubren temas más avanzados, como la instrumentación electrónica, el procesamiento de señales, la ingeniería de control, la microelectrónica y la robótica. Este conocimiento puede ser útil en una variedad de áreas, como la electrónica de consumo, la industria de la tecnología y la investigación y desarrollo de productos electrónicos."
@@ -54,7 +54,7 @@
                 {
                     "titulo": "Robotica e imprecion 3D",
                     "href": "https://aprendeprogramando.bue.edu.ar/",
-                    "img": "./assets/aprende programando.png",
+                    "img": "./assets/fotos/aprende programando.png",
                     "tipo": "Curso",
                     "estado": "finalizado",
                     "info": "Obtuve un título en robótica e impresión 3D a través del programa ´Aprende Programando Virtual 3.0´, el cual proporciona conocimientos teóricos y prácticos en diseño e impresión 3D, robótica, automatización, sensores y actuadores, interfaz humano-robot y seguridad. En este curso, se utiliza la plataforma Arduino para programar y controlar los dispositivos robóticos e impresoras 3D. Este conocimiento puede ser útil en áreas como la ingeniería, la investigación y el desarrollo de productos."
@@ -62,7 +62,7 @@
                 {
                     "titulo": "#YoProgramo",
                     "href": "",
-                    "img": "./assets/seProgramar.png",
+                    "img": "./assets/fotos/seProgramar.png",
                     "tipo": "Curso",
                     "estado": "finalizado",
                     "info": "Obtuve un título en Programación Full Stack Jr a través del programa Argentina Programa 4.0. El curso proporciona conocimientos teóricos y prácticos en el desarrollo de aplicaciones web, utilizando lenguajes de programación como HTML, CSS, JavaScript, TypeScript, Angular, Java y SQL. Además, se cubren temas como DevOps, control de versiones, metodologías ágiles y desarrollo de aplicaciones móviles. Este conocimiento puede ser útil en áreas como el desarrollo de aplicaciones web y móviles, la creación de productos digitales y la ingeniería de software."
@@ -70,7 +70,7 @@
                 {
                     "titulo": "Curso introductorio de python",
                     "href": "",
-                    "img": "./assets/itba_logo.jpg",
+                    "img": "./assets/fotos/itba_logo.jpg",
                     "tipo": "Curso",
                     "estado": "finalizado",
                     "info": "Obtuve un título introductorio en Python a través del programa de formación del IEEE - ITBA. El curso proporciona una introducción a los conceptos básicos de programación en Python, incluyendo variables, operadores, estructuras de control de flujo, funciones, módulos y manejo de excepciones. También se cubren temas más avanzados, como programación orientada a objetos, uso de librerías y módulos de Python para aplicaciones científicas y de datos, y desarrollo web con Python. Este conocimiento puede ser útil en una variedad de áreas, como la ingeniería, la ciencia de datos, la programación de aplicaciones y el desarrollo web."
@@ -90,49 +90,49 @@
             "conocimiento": [
                 {
                     "titulo": "HTML",
-                    "img": "./assets/html.avif",
+                    "img": "./assets/fotos/html.avif",
                     "saber": "lenguajeProgrmacion",
                     "porcentaje": "90"
                 },
                 {
                     "titulo": "CSS",
-                    "img": "./assets/css.svg",
+                    "img": "./assets/fotos/css.svg",
                     "saber": "lenguajeProgrmacion",
                     "porcentaje": "75"
                 },
                 {
                     "titulo": "Bootstrap",
-                    "img": "./assets/Bootstrap.svg.png",
+                    "img": "./assets/fotos/Bootstrap.svg.png",
                     "saber": "herramientas",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "JavaScript",
-                    "img": "./assets/js.svg.png",
+                    "img": "./assets/fotos/js.svg.png",
                     "saber": "lenguajeProgrmacion",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "TypeScript",
-                    "img": "./assets/Typescript.svg",
+                    "img": "./assets/fotos/Typescript.svg",
                     "saber": "lenguajeProgrmacion",
                     "porcentaje": "30"
                 },
                 {
                     "titulo": "Python",
-                    "img": "./assets/Python.svg.png",
+                    "img": "./assets/fotos/Python.svg.png",
                     "saber": "lenguajeProgrmacion",
                     "porcentaje": "30"
                 },
                 {
                     "titulo": "Arduino",
-                    "img": "./assets/Arduino.svg.png",
+                    "img": "./assets/fotos/Arduino.svg.png",
                     "saber": "lenguajeProgrmacion",
                     "porcentaje": "60"
                 },
                 {
                     "titulo": "GitHub",
-                    "img": "./assets/github.png",
+                    "img": "./assets/fotos/github.png",
                     "saber": "herramientas",
                     "porcentaje": "60"
                 },

@@ -1,20 +1,22 @@
-<ul>
-    <li>
-        <a routerLink="/inicio" aria-current="page">Acerca de mi</a>
-    </li>
-    <li>
-        <a routerLink="/Conocimiento" aria-current="page">Conocimiento</a>
-    </li>
-    <li>
-        <a routerLink="/Educacion" aria-current="page">Educacion</a>
-    </li>
-    <li>
-        <a routerLink="/Experiencia" aria-current="page">Experiencia</a>
-    </li>
-    <li>
-        <a routerLink="/Proyecto" aria-current="page">Proyectos</a>
-    </li>
-    <li>
-        <a routerLink="/Contacto" aria-current="page">Contacto</a>
-    </li>
-</ul>
+<div class="barra" [ngClass]="{ 'fixed': isFixed }" (scroll)="onScroll($event)">
+    <ul>
+        <li>
+            <a routerLink="/inicio" aria-current="page">Acerca de mi</a>
+        </li>
+        <li>
+            <a routerLink="/Conocimiento" aria-current="page">Conocimiento</a>
+        </li>
+        <li>
+            <a routerLink="/Educacion" aria-current="page">Educacion</a>
+        </li>
+        <li>
+            <a routerLink="/Experiencia" aria-current="page">Experiencia</a>
+        </li>
+        <li>
+            <a routerLink="/Proyecto" aria-current="page">Proyectos</a>
+        </li>
+        <li>
+            <a routerLink="/Contacto" aria-current="page">Contacto</a>
+        </li>
+    </ul>
+</div>
