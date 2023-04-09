@@ -11,8 +11,10 @@ import { Validators } from '@angular/forms';
 export class ContactoComponent {
   miPorfolio: any;
   form: FormGroup;
+  mensajeVer=false;
+
   constructor(private datosPorfolio: PorfolioService, private formBuilder: FormBuilder) {
-    this.form = this.formBuilder.group({
+    this.form = this.formBuilder.group({ 
       nombre: ['', [Validators.required]],
       apellido: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -58,18 +60,31 @@ export class ContactoComponent {
 
     if (this.form.valid) {
       this.form.value.mensaje += (document.getElementById("mensaje"))?.innerHTML;
-      alert(this.form.value.mensaje);
+      this.mensajeVer = true;
     } else {
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched();
     }
 
+
+  }
+
+  noEnviarMensaje(){
+    this.mensajeVer = false;
+  }
+
+  getmensajeVer(){
+    return this.mensajeVer
   }
 
 
 
   onClick() {
     alert('estas seguro que quieres hacer cambios');
+  }
+
+  getmensaje(){
+    return document.getElementById("mensaje")?.innerHTML;
   }
 
 }

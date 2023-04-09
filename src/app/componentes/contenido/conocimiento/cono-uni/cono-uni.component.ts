@@ -10,17 +10,14 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 export class ConoUniComponent {
   @Input() conocimientos:any;
 
-  habilidadesBlandas:any;
   miPorfolio:any;
   constructor(private datosPorfolio: PorfolioService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
 
     this.datosPorfolio.obtenerdatos().subscribe(data=>{ 
       console.log(data);
       this.miPorfolio=data.contenido.conocimiento;
-      this.habilidadesBlandas = this.conocimientos.find((user: any) => user.saber == "habilidadesBlandas");
-      console.log(this.habilidadesBlandas);
     });
 
   }

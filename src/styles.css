@@ -1,10 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial;
-    background-color: rgb(0, 0, 0);
     /* background: url("https://img2.wallspic.com/previews/4/1/4/6/6/166414/166414-en_blanco_y_negro-geometria-neumaticos_para_automoviles-parrilla-malla-550x310.jpg"); */
-    color: rgb(255, 255, 255);
 
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -31,7 +28,7 @@ header {
     z-index: 100;
     /* ------------------ */
     background-color: #333;
-    color: #fff;
+    color: #000000;
     border: 1px solid #ccc;
 
 }
@@ -55,6 +52,7 @@ ul {
     align-items: center;
     list-style: none;
     margin: 0;
+    /* margin-bottom: 15px; */
 }
 
 a {
@@ -154,15 +152,14 @@ input {
 
 
 .deMi {
-    display: flex;
+    /*     display: flex; */
     border-top: 5px solid rgb(133, 133, 133);
     padding-bottom: 30px;
     padding-top: 30px;
 }
 
 .cv {
-    margin-right: 100px;
-    display: flex;
+    width: 240px;
 }
 
 h4 {
@@ -199,6 +196,7 @@ footer {
     min-height: 70px;
     padding: 10px;
     width: 100%;
+    border: 1px solid #ccc;
 
     background-color: #333;
     color: #fff;
@@ -231,6 +229,7 @@ footer {
     color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     background-color: #222;
+    min-height: 540px;
 
 }
 
@@ -336,8 +335,242 @@ footer {
     margin-top: 72px;
     padding: 0px;
     width: 290px;
-    
+    border: 1px solid #ccc;
+
     /* no esta bien lo del tamaño
     cuidadooooooooooooooooooooooooo
     */
+}
+
+.cursorIco {
+    cursor: pointer;
+}
+
+.cursorIcoH:hover {
+    color: #0056b3;
+    cursor: pointer;
+}
+
+
+.cursorIco:hover {
+    color: #222;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.experiencia {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.experiencia h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.experiencia .fecha {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.experiencia .cargo {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.experiencia .descripcion {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* .experiencia-imagen {
+    margin-left: 20px;
+    width: 200px;
+    text-align: right;
+    align-items: start;
+}
+
+.experiencia-imagen img {
+    max-width: 100%;
+    height: auto;
+} */
+
+.experiencia-imagen {
+    width: 100%;
+}
+
+.experiencia-imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------proyecto------------------------------------------------ */
+
+.proyecto {
+    border: 1px solid #ccc;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.proyectoImg {
+    width: 100%;
+    height: auto;
+
+}
+
+.proyecto h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.descripcion {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tecnologias {
+    font-style: italic;
+
+}
+
+.boton,.botonNo {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1B75CE;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+.botonNo{
+    cursor: pointer;
+    background-color: #9d0000;
+}
+.botonNo:hover {
+    background-color: #610000;
+}
+
+
+.iconos-proyecto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(5px, 20px);
+    display: block;
+    width: 100px;
+
+    /* ajusta la posición de los iconos */
+}
+
+
+
+
+
+/* -------------------------------------------------educacion--------------------------------------------------- */
+.educacion {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+.educacion h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.curso {
+    margin-bottom: 20px;
+}
+
+.curso h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.curso .institucion {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.curso .fecha {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.curso .descripcion {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+/* -----------------------------------------------------------------alerta------------------------------------- */
+
+.alerta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.mensaje {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 20px;
+    color:#1B75CE;
+}
+
+.noMostrar {
+    display: none;
 }

@@ -12,7 +12,7 @@ export class BarralateralComponent {
   onScroll(event:Event) {
     if (window.pageYOffset > 430) {
       this.isFixed = true;
-    } else {
+    } else { 
       this.isFixed = false;
     }
   }

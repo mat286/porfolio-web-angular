@@ -1,27 +1,22 @@
 {
     "encabezado": {
         "name": "",
-        "img":"https://campusvirtual.ing.unlpam.edu.ar/pluginfile.php/37478/coursecat/description/FONDO%20JPG-%20sin%20espacios.png",
+        "img": "https://campusvirtual.ing.unlpam.edu.ar/pluginfile.php/37478/coursecat/description/FONDO%20JPG-%20sin%20espacios.png",
         "linkig": {
-            "Logo": "instagram",
             "link": "https://www.instagram.com/_mate__o/",
             "img": "./assets/fotos/ig.jpg"
         },
         "linkGmail": {
-            "Logo": "gmail",
             "link": "https://mail.google.com/mail/u/0/#inbox",
             "img": "./assets/fotos/Gmail.png"
         },
         "linkGithub": {
-            "Logo": "github",
-            "link": "https://github.com/mat286/Back-End.git",
+            "link": "https://github.com/mat286",
             "img": "./assets/fotos/github.png"
-        },
-        "buton": "login"
+        }
     },
     "fotosini": {
         "img": "./assets/fotos/IMG-20220215-WA0096.jpg",
-        "buton": "login",
         "fotos": [
             "./assets/fotos/imagen1.jpg",
             "./assets/fotos/imagen2.jpg",
@@ -29,7 +24,6 @@
             "./assets/fotos/imagenfondo3.jpg"
         ]
     },
-    "barralateral": {},
     "contenido": {
         "Acerca": {
             "titulo": "Acerca de mi",
@@ -45,42 +39,47 @@
             "educacion": [
                 {
                     "titulo": "Ingenieria Electronica",
-                    "href": "https://www.utn.edu.ar/es/",
+                    "institucion":"Universidad Tecnológica Nacional",
                     "img": "./assets/fotos/utn.jpg",
                     "tipo": "Universitario",
-                    "estado": "En curso",
+                    "fechaInicio": "01/03/2023",
+                    "fechaFin": "la Actualidad",
                     "info": "Actualmente estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN). La carrera proporciona una base sólida en los fundamentos de la electrónica, incluyendo circuitos eléctricos, sistemas digitales, análisis de señales y sistemas, comunicaciones y electrónica analógica y digital. Además, se cubren temas más avanzados, como la instrumentación electrónica, el procesamiento de señales, la ingeniería de control, la microelectrónica y la robótica. Este conocimiento puede ser útil en una variedad de áreas, como la electrónica de consumo, la industria de la tecnología y la investigación y desarrollo de productos electrónicos."
                 },
                 {
                     "titulo": "Robotica e imprecion 3D",
-                    "href": "https://aprendeprogramando.bue.edu.ar/",
+                    "institucion":"Aprende Programando Virtual 3.0",
                     "img": "./assets/fotos/aprende programando.png",
                     "tipo": "Curso",
-                    "estado": "finalizado",
+                    "fechaInicio": "01/04/2020",
+                    "fechaFin": "01/11/2020",
                     "info": "Obtuve un título en robótica e impresión 3D a través del programa ´Aprende Programando Virtual 3.0´, el cual proporciona conocimientos teóricos y prácticos en diseño e impresión 3D, robótica, automatización, sensores y actuadores, interfaz humano-robot y seguridad. En este curso, se utiliza la plataforma Arduino para programar y controlar los dispositivos robóticos e impresoras 3D. Este conocimiento puede ser útil en áreas como la ingeniería, la investigación y el desarrollo de productos."
                 },
                 {
                     "titulo": "#YoProgramo",
-                    "href": "",
+                    "institucion":"Argentina Programa 4.0.",
                     "img": "./assets/fotos/seProgramar.png",
                     "tipo": "Curso",
-                    "estado": "finalizado",
+                    "fechaInicio": "18/10/2022",
+                    "fechaFin": "15/05/2023",
                     "info": "Obtuve un título en Programación Full Stack Jr a través del programa Argentina Programa 4.0. El curso proporciona conocimientos teóricos y prácticos en el desarrollo de aplicaciones web, utilizando lenguajes de programación como HTML, CSS, JavaScript, TypeScript, Angular, Java y SQL. Además, se cubren temas como DevOps, control de versiones, metodologías ágiles y desarrollo de aplicaciones móviles. Este conocimiento puede ser útil en áreas como el desarrollo de aplicaciones web y móviles, la creación de productos digitales y la ingeniería de software."
                 },
                 {
                     "titulo": "Curso introductorio de python",
-                    "href": "",
+                    "institucion":"IEEE - ITBA.",
                     "img": "./assets/fotos/itba_logo.jpg",
                     "tipo": "Curso",
-                    "estado": "finalizado",
+                    "fechaInicio": "18/10/1999",
+                    "fechaFin": "15/05/1999",
                     "info": "Obtuve un título introductorio en Python a través del programa de formación del IEEE - ITBA. El curso proporciona una introducción a los conceptos básicos de programación en Python, incluyendo variables, operadores, estructuras de control de flujo, funciones, módulos y manejo de excepciones. También se cubren temas más avanzados, como programación orientada a objetos, uso de librerías y módulos de Python para aplicaciones científicas y de datos, y desarrollo web con Python. Este conocimiento puede ser útil en una variedad de áreas, como la ingeniería, la ciencia de datos, la programación de aplicaciones y el desarrollo web."
                 },
                 {
                     "titulo": "Tecnico en diseño de interior",
-                    "href": "https://www.escuelatecnicafader.com.ar/",
+                    "institucion":"Escuela Técnica Nº6 Fernando Fader",
                     "img": "https://billetto.imgix.net/m8pscns05rgmi906m3klf6ow62gv?s=8d15e8dc4759e53666153ba644c2910e",
                     "tipo": "Secundario",
-                    "estado": "finalizado",
+                    "fechaInicio": "18/10/1999",
+                    "fechaFin": "15/05/1999",
                     "info": "Obtuve un título de Técnico en Diseño de Interiores en la Escuela Técnica Nº6 Fernando Fader. El programa de estudio proporcionó conocimientos en áreas como el diseño de espacios interiores, la elección de materiales y acabados, la iluminación, la planificación de proyectos y la presentación de proyectos a clientes. También se cubrieron temas como la historia del diseño de interiores y la teoría del color. Este conocimiento puede ser útil en una variedad de áreas, como el diseño de interiores para viviendas, negocios, oficinas y otros espacios comerciales."
                 }
             ]
@@ -172,7 +171,7 @@
             "titulo": "Experiencia",
             "experiencia": [
                 {
-                    "id":1,
+                    "id": 1,
                     "nombreEmpresa": "Ministerio de Economia",
                     "tituloTrabajo": "Coordinacion de Sistemas Operativos",
                     "fotoEmpresa": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Ministerio_de_Econom%C3%ADa_arg.png",
@@ -182,14 +181,14 @@
                     "info": "Trabajo en la coordinación de sistemas operativos del departamento de presupuesto en el Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva."
                 },
                 {
-                    "id":2,
+                    "id": 2,
                     "nombreEmpresa": "Empresa Importante",
                     "tituloTrabajo": "Desarrollador Web",
-                    "fotoEmpresa": "",
+                    "fotoEmpresa": "https://static.javatpoint.com/htmlpages/images/mailto-html-tag3.png",
                     "fechaInicio": "24/05/2021",
                     "fechaFin": "03/09/2021",
                     "tipoEmpleo": "fulltime",
-                    "info": "loremaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+                    "info": "Trabajo en la coordinación de sistemas operativos del departamento de presupuesto en el Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva.."
                 }
             ]
         },
@@ -199,24 +198,45 @@
                 {
                     "nombreProyecto": "Portafolio Web",
                     "puesto": "Principal desarrollador Full Stack",
-                    "url":"http://localhost:4200/inicio",
-                    "equipo":"",
-                    "img": "./assets/fotos/pagina.png",
+                    "url": "http://localhost:4200/inicio",
+                    "equipo": "",
+                    "img": "https://img.freepik.com/vector-premium/portafolio_9206-678.jpg",
                     "fecha": "14/05/2023",
                     "info": "Un portafolio web es una colección de trabajos, proyectos y logros profesionales presentados en un sitio web. Generalmente, está diseñado para demostrar tus habilidades, conocimientos y experiencia en un área específica y permite a los posibles empleadores o clientes ver tu trabajo y habilidades de una manera visualmente atractiva e interactiva. Un portafolio web puede incluir proyectos, diseños, habilidades técnicas y certificaciones, además de información personal y de contacto.",
-                    "herramientas": ["HTML","CSS","TypeScript","Java", "Bootstrap","SQL","Spring Boot", "DevOps"]
+                    "herramientas": [
+                        "HTML",
+                        "CSS",
+                        "TypeScript",
+                        "Java",
+                        "Bootstrap",
+                        "SQL",
+                        "Spring Boot",
+                        "DevOps"
+                    ]
                 },
                 {
                     "nombreProyecto": "Pagina ecommerce de cervezas",
                     "puesto": "Principal desarrollador Full Stack",
-                    "url":"https://www.youtube.com/watch?v=lqQ_UfTbyyQ",
-                    "equipo":"",
+                    "url": "https://www.youtube.com/watch?v=lqQ_UfTbyyQ",
+                    "equipo": "",
                     "img": "https://images.unsplash.com/photo-1586993451228-09818021e309?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2VydmV6YXxlbnwwfHwwfHw%3D&w=1000&q=80",
                     "fecha": "15/06/2023",
                     "info": "Como principal desarrollador Full Stack, lideré el proyecto de creación de una página de ecommerce de cervezas. Utilizamos tecnologías como Angular para el frontend y Java para el backend, implementando una base de datos SQL para el almacenamiento de información de productos y clientes. Además, integré funcionalidades de pago en línea y seguimiento de envíos para una experiencia de compra fluida. El proyecto fue exitoso y resultó en un aumento significativo en las ventas en línea de la empresa.",
-                    "herramientas": ["HTML","CSS","TypeScript","Java", "Bootstrap","SQL","Spring Boot", "DevOps","api mercado pago","javaScript","Angular"]
+                    "herramientas": [
+                        "HTML",
+                        "CSS",
+                        "TypeScript",
+                        "Java",
+                        "Bootstrap",
+                        "SQL",
+                        "Spring Boot",
+                        "DevOps",
+                        "api mercado pago",
+                        "javaScript",
+                        "Angular"
+                    ]
                 }
-            ]            
+            ]
         },
         "Contacto": {
             "titulo": "Contacto",
@@ -233,13 +253,10 @@
                 "enviar": "Enviar"
             },
             "info": {
-                "telefono": "Teleforno: 1165161480",
-                "email": "Gmail: riveramateo10432@gmail.com",
+                "telefono": "+54 9 1165161480",
+                "email": "riveramateo10432@",
                 "informacionvara": "",
-                "fotoMail":"./assets/fotos/Gmail.png",
-                "imgtelefono":"https://assets.stickpng.com/images/5a4525cd546ddca7e1fcbc84.png",
-                "imagenUbiico":"https://media2.giphy.com/media/PiztBShfDTJwUQDLbT/giphy.gif?cid=6c09b952c4lfl8e36rkl6bzsffih377ufx1yya8snwr1texu&rid=giphy.gif&ct=s",
-                "dire":"Liniers, Ciudad Autónoma de Buenos Aires, CABA"
+                "dire": "Liniers, CABA"
             }
         }
     },
