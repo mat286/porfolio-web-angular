@@ -1,12 +1,12 @@
-<div class="row rectangular">
+<div class="row rectangular conocimiento">
 
     <div class="col-3" style="text-align: center;">
         <h6>{{conocimientos.titulo}}</h6>
-        <img [src]="conocimientos.img" style="width: 70px;max-height: 70px;">
+        <img [src]="conocimientos.img" style="width: 75px;max-height: 75px;">
     </div>
 
     <div class="col">
-        <div class="progress" style="margin-top: 55px;">
+        <div class="progress">
             <div class="progress-bar conocimiento" role="progressbar"
                 [ngStyle]="{'width': conocimientos.porcentaje + '%', 'background-color': conocimientos.porcentaje >= 70 ? 'green' : conocimientos.porcentaje >= 35 ? 'yellow' : 'red'}"
                 aria-valuemin="0" aria-valuemax="100">

@@ -7,7 +7,7 @@
             "img": "./assets/fotos/ig.jpg"
         },
         "linkGmail": {
-            "link": "https://mail.google.com/mail/u/0/#inbox",
+            "link": "https://www.linkedin.com/in/mateo-rivera-8b3811265/",
             "img": "./assets/fotos/Gmail.png"
         },
         "linkGithub": {
@@ -144,7 +144,7 @@
                 {
                     "titulo": "Ingles",
                     "img": "https://www.magisnet.com/wp-content/uploads/2020/11/ingle%CC%81s.jpg",
-                    "saber": "herramientas",
+                    "saber": "Lenguajes",
                     "porcentaje": "30"
                 },
                 {

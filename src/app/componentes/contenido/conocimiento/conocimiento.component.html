@@ -15,22 +15,22 @@
 </div>
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
-  <div class="row">
+  <div class="row conocimiento-filtro">
 
     <div class="col-5">
 
       <div class="container-fluid">
 
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked
-            ng-change="lenguajeProgrmacion()">
+        <div class="form-check form-switch" style="margin-bottom: 20px;">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+          [(ngModel)]="lenguajeProgrmacion" checked>
           <label class="form-check-label" for="flexSwitchCheckChecked" style="color: rgb(255, 255, 255);">Lenguaje de
             Programacion</label>
         </div>
 
         <div class="form-check form-switch">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-          formControlName="habilidadesBlandas">
+          [(ngModel)]="habilidadesBlandas">
           <label class="form-check-label" for="flexSwitchCheckDefault" style="color: rgb(255, 255, 255);">Habilidades
             Blandas</label>
         </div>
@@ -44,16 +44,16 @@
 
       <div class="container-fluid">
 
-        <div class="form-check form-switch">
+        <div class="form-check form-switch" style="margin-bottom: 20px;">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
-            ng-model="confirmed" ng-change="herramientas()" checked>
+          [(ngModel)]="herramientas" checked>
           <label class="form-check-label" for="flexSwitchCheckChecked2"
             style="color: rgb(255, 255, 255);">Herramientas</label>
         </div>
         
         <div class="form-check form-switch">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-            ng-change="habilidadesBlandas()">
+          [(ngModel)]="Lenguajes">
           <label class="form-check-label" for="flexSwitchCheckDefault"
             style="color: rgb(255, 255, 255);">Lenguajes</label>
         </div>
@@ -73,6 +73,6 @@
 
 
 
-  <app-cono-uni *ngFor="let conocimientos of conocimiento" [conocimientos]="conocimientos"></app-cono-uni>
+  <app-cono-uni *ngFor="let conocimientos of filtro()" [conocimientos]="conocimientos"></app-cono-uni>
 
 </div>
