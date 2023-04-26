@@ -26,16 +26,13 @@
     },
     "contenido": {
         "Acerca": {
-            "titulo": "Acerca de mi",
             "presentacion": "¡Hola! Mi nombre es Facundo Mateo Rivera, nací en Argentina el 13 de Febrero de 2002 y actualmente trabajo en el Ministerio de Economia en departamento de presupuesto en el area de Coordinación de Sistemas Operativos, donde aplico mis conocimientos en programación y diseño para mejorar el funcionamiento de la oficina. /n En mi tiempo libre, me gusta estar al día con las tecnologías emergentes como criptomonedas, blockchain y web3, y seguir aprendiendo nuevos lenguajes de programación. Actualmente, estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN) y, a la vez, estoy tomando cursos y aprendiendo por mi cuenta para ampliar mis habilidades en el campo de la programación.Creo que el aprendizaje continuo es fundamental para el crecimiento profesional y personal. Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y mejorar mis habilidades. Me encanta estar en constante evolución y desarrollar soluciones innovadoras para enfrentar los retos del mundo actual.Gracias por conocer un poco más sobre mí. ¡Espero poder compartir mis habilidades y conocimientos con aquellos que lo necesiten!",
-            "titulocv": "Haciendo click aquí se mostrara el CV ",
             "CV": {
                 "href": "https://www.canva.com/design/DAEUkK7gW1Y/kUAPFA5k9EADCkHgpMkWeg/view?utm_content=DAEUkK7gW1Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
                 "img": "./assets/fotos/Black Professional Resume (3).jpg"
             }
         },
         "Educacion": {
-            "titulo": "Educacion",
             "educacion": [
                 {
                     "titulo": "Ingenieria Electronica",
@@ -261,8 +258,7 @@
         }
     },
     "footer": {
-        "info": "La elavoracion del proyecto fue llevada acabo por facundo mateo rivera",
-        "info2": "para cualquier tipo de consulta escribime a mi gmail: riveramateo10432@gmail.com",
-        "info3": "la otra paginaaaaa"
+        "contacto": "Para cualquier tipo de consulta, escribime a mi correo electrónico: riveramateo10432@gmail.com",
+        "copy": "2023 Facundo Mateo Rivera. Todos los derechos reservados."
     }
 }

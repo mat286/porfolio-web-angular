@@ -8,6 +8,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class AcercaComponent {
   miPorfolio:any;
+  mensajeVer=false;
   constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
@@ -18,8 +19,18 @@ export class AcercaComponent {
     });
 
   }
+  
+  noEnviarMensaje(){
+    this.mensajeVer = false;
+  }
+
+  getmensajeVer(){
+    return this.mensajeVer
+  }
+  
+
   onClick() {
-    alert('estas seguro que quieres hacer cambios');
+    this.mensajeVer = true;
   }
 
 }

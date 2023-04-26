@@ -8,9 +8,10 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class FotosiniComponent {
   miPorfolio: any;
-  foto: any;
+  foto: any; 
   fotov: any;
   incremental: number=0;
+  mensajeVer=false;
   constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
@@ -33,10 +34,18 @@ export class FotosiniComponent {
       this.incremental = 0;
     }
   }
+
+  noEnviarMensaje(){
+    this.mensajeVer = false;
+  }
+
+  getmensajeVer(){
+    return this.mensajeVer
+  }
   
 
   onClick() {
-    alert('estas seguro que quieres hacer cambios');
+    this.mensajeVer = true;
   }
 
 }

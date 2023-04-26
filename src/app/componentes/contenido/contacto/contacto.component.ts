@@ -63,7 +63,7 @@ export class ContactoComponent {
       this.mensajeVer = true;
     } else {
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
-      this.form.markAllAsTouched();
+      this.form.markAllAsTouched(); 
     }
 
 

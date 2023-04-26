@@ -10,7 +10,7 @@ export class BarralateralComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event:Event) {
-    if (window.pageYOffset > 430) {
+    if (window.pageYOffset > 415) {
       this.isFixed = true;
     } else { 
       this.isFixed = false;

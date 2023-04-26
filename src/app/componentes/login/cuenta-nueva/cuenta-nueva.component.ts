@@ -19,9 +19,13 @@ export class CuentaNuevaComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       nombre: ['', [Validators.required]],
-      passwordconfirm: ['', [Validators.required],[Validators.composeAsync]],
+      apellido: ['', [Validators.required]],
+      passwordconfirm: ['', [Validators.required], [Validators.composeAsync]],
       mensaje: ['', [Validators.required]]
-    });
+    },
+      {
+        /* validators: this.matchPasswords.bind(this) */
+      });
   }
 
   ngOnInit(): void {
@@ -42,8 +46,21 @@ export class CuentaNuevaComponent {
   public get nombre(): any {
     return this.form.get("nombre");
   }
+  public get apellido(): any {
+    return this.form.get("apellido");
+  }
   public get email(): any {
     return this.form.get("email");
+  }
+  get Password() {
+    return this.form.get("password");
+  }
+  get passwordconfirm() {
+    return this.form.get("passwordconfirm");
+  }
+  get passwordconfirmValid() {
+
+    return this.Password != this.passwordconfirm;
   }
   onEnviar(event: Event) {
     // Detenemos la propagación o ejecución del compotamiento submit de un form
@@ -60,23 +77,30 @@ export class CuentaNuevaComponent {
     }
 
   }
-  get Password() {
-    return this.form.get("password");
-  }
-  get PasswordValid() {
+
+  /* get PasswordValid() {
     return this.Password?.touched && !this.Password?.valid;
-  }
-  get MailValid() {
+  } */
+  /* get MailValid() {
     return false
-  }
-  get passwordconfirm() {
-    return this.form.get("passwordconfirm");
-  }
+  } */
+
 
   ppasswordconfirm() {
     console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     return this.Password != this.passwordconfirm;
   }
+  matchPasswords() {
+    const passwordControl = this.form.get("password");
+    const confirmPasswordControl = this.form.get("passwordconfirm");
+
+    if (passwordControl === confirmPasswordControl) {
+      return null;
+    } else {
+      return { mismatch: true };
+    }
+  }
+
 
 
 }
