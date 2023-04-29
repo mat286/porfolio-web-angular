@@ -11,6 +11,7 @@ import { Validators } from '@angular/forms';
 export class ConocimientoComponent {
   conocimiento: any;
   form: FormGroup;
+  mensajeVer=false;
 
   miPorfolio: any;
 
@@ -70,6 +71,19 @@ export class ConocimientoComponent {
       }
       
     }
+  }
+
+  noEnviarMensaje(){
+    this.mensajeVer = false;
+  }
+
+  getmensajeVer(){
+    return this.mensajeVer
+  }
+  
+
+  onClick() {
+    this.mensajeVer = true;
   }
 
 

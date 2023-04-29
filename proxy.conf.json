@@ -1,0 +1,7 @@
+{
+    "/sobremi/*":{
+        "target":"http://localhost:8080",
+        "sec": false,
+        "logLevel": "debug"
+    }
+}

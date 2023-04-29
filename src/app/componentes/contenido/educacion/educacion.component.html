@@ -52,16 +52,64 @@
 <div class="mensaje" *ngIf="mensajeVer">
     <div class="alerta">
         <div class="mensaje">
-            <div *ngFor="let educacions of miPorfolio.educacion">
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputPassword6" class="col-form-label">Nombre del titulo</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="{{miPorfolio.educacion.titulo}}">
-                    </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">Nombre del titulo</label>
                 </div>
+                <div class="col-auto">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="{{miPorfolio.educacion.titulo}}">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">Nombre de la institucion</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="{{miPorfolio.educacion.institucion}}">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">Imagen</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="{{miPorfolio.educacion.institucion}}">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">Tipo</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="{{miPorfolio.educacion.institucion}}">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">fecha inicio</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="{{miPorfolio.educacion.institucion}}">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">Fecha fin</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="{{miPorfolio.educacion.institucion}}">
+                </div>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Informacion</label>
             </div>
             <div class="botones">
                 <a class="boton" (click)="noEnviarMensaje()">Guardar cambios</a>

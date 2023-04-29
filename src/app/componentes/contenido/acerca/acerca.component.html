@@ -22,12 +22,12 @@
         <div class="row">
 
             <div class="col-8">
-                <P>{{miPorfolio.presentacion}}</P>
+                <P>{{miPorfolio.info}}</P>
             </div>
 
             <div class="col-4">
                 <h2>Curriculum Vitae</h2>
-                <a href="{{miPorfolio.CV.href}}"><img [src]="miPorfolio.CV.img" class="cv" alt=""></a>
+                <a href="{{miPorfolio.urlCv}}"><img [src]="miPorfolio.img" class="cv" alt=""></a>
             </div>
 
         </div>
@@ -35,16 +35,16 @@
 
 </div>
 
-<div class="mensaje" *ngIf="mensajeVer">
+<div *ngIf="mensajeVer">
     <div class="alerta">
-        <div class="mensaje">
+        <form class="mensaje"[formGroup]="form" (ngSubmit)="onEnviar($event)">
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
                     <label for="inputPassword6" class="col-form-label">Foto de CV</label>
                 </div>
                 <div class="col-auto">
                     <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="{{miPorfolio.CV.img}}">
+                        placeholder="{{miPorfolio.CV.img}}" formControlName="img">
                 </div>
             </div>
             <div class="row g-3 align-items-center">
@@ -53,19 +53,20 @@
                 </div>
                 <div class="col-auto">
                     <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="{{miPorfolio.CV.href}}">
+                        placeholder="{{miPorfolio.CV.href}}" formControlName="urlCv">
                 </div>
             </div>
             <div class="form-floating">
                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                    style="height: 100px"></textarea>
+                    style="height: 100px" formControlName="info"></textarea>
                 <label for="floatingTextarea2">Presentacion</label>
             </div>
+            <h1>{{form.urlCv}}</h1>
             <div class="botones">
-                <a class="boton" (click)="noEnviarMensaje()">Guardar cambios</a>
+                <button type="submit" class="buttonC">Guardar cambios</button>
                 <a class="botonNo" (click)="noEnviarMensaje()">No</a>
             </div>
-        </div>
+        </form>
 
     </div>
 
