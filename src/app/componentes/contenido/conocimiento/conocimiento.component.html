@@ -4,8 +4,8 @@
   </div>
   <div class="col-1">
     <h1 class="fotoLapizGeneral">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill cursorIco"
-        viewBox="0 0 16 16" (click)="onClick()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+        class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16" (click)="onClick()">
         <path
           d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
       </svg>
@@ -23,48 +23,61 @@
 
         <div class="form-check form-switch" style="margin-bottom: 20px;">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-          [(ngModel)]="lenguajeProgrmacion" checked>
+            [(ngModel)]="lenguajeProgrmacion" checked>
           <label class="form-check-label" for="flexSwitchCheckChecked" style="color: rgb(255, 255, 255);">Lenguaje de
             Programacion</label>
         </div>
 
         <div class="form-check form-switch">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-          [(ngModel)]="habilidadesBlandas">
+            [(ngModel)]="habilidadesBlandas">
           <label class="form-check-label" for="flexSwitchCheckDefault" style="color: rgb(255, 255, 255);">Habilidades
             Blandas</label>
         </div>
-        
+
       </div>
 
     </div>
-    <div class="col-3">
+    <div class="col-4">
 
-      
 
       <div class="container-fluid">
 
         <div class="form-check form-switch" style="margin-bottom: 20px;">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
-          [(ngModel)]="herramientas" checked>
+            [(ngModel)]="herramientas" checked>
           <label class="form-check-label" for="flexSwitchCheckChecked2"
             style="color: rgb(255, 255, 255);">Herramientas</label>
         </div>
-        
+
         <div class="form-check form-switch">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-          [(ngModel)]="Lenguajes">
+            [(ngModel)]="framework" checked>
           <label class="form-check-label" for="flexSwitchCheckDefault"
-            style="color: rgb(255, 255, 255);">Lenguajes</label>
+            style="color: rgb(255, 255, 255);">Framework</label>
         </div>
       </div>
     </div>
 
-    <div class="col-4">
-      <form class="" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" id="busqueda">
-        <button class="boton" type="submit" (click)="botonBusqueda()">Buscar</button>
-      </form>
+    <div class="col-3">
+      <div class="container-fluid">
+
+        <div class="form-check form-switch" style="margin-bottom: 20px;">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
+            [(ngModel)]="Basico" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked2" style="color: rgb(255, 255, 255);">Nivel
+            bajo</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+            [(ngModel)]="Avanzado" checked>
+          <label class="form-check-label" for="flexSwitchCheckDefault" style="color: rgb(255, 255, 255);">Nivel
+            alto</label>
+        </div>
+
+      </div>
+
     </div>
 
 
@@ -79,28 +92,42 @@
 
 <div class="alerta" *ngIf="mensajeVer">
   <div class="mensaje">
-      <div class="row g-3 align-items-center">
-          <div class="col-auto">
-              <label for="inputPassword6" class="col-form-label">Foto de CV</label>
-          </div>
-          <div class="col-auto">
-              <input type="email" class="form-control" id="exampleFormControlInput1"
-                  placeholder="{{miPorfolio.CV.img}}">
-          </div>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="inputPassword6" class="col-form-label">Titulo</label>
       </div>
-      <div class="row g-3 align-items-center">
-          <div class="col-auto">
-              <label for="inputPassword6" class="col-form-label">Link de CV</label>
-          </div>
-          <div class="col-auto">
-              <input type="email" class="form-control" id="exampleFormControlInput1"
-                  placeholder="{{miPorfolio.CV.href}}">
-          </div>
+      <div class="col-auto">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{miPorfolio.CV.img}}">
       </div>
-      <div class="botones">
-          <a class="boton" (click)="noEnviarMensaje()">Guardar cambios</a>
-          <a class="botonNo" (click)="noEnviarMensaje()">No</a>
+    </div>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="inputPassword6" class="col-form-label">Imagen</label>
       </div>
+      <div class="col-auto">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{miPorfolio.CV.href}}">
+      </div>
+    </div>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="inputPassword6" class="col-form-label">Tipo</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{miPorfolio.CV.href}}">
+      </div>
+    </div>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="inputPassword6" class="col-form-label">Porcentaje</label>
+      </div>
+      <div class="col-auto">
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="{{miPorfolio.CV.href}}">
+      </div>
+    </div>
+    <div class="botones">
+      <a class="boton" (click)="noEnviarMensaje()">Guardar cambios</a>
+      <a class="botonNo" (click)="noEnviarMensaje()">No</a>
+    </div>
   </div>
 
 </div>

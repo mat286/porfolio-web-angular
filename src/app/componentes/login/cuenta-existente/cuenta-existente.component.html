@@ -5,26 +5,20 @@
         <path fill-rule="evenodd"
             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
     </svg>
-    <!-- <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt=""
-        style="width: 200px; height: 200px;"> -->
 
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email">
-            <label for="email">Email</label>
-
-            <div *ngIf="email?.errors  && email?.touched">
-                <p *ngIf="email?.hasError('required')" class="error">
-                    El email es requerido.
-                </p>
-                <p *ngIf="email?.hasError('email')" class="error">
-                    El formato del email debe ser válido.
+            <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="name">
+            <label for="nombre">Nombre</label>
+            <div *ngIf="nombre?.errors  && nombre?.touched">
+                <p *ngIf="nombre?.hasError('required')" class="error">
+                    El nombre es requerido.
                 </p>
             </div>
         </div>
         <div class="form-floating">
             <input type="password" formControlName="password" placeholder="password" id="password"
-                [class.border-danger]="MailValid" class="form-control">
+                class="form-control">
             <label for="password" class="form-label">Password </label>
 
             <div *ngIf="Password?.errors && Password?.touched">

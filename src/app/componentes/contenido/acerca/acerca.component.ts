@@ -17,11 +17,11 @@ export class AcercaComponent {
   form: any;
 
   constructor(private datosPorfolio: PorfolioService, private formBuilder: FormBuilder) { 
-    this.form = this.formBuilder.group({
+/*     this.form = this.formBuilder.group({
       img: ['',],
       urlCv: ['', ],
       info: ['', ]
-    });
+    }); */
   }
 
 /*   ngOnInit(): void {
@@ -60,10 +60,10 @@ export class AcercaComponent {
   }
 
   onEnviar(event: Event) {
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
+    /* // Detenemos la propagación o ejecución del compotamiento submit de un form
     event.preventDefault;
 
-    alert(this.form.urlCv);
+    alert(this.form.urlCv); */
 
   }
 

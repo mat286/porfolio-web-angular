@@ -20,6 +20,7 @@ export class ContactoComponent {
       email: ['', [Validators.required, Validators.email]],
       motivo: ['', [Validators.required]],
       telefono: ['', [Validators.required,] ],
+      campo: ['', [Validators.required,] ],
       mensaje: ['']
     });
   }
@@ -50,6 +51,9 @@ export class ContactoComponent {
   }
   public get telefono(): any {
     return this.form.get("telefono");
+  }
+  public get campo(): any {
+    return this.form.get("campo");
   }
   public get mensaje(): any {
     return this.form.get("mensaje");

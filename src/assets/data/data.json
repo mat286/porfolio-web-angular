@@ -19,9 +19,9 @@
         "img": "./assets/fotos/IMG-20220215-WA0096.jpg",
         "fotos": [
             "./assets/fotos/imagen1.jpg",
-            "./assets/fotos/imagen2.jpg",
+            "https://www.campusmvp.es/recursos/image.axd?picture=/2019/3T/front-vs-back-campusmvp.png",
             "./assets/fotos/utn.jpg",
-            "./assets/fotos/imagenfondo3.jpg"
+            "https://static.vecteezy.com/system/resources/previews/002/792/944/original/cloud-computing-circuit-future-technology-concept-background-free-vector.jpg"
         ]
     },
     "contenido": {
@@ -135,13 +135,13 @@
                 {
                     "titulo": "Angular",
                     "img": "./assets/fotos/angular.png",
-                    "saber": "herramientas",
+                    "saber": "framework",
                     "porcentaje": "80"
                 },
                 {
                     "titulo": "Ingles",
                     "img": "https://www.magisnet.com/wp-content/uploads/2020/11/ingle%CC%81s.jpg",
-                    "saber": "Lenguajes",
+                    "saber": "herramientas",
                     "porcentaje": "30"
                 },
                 {
@@ -175,7 +175,7 @@
                     "fechaInicio": "01/03/2023",
                     "fechaFin": "la Actualidad",
                     "tipoEmpleo": "fulltime",
-                    "info": "Trabajo en la coordinación de sistemas operativos del departamento de presupuesto en el Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva."
+                    "info": "Trabajo en la coordinación de sistemas operativos en el departamento de Presupuesto del Ministerio de Economía. Garantizo que los sistemas operativos trabajen juntos de manera eficiente y he liderado proyectos de desarrollo de software para mejorar el funcionamiento del departamento. Mi trabajo implica estar al tanto de soluciones tecnológicas para mejorar la eficiencia del departamento. En resumen, mi trabajo es esencial para asegurar que el departamento de presupuesto tenga los recursos tecnológicos necesarios para llevar a cabo su trabajo de manera efectiva."
                 },
                 {
                     "id": 2,

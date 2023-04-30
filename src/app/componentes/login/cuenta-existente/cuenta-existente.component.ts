@@ -15,11 +15,8 @@ export class CuentaExistenteComponent {
   form: FormGroup;
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]], 
       nombre: ['', [Validators.required]],
-      motivo: ['', [Validators.required]],
-      mensaje: ['', [Validators.required]]
     });
   }
 
@@ -27,25 +24,10 @@ export class CuentaExistenteComponent {
 
     /* console.log(this.datosPorfolio.loginV); */
 
-  }  
-
-  mostrare(){
-
-  }  
-
-
-
-
-
-
-
-
+  }   
 
   public get nombre(): any {
     return this.form.get("nombre");
-  }
-  public get email(): any {
-    return this.form.get("email");
   }
   onEnviar(event: Event) {
     // Detenemos la propagación o ejecución del compotamiento submit de un form
@@ -68,8 +50,6 @@ export class CuentaExistenteComponent {
   get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }
-  get MailValid() {
-    return false
-  }
+
 
 }

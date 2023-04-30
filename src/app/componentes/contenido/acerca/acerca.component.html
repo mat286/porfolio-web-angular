@@ -37,7 +37,7 @@
 
 <div *ngIf="mensajeVer">
     <div class="alerta">
-        <form class="mensaje"[formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
                     <label for="inputPassword6" class="col-form-label">Foto de CV</label>

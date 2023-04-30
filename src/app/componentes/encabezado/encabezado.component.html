@@ -41,5 +41,5 @@
     </nav>
   </div>
 
-  <app-login estilo="{{botton}}" (salida)="cerrar()"></app-login>
+  <app-login (salida)="cerrar()" *ngIf="botton"></app-login>
 </header>

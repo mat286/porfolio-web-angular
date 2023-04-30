@@ -15,7 +15,6 @@ import { Validators } from '@angular/forms';
 })
 export class LoginComponent {
 
-  @Input() estilo:String="";
   @Output() salida =new EventEmitter();
 
   existe:string="block";
@@ -53,6 +52,5 @@ export class LoginComponent {
       this.nueva="none"
     }
   }
-
 
 }

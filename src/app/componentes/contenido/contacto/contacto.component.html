@@ -1,21 +1,20 @@
 <div class="row">
     <div class="col-12">
-        <h2>{{miPorfolio.titulo}}</h2>
+        <h2>Contacto</h2>
     </div>
 
 </div>
 
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
-
-    <div class="row rectangular">
+ 
+    <div class="row">
         <div class="col-9">
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
 
                 <div class="row ">
 
                     <div class="col-6">
-                        <!-- <label for="nombre">Nombre</label> -->
                         <input type="text" formControlName="nombre" placeholder="Nombre">
 
                         <div *ngIf="nombre?.errors  && nombre?.touched">
@@ -23,8 +22,6 @@
                                 El Nombre es requerido.
                             </p>
                         </div>
-
-                        <!-- <label for="email" class="rectangular">Email</label> -->
                         <input type="email" formControlName="email" placeholder="Email" class="rectangular">
 
                         <div *ngIf="email?.errors  && email?.touched">
@@ -36,18 +33,23 @@
                             </p>
                         </div>
 
-                        <!-- <label for="telefono" class="rectangular">Telefono</label> -->
-                        <input type="number" formControlName="telefono" class="rectangular" placeholder="Telefono">
+                        <label for="campo">Campo</label>
+                        <select class="form-select" formControlName="campo" style="border-radius: 0;padding: 1px 2px;;">
+                            <option value="el Front End">Front End</option>
+                            <option value="el Back End">Back End</option>
+                            <option value="en este porfolio web">Otro</option>
+                        </select>
 
-                        <div *ngIf="telefono?.errors  && telefono?.touched">
-                            <p *ngIf="telefono?.hasError('required')" class="error">
-                                El telefono es requerido.
+                        <div *ngIf="campo?.errors  && campo?.touched">
+                            <p *ngIf="campo?.hasError('required')" class="error">
+                                El campo es requerido.
                             </p>
                         </div>
+
                     </div>
 
                     <div class="col-6">
-                        <!-- <label for="apellido">Apellido</label> -->
+
                         <input type="text" formControlName="apellido" placeholder="Apellido">
 
                         <div *ngIf="apellido?.errors  && apellido?.touched">
@@ -56,30 +58,20 @@
                             </p>
                         </div>
 
-                        <input type="text" formControlName="apellido" class="rectangular" placeholder="otro">
+                        <input type="number" formControlName="telefono" class="rectangular" placeholder="Telefono">
 
-                        <div *ngIf="apellido?.errors  && apellido?.touched">
-                            <p *ngIf="apellido?.hasError('required')" class="error">
-                                El apellido es requerido.
-                            </p>
-                        </div>
-
-                        <div *ngIf="motivo?.errors  && motivo?.touched">
-                            <p *ngIf="motivo?.hasError('required')" class="error">
-                                El motivo es requerido.
+                        <div *ngIf="telefono?.errors  && telefono?.touched">
+                            <p *ngIf="telefono?.hasError('required')" class="error">
+                                El telefono es requerido.
                             </p>
                         </div>
 
                         <label for="motivo">Motivo</label>
-                        <select class="form-select" formControlName="motivo" style="border-radius: 0;padding: 1px 2px;;"
-                            placeholder="otro">
-                            <option selected placeholder="otro">{{miPorfolio.contacto.contacto1}}</option>
-                            <option value="{{miPorfolio.contacto.contacto2}}">{{miPorfolio.contacto.contacto2}}
-                            </option>
-                            <option value="{{miPorfolio.contacto.contacto3}}">{{miPorfolio.contacto.contacto3}}
-                            </option>
-                            <option value="{{miPorfolio.contacto.contacto4}}">{{miPorfolio.contacto.contacto4}}
-                            </option>
+                        <select class="form-select" formControlName="motivo"
+                            style="border-radius: 0;padding: 1px 2px;;">
+                            <option value="una Propuesta Laboral">Propuesta Laboral</option>
+                            <option value="un Presupuesto">Conslta de Presupuesto</option>
+                            <option value="un Proyecto">Proyecto</option>
                         </select>
                         <div *ngIf="motivo?.errors  && motivo?.touched">
                             <p *ngIf="motivo?.hasError('required')" class="error">
@@ -90,17 +82,19 @@
                     </div>
 
                     <div class="rectangular">
-                        <!-- <label for="mensaje">Mensaje</label>
-                         <textarea formControlName="mensaje" name="textarea" rows="5" cols="33"><p>{{form.value.nombre}} {{form.value.apellido}}como estas?</p>
-                        </textarea> -->
 
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="textarea" rows="8" cols="33">Estimado Rivera Mateo,
-Me dirijo a usted en relación a una consulta de {{form.value.motivo}}. Mi nombre es {{form.value.apellido}} {{form.value.nombre}} y quisiera solicitar información sobre los servicios.
-Agradezco de antemano su tiempo y consideración en este asunto. Por favor, siéntase libre de ponerse en contacto conmigo a través de mi dirección de correo electrónico {{form.value.email}} o llamándome al {{form.value.telefono}}.
-                                                
-Atentamente,                  
-{{form.value.apellido}} {{form.value.nombre}}</textarea>
+                        <textarea id="mensaje" name="textarea" rows="8" cols="33">
+Estimado Rivera,
+
+Me dirijo a usted en relación a una consulta sobre {{form.value.motivo}}. Soy {{form.value.nombre}} {{form.value.apellido}} y estoy interesado/a en obtener más información sobre los servicios que usted ofrece.
+
+He investigado sobre su experiencia y habilidades en {{form.value.campo}} y estoy interesado/a por su conocimiento en el campo. Me gustaría saber más sobre cómo puedo trabajar contigo para alcanzar mis objetivos.
+                            
+Por favor, siéntete libre de ponerte en contacto conmigo a través de mi dirección de correo electrónico {{form.value.email}} o llamándome al {{form.value.telefono}}. Agradezco de antemano su tiempo y consideración en este asunto. Espero su pronta respuesta.
+                            
+Atentamente,{{form.value.nombre}} {{form.value.apellido}}.
+                        </textarea>
 
                         <div *ngIf="mensaje?.errors  && mensaje?.touched">
                             <p *ngIf="mensaje?.hasError('required')" class="error">
@@ -137,13 +131,16 @@ Atentamente,
             <div class="row">
                 <div class="col-2">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
-                        <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
-                        <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-envelope-at" viewBox="0 0 16 16">
+                        <path
+                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z" />
+                        <path
+                            d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                    </svg>
                 </div>
                 <div class="col-10">
-                    <p style="font-size: 15px;">{{miPorfolio.info.email}}</p>
+                    <p style="font-size: 15px;">riveramateo10432@</p>
                 </div>
             </div>
 
@@ -159,7 +156,7 @@ Atentamente,
                     </svg>
                 </div>
                 <div class="col-10">
-                    <p style="font-size: 15px;">{{miPorfolio.info.dire}}</p>
+                    <p style="font-size: 15px;">Liniers, CABA</p>
                 </div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13129.539008078498!2d-58.52485796673839!3d-34.64498498717919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc850a8ddd4a1%3A0x6923689fbcc4f458!2sLiniers%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1680896878960!5m2!1ses-419!2sar"
@@ -172,20 +169,21 @@ Atentamente,
 
 
     </div>
+</div>
 
-    <div class="mensaje" *ngIf="mensajeVer">
-        <div class="alerta">
-            <div class="mensaje">
-                <h2>¿Está seguro de que desea enviar?</h2>
-                <p>{{getmensaje()}}</p>
-                <div class="botones">
-                    <a class="boton" href='mailto:riveramateo10432@gmail.com?cc={{form.value.email}}&body={{getmensaje()}}&Subject={{form.value.motivo}}'>Enviar mail completo</a>
-                    <a class="botonNo" (click)="noEnviarMensaje()">No</a>
-                </div>
+<div *ngIf="mensajeVer">
+    <div class="alerta">
+        <div class="mensaje">
+            <h2>¿Está seguro de que desea enviar?</h2>
+            <p>{{getmensaje()}}</p>
+            <div class="botones">
+                <a class="boton"
+                    href='mailto:riveramateo10432@gmail.com?cc={{form.value.email}}&body={{getmensaje()}}&Subject={{form.value.motivo}}'>Enviar
+                    mail completo</a>
+                <a class="botonNo" (click)="noEnviarMensaje()">Cerrar</a>
             </div>
-           
         </div>
-        
+
     </div>
 
 </div>

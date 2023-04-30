@@ -12,7 +12,8 @@ import { LoginComponent } from '../login/login.component';
 
 export class EncabezadoComponent {
   miPorfolio:any;
-  botton:string= "none";
+
+  botton:boolean = false;
   constructor(private datosPorfolio: PorfolioService, private datoEstilo: LoginComponent) { }
 
   ngOnInit(): void {
@@ -25,11 +26,11 @@ export class EncabezadoComponent {
   }
 
   onclick():void {
-    this.botton= "flex"
+    this.botton= true;
   }
 
-  cerrar():void {
-    this.botton= "none"
+  cerrar() {
+    this.botton= false;
   }
 
 

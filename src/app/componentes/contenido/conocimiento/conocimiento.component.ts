@@ -20,7 +20,10 @@ export class ConocimientoComponent {
   herramientas: boolean= true;
   lenguajeProgrmacion: boolean= true;
   habilidadesBlandas: boolean= false;
-  Lenguajes: boolean= false;
+  framework: boolean= true;
+  Avanzado : boolean= true;
+  Basico: boolean= true;
+
   constructor(private datosPorfolio: PorfolioService, private formBuilder: FormBuilder) {
 
     this.form = this.formBuilder.group({
@@ -43,34 +46,15 @@ export class ConocimientoComponent {
     let lista: any[]=[];
     for (let i = 0; i < this.conocimiento.length; i++) {
       const element = this.conocimiento[i];
-      if (this.buscado!="") {
-        lista.push(this.buscado);
-        return lista;
-      }
-      if (element.saber==="lenguajeProgrmacion" && this.lenguajeProgrmacion || element.saber==="herramientas" && this.herramientas|| element.saber==="habilidadesBlandas" && this.habilidadesBlandas || element.saber==="Lenguajes" && this.Lenguajes) {
-        lista.push(element);
+      if (element.saber==="lenguajeProgrmacion" && this.lenguajeProgrmacion || element.saber==="herramientas" && this.herramientas|| element.saber==="habilidadesBlandas" && this.habilidadesBlandas || element.saber==="framework" && this.framework) {
+        if (element.porcentaje >= 50 && this.Avanzado ||element.porcentaje < 50 && this.Basico){
+          lista.push(element);
+        }
       }
       
     }
     /* console.log(lista) */
     return lista;
-  }
-
-
-  botonBusqueda(): void {
-    for (let i = 0; i < this.conocimiento.length; i++) {
-      const element = this.conocimiento[i];
-      const buscar = document.getElementById("busqueda");
-      console.log(this.buscado);
-      console.log(buscar);
-      if (element.titulo==buscar || element.porcentaje==buscar) {
-        this.buscado=element;
-        console.log(this.buscado);        
-      }else{
-        alert("no se encuentra lo que buscaste")
-      }
-      
-    }
   }
 
   noEnviarMensaje(){
