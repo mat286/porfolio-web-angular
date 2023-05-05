@@ -3,5 +3,25 @@
         "target":"http://localhost:8080",
         "sec": false,
         "logLevel": "debug"
+    },
+    "/Conocimientos/*":{
+        "target":"http://localhost:8080",
+        "sec": false,
+        "logLevel": "debug"
+    },
+    "/Educaciones/*":{
+        "target":"http://localhost:8080",
+        "sec": false,
+        "logLevel": "debug"
+    },
+    "/experiencias/*":{
+        "target":"http://localhost:8080",
+        "sec": false,
+        "logLevel": "debug"
+    },
+    "/proyectos/*":{
+        "target":"http://localhost:8080",
+        "sec": false,
+        "logLevel": "debug"
     }
 }

@@ -14,13 +14,8 @@ export class PiedepaginaComponent {
   ngOnInit(): void {
 
     this.datosPorfolio.obtenerdatos().subscribe(data=>{ 
-      console.log(data);
       this.miPorfolio=data.footer;
     });
 
   }
-  onClick() {
-    alert('estas seguro que quieres hacer cambios');
-  }
-
 }

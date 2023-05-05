@@ -1,19 +1,156 @@
 <div class="row">
     <div class="col-11">
-        <h2>{{miPorfolio.titulo}}</h2>
+        <h2>Experiencia</h2>
     </div>
     <div class="col-1">
-        <h1 class="fotoLapizGeneral" (click)="onClick()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-          </svg>
+        <h1 class="fotoLapizGeneral">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+            </svg>
         </h1>
     </div>
 
-</div> 
+</div>
 
-<div class="padding" style="border-top: 5px solid rgb(133, 133, 133);"> 
+<div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
-    <app-experiencia-uni *ngFor="let expe of experi" [experiencia]= "expe" style="margin-bottom: 50px;" ></app-experiencia-uni>    
-    
+    <app-experiencia-uni *ngFor="let expe of miPorfolio" [experiencia]="expe"(editar)="mostrarIdParaEditar($event)"
+    (eliminar)="mostrarIdParaEliminar($event)"
+        style="margin-bottom: 50px;"></app-experiencia-uni>
+
+</div>
+
+<!-- Agregar -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Agregar Experiencia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="color: black;">
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo"
+                        [(ngModel)]="nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Institucion</label>
+                    <input type="text" class="form-control" id="Institucion"
+                        [(ngModel)]="puesto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Imagen</label>
+                    <input type="text" class="form-control" id="img"
+                        [(ngModel)]="img">
+                </div>
+
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Fecha de inicio</label>
+                        <input type="date" class="form-control" id="inicio"
+                            [(ngModel)]="inicio">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Fecha de finalización</label>
+                        <input type="date" class="form-control" id="fin"
+                            [(ngModel)]="fin">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Informacion</label>
+                    <input type="text" class="form-control" id="info"
+                        [(ngModel)]="info">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)='agregar()'>Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Editar -->
+<div class="modal fade" id="exampleModalE" tabindex="-1" aria-labelledby="exampleModalLabelE" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabelE" style="color: black;">Editar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body" style="color: black;">
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Titulo</label>
+                <input type="text" class="form-control" id="titulo" 
+                    [(ngModel)]="nombre">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Puesto</label>
+                <input type="text" class="form-control" id="puesto"
+                    [(ngModel)]="puesto">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Imagen</label>
+                <input type="text" class="form-control" id="img"
+                    [(ngModel)]="img">
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-6">
+                    <label for="formGroupExampleInput" class="form-label">Fecha de inicio</label>
+                    <input type="date" class="form-control" id="inicio"
+                        [(ngModel)]="inicio">
+                </div>
+                <div class="col-6">
+                    <label for="formGroupExampleInput" class="form-label">Fecha de finalización</label>
+                    <input type="date" class="form-control" id="fin"
+                        [(ngModel)]="fin">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Informacion</label>
+                <input type="text" class="form-control" id="info"
+                    [(ngModel)]="info">
+            </div>
+        </div>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="editar()">Guardar
+            cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Eliminar -->
+<div class="modal fade" id="exampleModaleliminar" tabindex="-1" aria-labelledby="exampleModaleliminarLabel"
+  aria-hidden="true" style="color: black;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModaleliminarLabel">¿Estas seguro que queres eliminar esta Experiencia?
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary" (click)="eliminar()" >Eliminar</button>
+      </div>
+    </div>
+  </div>
 </div>

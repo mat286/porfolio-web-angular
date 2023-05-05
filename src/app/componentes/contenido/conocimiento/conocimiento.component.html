@@ -1,11 +1,12 @@
 <div class="row">
   <div class="col-11">
-    <h2>{{miPorfolio.titulo}}</h2>
+    <h2>Conocimiento</h2>
   </div>
   <div class="col-1">
     <h1 class="fotoLapizGeneral">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-        class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16" (click)="onClick()">
+        class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
         <path
           d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
       </svg>
@@ -17,117 +18,168 @@
 
   <div class="row conocimiento-filtro">
 
-    <div class="col-5">
+    <div class="col-5 container-fluid">
+      <div class="form-check form-switch" style="margin-bottom: 20px;">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+          [(ngModel)]="lenguajeProgrmacion" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked" style="color: rgb(255, 255, 255);">Lenguaje de
+          Programacion</label>
+      </div>
 
-      <div class="container-fluid">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+          [(ngModel)]="habilidadesBlandas">
+        <label class="form-check-label" for="flexSwitchCheckDefault" style="color: rgb(255, 255, 255);">Habilidades
+          Blandas</label>
+      </div>
+    </div>
+    <div class="col-4 container-fluid">
 
-        <div class="form-check form-switch" style="margin-bottom: 20px;">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-            [(ngModel)]="lenguajeProgrmacion" checked>
-          <label class="form-check-label" for="flexSwitchCheckChecked" style="color: rgb(255, 255, 255);">Lenguaje de
-            Programacion</label>
-        </div>
+      <div class="form-check form-switch" style="margin-bottom: 20px;">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
+          [(ngModel)]="herramientas" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked2"
+          style="color: rgb(255, 255, 255);">Herramientas</label>
+      </div>
 
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-            [(ngModel)]="habilidadesBlandas">
-          <label class="form-check-label" for="flexSwitchCheckDefault" style="color: rgb(255, 255, 255);">Habilidades
-            Blandas</label>
-        </div>
-
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+          [(ngModel)]="framework" checked>
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          style="color: rgb(255, 255, 255);">Framework</label>
       </div>
 
     </div>
-    <div class="col-4">
+    <div class="col-3 container-fluid">
 
-
-      <div class="container-fluid">
-
-        <div class="form-check form-switch" style="margin-bottom: 20px;">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
-            [(ngModel)]="herramientas" checked>
-          <label class="form-check-label" for="flexSwitchCheckChecked2"
-            style="color: rgb(255, 255, 255);">Herramientas</label>
-        </div>
-
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-            [(ngModel)]="framework" checked>
-          <label class="form-check-label" for="flexSwitchCheckDefault"
-            style="color: rgb(255, 255, 255);">Framework</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-3">
-      <div class="container-fluid">
-
-        <div class="form-check form-switch" style="margin-bottom: 20px;">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
-            [(ngModel)]="Basico" checked>
-          <label class="form-check-label" for="flexSwitchCheckChecked2" style="color: rgb(255, 255, 255);">Nivel
-            bajo</label>
-        </div>
-
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-            [(ngModel)]="Avanzado" checked>
-          <label class="form-check-label" for="flexSwitchCheckDefault" style="color: rgb(255, 255, 255);">Nivel
-            alto</label>
-        </div>
-
+      <div class="form-check form-switch" style="margin-bottom: 20px;">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2" [(ngModel)]="Basico"
+          checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked2" style="color: rgb(255, 255, 255);">Nivel
+          bajo</label>
       </div>
 
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [(ngModel)]="Avanzado"
+          checked>
+        <label class="form-check-label" for="flexSwitchCheckDefault" style="color: rgb(255, 255, 255);">Nivel
+          alto</label>
+      </div>
     </div>
-
-
-
   </div>
-
-
-
-  <app-cono-uni *ngFor="let conocimientos of filtro()" [conocimientos]="conocimientos"></app-cono-uni>
+  <app-cono-uni *ngFor="let conocimientos of filtro()" [conocimientos]="conocimientos" (editar)="mostrarIdParaEditar($event)"
+    (eliminar)="mostrarIdParaEliminar($event)"></app-cono-uni>
 
 </div>
 
-<div class="alerta" *ngIf="mensajeVer">
-  <div class="mensaje">
-    <div class="row g-3 align-items-center">
-      <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">Titulo</label>
+<!-- Agregar -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Agregar Conocimiento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="col-auto">
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{miPorfolio.CV.img}}">
+      <div class="modal-body" style="color: black;">
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="img" [(ngModel)]="nombre">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Imagen</label>
+          <input type="text" class="form-control" id="img"[(ngModel)]="img">
+        </div>
+
+        <div class="mb-3">
+          <label for="customRange3" class="form-label">Porcentaje {{porcentaje}}% </label>
+          <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3" id="porcentaje"
+          [(ngModel)]="porcentaje">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Tipo</label>
+          <select class="form-select" id="tipo"  [(ngModel)]="tipo">
+            <option value="lenguajeProgrmacion">Lenguaje de Programacion</option>
+            <option value="herramienta">Herramientas</option>
+            <option value="framework">Framework</option>
+            <option value="habilidadesBlanda">Habilidades Blandas</option>
+          </select>
+        </div>
+
+
+
+
       </div>
-    </div>
-    <div class="row g-3 align-items-center">
-      <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">Imagen</label>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)='agregar()'>Agregar</button>
       </div>
-      <div class="col-auto">
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{miPorfolio.CV.href}}">
-      </div>
-    </div>
-    <div class="row g-3 align-items-center">
-      <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">Tipo</label>
-      </div>
-      <div class="col-auto">
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{miPorfolio.CV.href}}">
-      </div>
-    </div>
-    <div class="row g-3 align-items-center">
-      <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">Porcentaje</label>
-      </div>
-      <div class="col-auto">
-        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="{{miPorfolio.CV.href}}">
-      </div>
-    </div>
-    <div class="botones">
-      <a class="boton" (click)="noEnviarMensaje()">Guardar cambios</a>
-      <a class="botonNo" (click)="noEnviarMensaje()">No</a>
     </div>
   </div>
+</div>
 
+<!-- Editar -->
+<div class="modal fade" id="exampleModalE" tabindex="-1" aria-labelledby="exampleModalLabelE" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabelE" style="color: black;">Editar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body" style="color: black;">
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="img"[(ngModel)]="nombre">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Imagen</label>
+          <input type="text" class="form-control" id="img" [(ngModel)]="img">
+        </div>
+
+        <div class="mb-3">
+          <label for="customRange3" class="form-label">Porcentaje {{porcentaje}}% </label>
+          <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3" id="porcentaje"[(ngModel)]="porcentaje">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Tipo</label>
+          <select class="form-select" id="tipo" [(ngModel)]="tipo">
+            <option value="lenguajeProgrmacion">Lenguaje de Programacion</option>
+            <option value="herramienta">Herramientas</option>
+            <option value="framework">Framework</option>
+            <option value="habilidadesBlanda">Habilidades Blandas</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)="editar()">Guardar
+          cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Eliminar -->
+<div class="modal fade" id="exampleModaleliminar" tabindex="-1" aria-labelledby="exampleModaleliminarLabel"
+  aria-hidden="true" style="color: black;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModaleliminarLabel">¿Estas seguro que queres eliminar este Conocimiento?
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary" (click)="eliminar()" >Eliminar</button>
+      </div>
+    </div>
+  </div>
 </div>

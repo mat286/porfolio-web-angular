@@ -19,7 +19,6 @@ export class EncabezadoComponent {
   ngOnInit(): void {
 
     this.datosPorfolio.obtenerdatos().subscribe(data=>{ 
-      console.log(data);
       this.miPorfolio=data;
     });
 

@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 @Component({
@@ -8,27 +7,35 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./cono-uni.component.css']
 })
 export class ConoUniComponent {
-  @Input() conocimientos:any;
 
-  miPorfolio:any;
-  constructor(private datosPorfolio: PorfolioService) { }
+  @Output() eliminar = new EventEmitter();
+  @Output() editar = new EventEmitter();
+  @Input() conocimientos: any;
 
-  ngOnInit(): void { 
+  contenido: any;
 
-    this.datosPorfolio.obtenerdatos().subscribe(data=>{ 
-      console.log(data);
-      this.miPorfolio=data.contenido.conocimiento;
-    });
+  varibleId:any;
+
+  nombre: string = "";
+  img: String = "";
+  tipo: String = "";
+  porcentaje: number = 0;
+
+  constructor() { }
+
+  ngOnInit(): void {
+
 
   }
-
-  lenguajeProgrmacion():void{
-
-    
+  
+  mostrarIdEliminar(id:string){
+    this.varibleId = id;
+    this.eliminar.emit(this.varibleId);
   }
-  herramientas(): void{
-    alert("herramientas");
-    console.log("sssssssssssssssssssssssssssss");
+
+  mostrarIdEditar(id:string){
+    this.varibleId = id;
+    this.editar.emit(this.varibleId);
   }
 
 }

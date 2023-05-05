@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
@@ -29,7 +29,6 @@ export class ContactoComponent {
   ngOnInit(): void {
 
     this.datosPorfolio.obtenerdatos().subscribe(data => {
-      console.log(data);
       this.miPorfolio = data.contenido.Contacto;
     });
 
@@ -69,8 +68,6 @@ export class ContactoComponent {
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 
     }
-
-
   }
 
   noEnviarMensaje(){
@@ -79,12 +76,6 @@ export class ContactoComponent {
 
   getmensajeVer(){
     return this.mensajeVer
-  }
-
-
-
-  onClick() {
-    alert('estas seguro que quieres hacer cambios');
   }
 
   getmensaje(){

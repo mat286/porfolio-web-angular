@@ -3,9 +3,10 @@
         <h2>Educacion</h2>
     </div>
     <div class="col-1">
-        <h1 class="fotoLapizGeneral" (click)="onClick()">
+        <h1 class="fotoLapizGeneral">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                class="bi bi-plus-circle-fill" viewBox="0 0 16 16" viewBox="0 0 16 16" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
                 <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
             </svg>
@@ -15,23 +16,26 @@
 </div>
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
-    <div class="row educacion" *ngFor="let educacions of miPorfolio.educacion">
+    <div class="row educacion" *ngFor="let educacions of miPorfolio">
         <div class="col-4" style="display: flex; justify-content: center; text-align: center;">
-            <div><img [src]="educacions.img" class="proyectoImg" alt="imagen educacion"></div>
+            <div style="justify-content: center; text-align: center;">
+                <img [src]="educacions.img" class="proyectoImg" alt="imagen educacion">
+            </div>
         </div>
         <div class="col-8">
             <h2>{{educacions.titulo}}</h2>
             <div class="curso">
                 <h3>{{educacions.tipo}}</h3>
                 <p class="institucion">{{educacions.institucion}}</p>
-                <p class="fecha">{{educacions.fechaInicio}} - {{educacions.fechaFin}}</p>
+                <p class="fecha">{{educacions.inicio}} - {{educacions.fin}}</p>
             </div>
         </div>
         <p class="descripcion">{{educacions.info}}</p>
 
         <div class="iconos-proyecto">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16">
+                class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
+                data-bs-target="#exampleModalE" (click)="mostrarId(educacions.id)">
                 <path
                     d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                 <path fill-rule="evenodd"
@@ -39,82 +43,154 @@
             </svg>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                class="bi bi-trash3 cursorIco" viewBox="0 0 16 16">
+                class="bi bi-trash3 cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
+                data-bs-target="#exampleModaleliminar" (click)="mostrarId(educacions.id)">
                 <path
                     d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
             </svg>
         </div>
+
     </div>
 </div>
 
-<div *ngIf="mensajeVer">
-    <div class="alerta">
-        <div class="mensaje">
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Nombre del titulo</label>
+<!-- Agregar -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Agregar Educacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="color: black;">
+
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Institucion</label>
+                        <input type="text" class="form-control" id="Institucion" [(ngModel)]="institucion">
+                    </div>
                 </div>
-                <div class="col-auto">
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="{{miPorfolio.educacion.titulo}}">
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Imagen</label>
+                    <input type="text" class="form-control" id="img" [(ngModel)]="img">
+                </div>
+
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Fecha de inicio</label>
+                        <input type="date" class="form-control" id="inicio" [(ngModel)]="inicio">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Fecha de finalización</label>
+                        <input type="date" class="form-control" id="fin" [(ngModel)]="fin">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Tipo</label>
+                    <select class="form-select" id="tipo" [(ngModel)]="tipo">
+                        <option value="Universitario">Universitario</option>
+                        <option value="Secundario">Secundario</option>
+                        <option value="Terciario">Terciario</option>
+                        <option value="Curso">Curso</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Informacion</label>
+                    <input type="text" class="form-control" id="info" [(ngModel)]="info">
                 </div>
             </div>
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Nombre de la institucion</label>
-                </div>
-                <div class="col-auto">
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="{{miPorfolio.educacion.institucion}}">
-                </div>
-            </div>
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Imagen</label>
-                </div>
-                <div class="col-auto">
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="{{miPorfolio.educacion.institucion}}">
-                </div>
-            </div>
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Tipo</label>
-                </div>
-                <div class="col-auto">
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="{{miPorfolio.educacion.institucion}}">
-                </div>
-            </div>
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">fecha inicio</label>
-                </div>
-                <div class="col-auto">
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="{{miPorfolio.educacion.institucion}}">
-                </div>
-            </div>
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Fecha fin</label>
-                </div>
-                <div class="col-auto">
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="{{miPorfolio.educacion.institucion}}">
-                </div>
-            </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                    style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Informacion</label>
-            </div>
-            <div class="botones">
-                <a class="boton" (click)="noEnviarMensaje()">Guardar cambios</a>
-                <a class="botonNo" (click)="noEnviarMensaje()">No</a>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)='agregar()'>Agregar</button>
             </div>
         </div>
-
     </div>
+</div>
 
+<!-- Editar -->
+<div class="modal fade" id="exampleModalE" tabindex="-1" aria-labelledby="exampleModalLabelE" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelE" style="color: black;">Editar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" style="color: black;">
+
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Institucion</label>
+                        <input type="text" class="form-control" id="Institucion" [(ngModel)]="institucion">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Imagen</label>
+                    <input type="text" class="form-control" id="img" [(ngModel)]="img">
+                </div>
+
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Fecha de inicio</label>
+                        <input type="date" class="form-control" id="inicio" [(ngModel)]="inicio">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Fecha de finalización</label>
+                        <input type="date" class="form-control" id="fin" [(ngModel)]="fin">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Tipo</label>
+                    <select class="form-select" id="tipo" [(ngModel)]="tipo">
+                        <option value="Universitario">Universitario</option>
+                        <option value="Secundario">Secundario</option>
+                        <option value="Terciario">Terciario</option>
+                        <option value="Curso">Curso</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Informacion</label>
+                    <input type="text" class="form-control" id="info" [(ngModel)]="info">
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="editar()">Guardar
+                    cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Eliminar -->
+<div class="modal fade" id="exampleModaleliminar" tabindex="-1" aria-labelledby="exampleModaleliminarLabel"
+    aria-hidden="true" style="color: black;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModaleliminarLabel">¿Estas seguro que queres eliminar esta Educacion?
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" (click)='eliminar()'>Eliminar</button>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,11 +1,12 @@
 <div class="row">
     <div class="col-11">
-        <h2>{{miPorfolio.titulo}}</h2>
+        <h2>Proyectos</h2>
     </div>
     <div class="col-1">
-        <h1 class="fotoLapizGeneral" (click)="onClick()">
+        <h1 class="fotoLapizGeneral">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16">
+                class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
                 <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
             </svg>
@@ -16,14 +17,15 @@
 
 
 
-        <div class="row proyecto" *ngFor="let proye of miPorfolio.proyecto">
+        <div class="row proyecto" *ngFor="let proye of miPorfolio">
             <div class="col-4">
                 <img [src]="proye.img" class="proyectoImg" alt="Imagen del proyecto">
             </div>
 
             <div class="col-8 informacion">
-                <h3>{{proye.nombreProyecto}}</h3>
+                <h3>{{proye.nombre}}</h3>
                 <p class="descripcion">{{proye.info}}</p>
+                <p class="descripcion">{{proye.fecha}}</p>
                 <p class="tecnologias">Tecnologías utilizadas:</p>
                 <div class="row">
                     <div class="col-8" style="padding-left: 0px;">
@@ -40,91 +42,137 @@
             </div>
 
             <div class="iconos-proyecto">
-                <svg xmlns="http://www.w3.org/2000/svg" (click)="onClick()" width="30" height="30" fill="currentColor"
-                    class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
+                    data-bs-target="#exampleModalE" (click)="mostrarId(proye.id)">
                     <path
                         d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                     <path fill-rule="evenodd"
                         d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                 </svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" (click)="onClick()" width="30" height="30" fill="currentColor" class="bi bi-trash3 cursorIco"
-                    viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-trash3 cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
+                    data-bs-target="#exampleModaleliminar" (click)="mostrarId(proye.id)">
                     <path
                         d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
                 </svg>
             </div>
-
-
         </div>
 
 
-        <!-- <div class="proyecto" *ngFor="let proye of miPorfolio.proyecto">
-            <img [src]="proye.img" alt="Imagen del proyecto">
-            <div class="informacion">
-                <h3>{{proye.nombreProyecto}}</h3>
-                <p class="descripcion">{{proye.info}}</p>
-                <p class="tecnologias">Tecnologías utilizadas:</p>
-                <div>
-                    <ul *ngFor="let herra of proye.herramientas">
-                        <li>{{herra}}</li>
-                    </ul>
-                </div>
-                <a href="{{proye.url}}" class="boton">Ver proyecto</a>
-            </div>
-        </div> -->
-
-        <!-- <div class="row" *ngFor="let proye of miPorfolio.proyecto">
-
-            <div class="col-8">
-                <h3>{{proye.nombreProyecto}}</h3>
-                <h5 style="text-align: center;">{{proye.puesto}}</h5>
-
-                <p>{{proye.info}}</p>
-                <h5 style="text-align: center;">Herramientas utilizadas</h5>
-                <ul *ngFor="let herra of proye.herramientas">
-                    <li>{{herra}}</li>
-                </ul>
-
-                <div>
-
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseWidthExample" aria-expanded="false"
-                        aria-controls="collapseWidthExample">Visitar Pagina Web
-                    </button>
-                    <div style="min-height: 120px;">
-                        <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                            <div class="card card-body" style="width: 100%;color: black;">
-                                <a href="{{proye.url}}">{{proye.url}}</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-3">
-                <h4 class="center">{{proye.fecha}}</h4>
-                <img [src]="proye.img" alt="" style="width: 100%;">
-            </div>
-            <div class="col-1">
-                <svg xmlns="http://www.w3.org/2000/svg" (click)="onClick()" width="30" height="30" fill="currentColor"
-                    class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    <path
-                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                    <path fill-rule="evenodd"
-                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                </svg>
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash3"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
-                </svg>
-
-            </div>
-            <hr>
-
-        </div> -->
     </div>
 
+</div>
+
+
+
+<!-- Agregar -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Agregar Proyecto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="color: black;">
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Url</label>
+                    <input type="text" class="form-control" id="Institucion" [(ngModel)]="url">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Imagen</label>
+                    <input type="text" class="form-control" id="img" [(ngModel)]="img">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="fecha" [(ngModel)]="fecha">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Informacion</label>
+                    <input type="text" class="form-control" id="info" [(ngModel)]="info">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)='agregar()'>Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Editar -->
+<div class="modal fade" id="exampleModalE" tabindex="-1" aria-labelledby="exampleModalLabelE" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelE" style="color: black;">Editar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" style="color: black;">
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Url</label>
+                    <input type="text" class="form-control" id="Institucion" [(ngModel)]="url">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Imagen</label>
+                    <input type="text" class="form-control" id="img" [(ngModel)]="img">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="fecha" [(ngModel)]="fecha">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Informacion</label>
+                    <input type="text" class="form-control" id="info" [(ngModel)]="info">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="editar()">Guardar
+                    cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Eliminar -->
+<div class="modal fade" id="exampleModaleliminar" tabindex="-1" aria-labelledby="exampleModaleliminarLabel"
+    aria-hidden="true" style="color: black;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModaleliminarLabel">¿Estas seguro que queres eliminar este
+                    Proyecto?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" (click)='eliminar()'>Eliminar</button>
+            </div>
+        </div>
+    </div>
 </div>

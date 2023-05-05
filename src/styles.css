@@ -15,7 +15,7 @@ body {
     color: #fff;
     line-height: 1.5;
 }
- 
+
 /*-*/
 header {
     height: 80px;
@@ -142,16 +142,7 @@ input {
     right: 0;
 }
 
-/* .fotoLapiz:hover,
-.fotoLapizP:hover,
-.fotoLapizGeneral:hover {
-    width: 55px;
-    height: 55px;
-} */
-
-
 .deMi {
-    /*     display: flex; */
     border-top: 5px solid rgb(133, 133, 133);
     padding-bottom: 30px;
     padding-top: 30px;
@@ -463,8 +454,7 @@ footer {
 
 .proyectoImg {
     width: 100%;
-    height: auto;
-
+    height: 95%;
 }
 
 .proyecto h3 {
@@ -595,6 +585,3 @@ footer {
 .noMostrar {
     display: none;
 }
-
-
-

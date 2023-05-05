@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-acerca',
@@ -8,62 +7,35 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./acerca.component.css']
 })
 export class AcercaComponent {
-  miPorfolio:any;
-  mensajeVer:boolean=false;
+  miPorfolio: any;
+  img: String = "";
+  urlCv: String = "";
+  info: String = "";
 
-/*   img:String="";
-  urlCv:String="";
-  info:String=""; */
-  form: any;
-
-  constructor(private datosPorfolio: PorfolioService, private formBuilder: FormBuilder) { 
-/*     this.form = this.formBuilder.group({
-      img: ['',],
-      urlCv: ['', ],
-      info: ['', ]
-    }); */
+  constructor(private datosPorfolio: PorfolioService) {
   }
-
-/*   ngOnInit(): void {
-
-    this.datosPorfolio.obtenerdatos().subscribe(data=>{ 
-      console.log(data);
-      this.miPorfolio=data.contenido.Acerca;
-    });
-
-  } */
   ngOnInit(): void {
     this.cargaData();
   }
 
-  public cargaData(){
-    this.datosPorfolio.getDatos("sobremi/traer").subscribe(respuesta=>{
+  public cargaData() {
+    this.datosPorfolio.getDatos("sobremi/traer").subscribe(respuesta => {
       this.miPorfolio = respuesta[0];
     });
   }
+  enviarMensaje(id: String) {
 
-  noEnviarMensaje(){
-    this.mensajeVer = false;
-  }
-  EnviarMensaje(){
-    alert();
-    
-  }
+    if (this.miPorfolio.id = id) {
 
-  getmensajeVer(){
-    return this.mensajeVer
-  }
-  
+      if (this.img != "") this.miPorfolio.img = this.img;
+      if (this.urlCv != "") this.miPorfolio.urlCv = this.urlCv;
+      if (this.info != "") this.miPorfolio.info = this.info;
 
-  onClick() {
-    this.mensajeVer = true;
-  }
+      this.datosPorfolio.editarDatos("/sobremi/editar/" + this.miPorfolio.id, this.miPorfolio).subscribe(respuesta => {
+      });
 
-  onEnviar(event: Event) {
-    /* // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault;
-
-    alert(this.form.urlCv); */
+    }
+    window.location.reload();
 
   }
 

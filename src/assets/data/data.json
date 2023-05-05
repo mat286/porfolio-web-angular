@@ -26,7 +26,7 @@
     },
     "contenido": {
         "Acerca": {
-            "presentacion": "¡Hola! Mi nombre es Facundo Mateo Rivera, nací en Argentina el 13 de Febrero de 2002 y actualmente trabajo en el Ministerio de Economia en departamento de presupuesto en el area de Coordinación de Sistemas Operativos, donde aplico mis conocimientos en programación y diseño para mejorar el funcionamiento de la oficina. /n En mi tiempo libre, me gusta estar al día con las tecnologías emergentes como criptomonedas, blockchain y web3, y seguir aprendiendo nuevos lenguajes de programación. Actualmente, estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN) y, a la vez, estoy tomando cursos y aprendiendo por mi cuenta para ampliar mis habilidades en el campo de la programación.Creo que el aprendizaje continuo es fundamental para el crecimiento profesional y personal. Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y mejorar mis habilidades. Me encanta estar en constante evolución y desarrollar soluciones innovadoras para enfrentar los retos del mundo actual.Gracias por conocer un poco más sobre mí. ¡Espero poder compartir mis habilidades y conocimientos con aquellos que lo necesiten!",
+            "presentacion": "¡Hola! Soy Facundo Mateo Rivera, un apasionado de la programación y el diseño, actualmente trabajando en el Ministerio de Economía en el área de Coordinación de Sistemas Operativos del departamento de presupuesto. Nací en Argentina el 13 de Febrero de 2002 y estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN). Fuera del trabajo y los estudios, dedico mi tiempo libre a estar al día con las tecnologías emergentes como criptomonedas, blockchain y web3, siempre en busca de aprender nuevos lenguajes de programación y ampliar mis habilidades en el campo de la programación. Para mí, el aprendizaje continuo es fundamental para el crecimiento profesional y personal. Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y mejorar mis habilidades, lo que me ha permitido desarrollar soluciones innovadoras para enfrentar los retos del mundo actual. Me encantaría compartir mis habilidades y conocimientos contigo, y trabajar juntos para encontrar soluciones creativas a cualquier problema que puedas tener. ¡Gracias por conocer un poco más sobre mí!",
             "CV": {
                 "href": "https://www.canva.com/design/DAEUkK7gW1Y/kUAPFA5k9EADCkHgpMkWeg/view?utm_content=DAEUkK7gW1Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
                 "img": "./assets/fotos/Black Professional Resume (3).jpg"
@@ -39,8 +39,8 @@
                     "institucion":"Universidad Tecnológica Nacional",
                     "img": "./assets/fotos/utn.jpg",
                     "tipo": "Universitario",
-                    "fechaInicio": "01/03/2023",
-                    "fechaFin": "la Actualidad",
+                    "inicio": "01/03/2023",
+                    "fin": "la Actualidad",
                     "info": "Actualmente estoy estudiando Ingeniería Electrónica en la Universidad Tecnológica Nacional (UTN). La carrera proporciona una base sólida en los fundamentos de la electrónica, incluyendo circuitos eléctricos, sistemas digitales, análisis de señales y sistemas, comunicaciones y electrónica analógica y digital. Además, se cubren temas más avanzados, como la instrumentación electrónica, el procesamiento de señales, la ingeniería de control, la microelectrónica y la robótica. Este conocimiento puede ser útil en una variedad de áreas, como la electrónica de consumo, la industria de la tecnología y la investigación y desarrollo de productos electrónicos."
                 },
                 {
