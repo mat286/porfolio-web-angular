@@ -83,7 +83,9 @@ export class ConocimientoComponent {
     this.datosPorfolio.crearDatos("Conocimientos/crear", this.objeto).subscribe(respuesta => {
     });    
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
     
 
   }
@@ -95,7 +97,9 @@ export class ConocimientoComponent {
         });
       }
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
   }
   editar() {
     for (let i = 0; i < this.miPorfolio.length; i++) {
@@ -111,7 +115,9 @@ export class ConocimientoComponent {
         });
       }
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
   }
 
 }

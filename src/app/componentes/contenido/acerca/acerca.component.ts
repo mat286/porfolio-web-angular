@@ -12,13 +12,14 @@ export class AcercaComponent {
   mostrar:boolean=false;
   admin:boolean=false;
 
-  mostrarSpinner = false;
+  Loading:boolean;
   
   img: String = "";
   urlCv: String = "";
   info: String = "";
 
   constructor(private datosPorfolio: PorfolioService) {
+    this.Loading=false;
   }
   ngOnInit(): void {
     this.cargaData();
@@ -31,8 +32,10 @@ export class AcercaComponent {
     });
   }
   enviarMensaje(id: String) {
+    console.log(this.Loading)
+    this.Loading = true;
+    console.log(this.Loading);
     if (this.miPorfolio.id == id && this.admin == true) {
-      this.mostrarSpinner=true;
 
       if (this.img != "") this.miPorfolio.img = this.img;
       if (this.urlCv != "") this.miPorfolio.urlCv = this.urlCv;
@@ -42,8 +45,11 @@ export class AcercaComponent {
       });
 
     }
-    this.mostrarSpinner=false;
-    window.location.reload();
+    setTimeout(function () {
+      
+      window.location.reload();
+    }, 4000);
+    this.Loading=false;
 
   }
 
@@ -52,5 +58,10 @@ export class AcercaComponent {
     this.mostrar = pepe.vista;
     this.admin = pepe.edicion;
   }
+
+/*   mostrarto(){
+    let pepe=this.Loading
+    return pepe;
+  } */
 
 }

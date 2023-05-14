@@ -25,16 +25,12 @@
     </div>
 </div>
 
-<!-- <div class="row">
-    <div class="col-8">
-        <P>{{miPorfolio.info}}</P>
+<!-- Spinners -->
+<div class="text-center alerta" *ngIf="Loading">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
     </div>
-    <div class="col-4">
-        <h2>Curriculum Vitae</h2>
-        <a href="{{miPorfolio.urlCv}}"><img [src]="miPorfolio.img" class="cv" alt=""></a>
-    </div>
-
-</div> -->
+</div>
 
 <!-- Edicion -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

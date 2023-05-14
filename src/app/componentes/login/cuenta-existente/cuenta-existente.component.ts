@@ -1,8 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input  } from '@angular/core';
 import { Validators } from '@angular/forms';
-import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
-import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { CookieService } from 'ngx-cookie-service';
 

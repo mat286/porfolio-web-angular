@@ -41,7 +41,6 @@ export class ExperienciaComponent {
   public cargaData() {
     this.datosPorfolio.getDatos("experiencias/traer").subscribe(respuesta => {
       this.miPorfolio = respuesta;
-      console.log("user");
     });
   }
 
@@ -57,7 +56,9 @@ export class ExperienciaComponent {
     this.datosPorfolio.crearDatos("experiencias/crear", this.objeto).subscribe(respuesta => {
     });
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
   }
 
   mostrarIdParaEliminar(id: Number) {
@@ -79,7 +80,9 @@ export class ExperienciaComponent {
         });
       }
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
   }
   editar() {
     for (let i = 0; i < this.miPorfolio.length; i++) {
@@ -97,7 +100,9 @@ export class ExperienciaComponent {
         });
       }
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
   }
 
 }

@@ -18,7 +18,7 @@ export class PorfolioService {
 
   private urlBa=API_URL;
 
-  user = { "vista": false, "edicion": false };
+  user = { "vista": true, "edicion": true };
 
   constructor(private http: HttpClient, private cookieService: CookieService) {
     this.cookieValue = this.cookieService.get('miCookie');
@@ -74,7 +74,6 @@ export class PorfolioService {
       this.cookieService.set('users', JSON.stringify(this.user));
       console.log(this.cookieValue);
     } else if(user.admin==false){
-      console.log("acaaaaaa 2 aaaaaaaaaa");
       this.user.vista=true;
       this.user.edicion=false;
     }

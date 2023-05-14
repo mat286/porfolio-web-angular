@@ -82,7 +82,9 @@ export class ProyectoComponent {
       }
     }
 
-    /*     window.location.reload(); */
+    setTimeout(function () {
+      window.location.reload();
+    }, 6000);
   }
 
   borrarHerra(id: string) {
@@ -93,9 +95,6 @@ export class ProyectoComponent {
         console.log("oka");
       });
     }
-    setTimeout(function () {
-      window.location.reload();
-    }, 5000);
   }
 
   mostrarId(id: Number) {
@@ -107,12 +106,15 @@ export class ProyectoComponent {
   agregar() {
     if (this.admin == true) {
       this.objeto = { "nombre": this.nombre, "url": this.url, "img": this.img, "fecha": this.fecha, "info": this.info }
-      this.datosPorfolio.crearDatos("/proyectos/crear", this.objeto).subscribe(response => {
+      this.datosPorfolio.crearDatos("proyectos/crear", this.objeto).subscribe(response => {
         this.idUltimo = response.id;
         this.enviarHerraBack(response.id);
       });
 
     }
+    setTimeout(function () {
+      window.location.reload();
+    }, 10000);
 
   }
 
@@ -120,13 +122,10 @@ export class ProyectoComponent {
     for (let i = 0; i < this.listaHerraAgregar.length; i++) {
       const element = this.listaHerraAgregar[i];
       this.objetoHe = { "nombre": element, "idProyecto": id }
-      this.datosPorfolio.crearDatos("/herramientas/crear", this.objetoHe).subscribe(respuesta => {
+      this.datosPorfolio.crearDatos("herramientas/crear", this.objetoHe).subscribe(respuesta => {
         console.log("oka");
       });
     }
-    setTimeout(function () {
-      window.location.reload();
-    }, 8000);
   }
 
   editar() {
@@ -140,7 +139,7 @@ export class ProyectoComponent {
         if (this.fecha != "") element.fecha = this.fecha;
         if (this.info != "") element.info = this.info;
 
-        this.datosPorfolio.editarDatos("/proyectos/editar/" + this.varibleId, element).subscribe(respuesta => {
+        this.datosPorfolio.editarDatos("proyectos/editar/" + this.varibleId, element).subscribe(respuesta => {
           console.log("ok");
         });
       }
@@ -160,14 +159,16 @@ export class ProyectoComponent {
         const element = this.listaHerraAgregar[i];
         this.objetoHe = { "nombre": element, "idProyecto": this.varibleId.toString() }
         console.log("se agregara este: " + this.objetoHe.nombre)
-        this.datosPorfolio.crearDatos("/herramientas/crear", this.objetoHe).subscribe(respuesta => {
+        this.datosPorfolio.crearDatos("herramientas/crear", this.objetoHe).subscribe(respuesta => {
           console.log("oka");
         });
       }
     }
 
 
-    /* window.location.reload(); */
+    /* setTimeout(function () {
+      window.location.reload();
+    }, 10000); */
   }
 
   agregarHerra() {
@@ -178,24 +179,5 @@ export class ProyectoComponent {
   eliminarHerra() {
     this.listaHerraAgregar.pop();
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

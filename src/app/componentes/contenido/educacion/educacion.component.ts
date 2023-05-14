@@ -49,7 +49,9 @@ export class EducacionComponent {
     this.datosPorfolio.crearDatos("Educaciones/crear", this.objeto).subscribe(respuesta => {
     });
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
 
   }
 
@@ -61,7 +63,9 @@ export class EducacionComponent {
         });
       }
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
   }
 
   mostrarId(id: string) {
@@ -84,7 +88,9 @@ export class EducacionComponent {
         });
       }
     }
-    window.location.reload();
+    setTimeout(function () {
+      window.location.reload();
+    }, 4000);
   }
 }
 
