@@ -7,6 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class BarralateralComponent {
   isFixed = false;
+  isMenuOpen:any;
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event:Event) {
@@ -16,4 +17,9 @@ export class BarralateralComponent {
       this.isFixed = false;
     }
   }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+  
 }

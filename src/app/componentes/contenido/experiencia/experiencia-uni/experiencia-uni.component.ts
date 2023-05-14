@@ -10,16 +10,14 @@ export class ExperienciaUniComponent {
 
   @Output() eliminar = new EventEmitter();
   @Output() editar = new EventEmitter();
+  @Input() validador: boolean=false;
   varibleId:any;
 
   @Input() experiencia:any="";
 
   constructor() {  }
 
-  /* eliminar(id:Number){
-    console.log(id+"este es el id que tocasteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-    alert("tocaste el de id: "+id+" y se va a borrar ");
-  } */
+
   mostrarIdEliminar(id:string){
     this.varibleId = id;
     this.eliminar.emit(this.varibleId);

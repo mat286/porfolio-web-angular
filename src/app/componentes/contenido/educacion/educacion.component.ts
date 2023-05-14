@@ -8,7 +8,8 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class EducacionComponent {
   miPorfolio: any;
-  mensajeVer = false;
+  mostrar:boolean=false;
+  admin:boolean=false;
 
   varibleId: string = "";
 
@@ -26,6 +27,7 @@ export class EducacionComponent {
 
   ngOnInit(): void {
     this.cargaData();
+    this.mostrarBoton();
   }
 
   public cargaData() {
@@ -34,12 +36,19 @@ export class EducacionComponent {
     });
   }
 
-  agregar() {
-    this.objeto = { "titulo": this.titulo, "institucion": this.institucion, "img": this.img, "tipo": this.tipo, "inicio": this.inicio, "fin": this.fin, "info": this.info }
+  mostrarBoton(){
+    let pepe = this.datosPorfolio.validadors();
+    this.mostrar = pepe.vista;
+    this.admin = pepe.edicion;
+  }
 
+
+  agregar() {
+    if (this.admin==true) {
+      this.objeto = { "titulo": this.titulo, "institucion": this.institucion, "img": this.img, "tipo": this.tipo, "inicio": this.inicio, "fin": this.fin, "info": this.info }
     this.datosPorfolio.crearDatos("Educaciones/crear", this.objeto).subscribe(respuesta => {
     });
-
+    }
     window.location.reload();
 
   }
@@ -47,7 +56,7 @@ export class EducacionComponent {
   eliminar() {
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
-      if (element.id == this.varibleId) {
+      if (element.id == this.varibleId &&this.admin==true) {
         this.datosPorfolio.eliminarDatos("/Educaciones/borrar/" + this.varibleId).subscribe(respuesta => {
         });
       }
@@ -56,13 +65,12 @@ export class EducacionComponent {
   }
 
   mostrarId(id: string) {
-    console.log(id);
     this.varibleId = id;
   }
   editar() {
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
-      if (element.id == this.varibleId) {
+      if (element.id == this.varibleId && this.admin==true) {
 
         if (this.titulo != "") element.titulo = this.titulo;
         if (this.img != "") element.img = this.img;

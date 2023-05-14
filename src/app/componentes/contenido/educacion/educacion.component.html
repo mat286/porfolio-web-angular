@@ -4,7 +4,7 @@
     </div>
     <div class="col-1">
         <h1 class="fotoLapizGeneral">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+            <svg *ngIf="mostrar" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                 class="bi bi-plus-circle-fill" viewBox="0 0 16 16" viewBox="0 0 16 16" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
                 <path
@@ -17,12 +17,13 @@
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
     <div class="row educacion" *ngFor="let educacions of miPorfolio">
-        <div class="col-4" style="display: flex; justify-content: center; text-align: center;">
+
+        <div class="col-5" style="display: flex; justify-content: center; text-align: center;">
             <div style="justify-content: center; text-align: center;">
                 <img [src]="educacions.img" class="proyectoImg" alt="imagen educacion">
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-7">
             <h2>{{educacions.titulo}}</h2>
             <div class="curso">
                 <h3>{{educacions.tipo}}</h3>
@@ -32,7 +33,7 @@
         </div>
         <p class="descripcion">{{educacions.info}}</p>
 
-        <div class="iconos-proyecto">
+        <div *ngIf="mostrar" class="iconos-proyecto">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                 class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
                 data-bs-target="#exampleModalE" (click)="mostrarId(educacions.id)">

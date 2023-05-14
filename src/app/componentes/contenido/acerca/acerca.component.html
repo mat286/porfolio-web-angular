@@ -4,7 +4,7 @@
     </div>
     <div class="col-1">
         <h1 class="fotoLapizGeneral" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+            <svg *ngIf="mostrar" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                 class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16">
                 <path
                     d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
@@ -15,19 +15,27 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-12 deMi">
-        <div class="row">
-            <div class="col-8">
-                <P>{{miPorfolio.info}}</P>
-            </div>
-            <div class="col-4">
-                <h2>Curriculum Vitae</h2>
-                <a href="{{miPorfolio.urlCv}}"><img [src]="miPorfolio.img" class="cv" alt=""></a>
-            </div>
-        </div>
+<div class="row deMi">
+    <div class="col-12 col-md-8">
+        <p>{{miPorfolio.info}}</p>
+    </div>
+    <div class="col-12 col-md-4">
+        <h2 style="text-align: center;">Curriculum Vitae</h2>
+        <a href="{{miPorfolio.urlCv}}"><img [src]="miPorfolio.img" alt="" style="width: 100%;"></a>
     </div>
 </div>
+
+<!-- <div class="row">
+    <div class="col-8">
+        <P>{{miPorfolio.info}}</P>
+    </div>
+    <div class="col-4">
+        <h2>Curriculum Vitae</h2>
+        <a href="{{miPorfolio.urlCv}}"><img [src]="miPorfolio.img" class="cv" alt=""></a>
+    </div>
+
+</div> -->
+
 <!-- Edicion -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -40,20 +48,17 @@
 
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Imagen</label>
-                    <input type="text" class="form-control" id="img"
-                        [(ngModel)]="img">
+                    <input type="text" class="form-control" id="img" [(ngModel)]="img">
                 </div>
 
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Direccion</label>
-                    <input type="text" class="form-control" id="urlCv"
-                        [(ngModel)]="urlCv">
+                    <input type="text" class="form-control" id="urlCv" [(ngModel)]="urlCv">
                 </div>
 
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Informacion</label>
-                    <input type="text" class="form-control" id="info"
-                        [(ngModel)]="info">
+                    <input type="text" class="form-control" id="info" [(ngModel)]="info">
                 </div>
             </div>
             <div class="modal-footer">

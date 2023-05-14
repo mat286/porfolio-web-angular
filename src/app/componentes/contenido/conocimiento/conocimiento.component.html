@@ -4,7 +4,7 @@
   </div>
   <div class="col-1">
     <h1 class="fotoLapizGeneral">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+      <svg *ngIf="mostrar" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
         class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
         data-bs-target="#exampleModal">
         <path
@@ -67,8 +67,8 @@
       </div>
     </div>
   </div>
-  <app-cono-uni *ngFor="let conocimientos of filtro()" [conocimientos]="conocimientos" (editar)="mostrarIdParaEditar($event)"
-    (eliminar)="mostrarIdParaEliminar($event)"></app-cono-uni>
+  <app-cono-uni *ngFor="let conocimientos of filtro()" [conocimientos]="conocimientos" [validador]="mostrar"
+    (editar)="mostrarIdParaEditar($event)" (eliminar)="mostrarIdParaEliminar($event)"></app-cono-uni>
 
 </div>
 
@@ -89,18 +89,18 @@
 
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label">Imagen</label>
-          <input type="text" class="form-control" id="img"[(ngModel)]="img">
+          <input type="text" class="form-control" id="img" [(ngModel)]="img">
         </div>
 
         <div class="mb-3">
           <label for="customRange3" class="form-label">Porcentaje {{porcentaje}}% </label>
           <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3" id="porcentaje"
-          [(ngModel)]="porcentaje">
+            [(ngModel)]="porcentaje">
         </div>
 
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label">Tipo</label>
-          <select class="form-select" id="tipo"  [(ngModel)]="tipo">
+          <select class="form-select" id="tipo" [(ngModel)]="tipo">
             <option value="lenguajeProgrmacion">Lenguaje de Programacion</option>
             <option value="herramienta">Herramientas</option>
             <option value="framework">Framework</option>
@@ -133,7 +133,7 @@
 
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="img"[(ngModel)]="nombre">
+          <input type="text" class="form-control" id="img" [(ngModel)]="nombre">
         </div>
 
         <div class="mb-3">
@@ -143,7 +143,8 @@
 
         <div class="mb-3">
           <label for="customRange3" class="form-label">Porcentaje {{porcentaje}}% </label>
-          <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3" id="porcentaje"[(ngModel)]="porcentaje">
+          <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3" id="porcentaje"
+            [(ngModel)]="porcentaje">
         </div>
 
         <div class="mb-3">
@@ -178,8 +179,9 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary" (click)="eliminar()" >Eliminar</button>
+        <button type="button" class="btn btn-primary" (click)="eliminar()">Eliminar</button>
       </div>
     </div>
   </div>
 </div>
+

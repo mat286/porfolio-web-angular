@@ -8,6 +8,8 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class PiedepaginaComponent {
 
+  fecha:any;
+
   miPorfolio:any;
   constructor(private datosPorfolio: PorfolioService) { }
 
@@ -17,5 +19,8 @@ export class PiedepaginaComponent {
       this.miPorfolio=data.footer;
     });
 
+    this.fecha = this.datosPorfolio.fechaActual();
+
   }
+
 }

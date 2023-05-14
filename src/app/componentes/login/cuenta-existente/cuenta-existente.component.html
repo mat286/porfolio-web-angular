@@ -17,25 +17,22 @@
             </div>
         </div>
         <div class="form-floating">
-            <input type="password" formControlName="password" placeholder="password" id="password"
-                class="form-control">
-            <label for="password" class="form-label">Password </label>
+            <input type="password" formControlName="contrasena" placeholder="contrasena" id="contrasena" class="form-control">
+            <label for="contrasena" class="form-label">Contraseña</label>
 
             <div *ngIf="Password?.errors && Password?.touched">
                 <p *ngIf="Password?.hasError('required')" class="error">
-                    El password es requerido.
+                    La Contraseña es requerida.
                 </p>
                 <p *ngIf="Password?.errors?.['minlength']" class="error">
-                    El password debe ser de 8 o más caracteres.
+                    La Contraseña debe ser de 8 o más caracteres.
                 </p>
             </div>
         </div>
+        <button class="buttonCuenta" type="submit">Enviar</button>
+
     </form>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="buttonCuenta">Enviar</div>
-        </div>
-    </div>
+
 
 </div>

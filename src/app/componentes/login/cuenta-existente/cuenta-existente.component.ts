@@ -2,6 +2,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
+import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-cuenta-existente',
@@ -11,13 +14,15 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 export class CuentaExistenteComponent {
 
   @Input() mostrar:String="";
-
   form: FormGroup;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private datosPorfolio: PorfolioService) {
+
     this.form = this.formBuilder.group({
-      password: ['', [Validators.required, Validators.minLength(8)]], 
+      contrasena: ['', [Validators.required, Validators.minLength(8)]], 
       nombre: ['', [Validators.required]],
     });
+      
+
   }
 
   ngOnInit(): void {
@@ -32,6 +37,9 @@ export class CuentaExistenteComponent {
   onEnviar(event: Event) {
     // Detenemos la propagación o ejecución del compotamiento submit de un form
     event.preventDefault;
+    this.datosPorfolio.iniciarSesion(this.form.value).subscribe(data=>{
+      this.datosPorfolio.infouser(data);
+    })
 
     if (this.form.valid) {
       // Llamamos a nuestro servicio para enviar los datos al servidor
@@ -45,7 +53,7 @@ export class CuentaExistenteComponent {
 
   }
   get Password(){
-    return this.form.get("password");
+    return this.form.get("contrasena");
   }
   get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { EncabezadoComponent } from '../encabezado/encabezado.component';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -32,8 +31,6 @@ export class LoginComponent {
   }
 
   ngOnInit(): void {
-
-    /* console.log(this.datosPorfolio.loginV); */
 
   }  
 

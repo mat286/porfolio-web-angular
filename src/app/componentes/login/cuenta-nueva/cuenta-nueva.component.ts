@@ -19,9 +19,7 @@ export class CuentaNuevaComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       nombre: ['', [Validators.required]],
-      apellido: ['', [Validators.required]],
-      passwordconfirm: ['', [Validators.required], [Validators.composeAsync]],
-      mensaje: ['', [Validators.required]]
+      apellido: ['', [Validators.required]]
     },
       {
         /* validators: this.matchPasswords.bind(this) */
@@ -55,13 +53,7 @@ export class CuentaNuevaComponent {
   get Password() {
     return this.form.get("password");
   }
-  get passwordconfirm() {
-    return this.form.get("passwordconfirm");
-  }
-  get passwordconfirmValid() {
-
-    return this.Password != this.passwordconfirm;
-  }
+  
   onEnviar(event: Event) {
     // Detenemos la propagación o ejecución del compotamiento submit de un form
     event.preventDefault;
@@ -78,28 +70,7 @@ export class CuentaNuevaComponent {
 
   }
 
-  /* get PasswordValid() {
-    return this.Password?.touched && !this.Password?.valid;
-  } */
-  /* get MailValid() {
-    return false
-  } */
 
-
-  ppasswordconfirm() {
-    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-    return this.Password != this.passwordconfirm;
-  }
-  matchPasswords() {
-    const passwordControl = this.form.get("password");
-    const confirmPasswordControl = this.form.get("passwordconfirm");
-
-    if (passwordControl === confirmPasswordControl) {
-      return null;
-    } else {
-      return { mismatch: true };
-    }
-  }
 
 
 

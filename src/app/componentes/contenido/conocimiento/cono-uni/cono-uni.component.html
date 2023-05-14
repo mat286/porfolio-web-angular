@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class="col-1" style="text-align: center;">
+    <div *ngIf="validador" class="col-1" style="text-align: center;">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
             class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
             data-bs-target="#exampleModalE" (click)="mostrarIdEditar(conocimientos.id)">

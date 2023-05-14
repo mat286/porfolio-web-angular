@@ -1,11 +1,10 @@
 <div class="row fotoss">
   <div class="col-3 center">
     <div class="fotosConteiner">
-      <img [src]="miPorfolio.fotosini.img" alt="mi foto" class="foto">
-
+      <img [src]="miPorfolio.fotoPersona" alt="mi foto" class="foto">
       <div class="fotoLapizP">
-        <svg xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;" (click)="onClick()" width="30" height="30"
-          fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+        <svg *ngIf="mostrar" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;" width="30" height="30" fill="currentColor"
+          class="bi bi-pencil-square" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#exampleModalP">
           <path
             d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
           <path fill-rule="evenodd"
@@ -16,7 +15,7 @@
     </div>
   </div>
 
-  <div class="col-9 center" id="IMG">
+  <div class="col-9 center carru" id="IMG">
     <div class="imageness">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -51,51 +50,49 @@
 
 </div>
 
-<div class="mensaje" *ngIf="mensajeVer">
-  <div class="alerta">
-    <div class="mensaje">
-      <div class="row g-3 align-items-center">
-        <div class="col-auto">
-          <label for="inputPassword6" class="col-form-label">Link de foto de perfil</label>
+<!-- Editar -->
+<div class="modal fade" id="exampleModalP" tabindex="-1" aria-labelledby="exampleModalLabelP" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabelP" style="color: black;">Editar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body" style="color: black;">
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Foto</label>
+          <input type="text" class="form-control" id="titulo" [(ngModel)]="fotoPersona">
+
         </div>
-        <div class="col-auto">
-          <input type="email" class="form-control" id="exampleFormControlInput1"
-            placeholder="{{miPorfolio.fotosini.img}}">
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Linkedin</label>
+          <input type="text" class="form-control" id="img" [(ngModel)]="urlLinkedin">
+        </div>
+
+        <div class="mb-3 row">
+          <div class="col-6">
+            <label for="formGroupExampleInput" class="form-label">Github</label>
+            <input type="text" class="form-control" id="inicio" [(ngModel)]="urlGithub">
+          </div>
+          <div class="col-6">
+            <label for="formGroupExampleInput" class="form-label">Instagram</label>
+            <input type="text" class="form-control" id="Institucion" [(ngModel)]="urlInstagram">
+        </div>
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Informacion</label>
+          <input type="text" class="form-control" id="info" [(ngModel)]="info">
         </div>
       </div>
-      <div class="row g-3 align-items-center">
-        <div class="col-auto">
-          <label for="inputPassword6" class="col-form-label">Link de instagram</label>
-        </div>
-        <div class="col-auto">
-          <input type="email" class="form-control" id="exampleFormControlInput1"
-            placeholder="{{miPorfolio.encabezado.linkig.link}}">
-        </div>
-      </div>
-      <div class="row g-3 align-items-center">
-        <div class="col-auto">
-          <label for="inputPassword6" class="col-form-label">Link de linkedin</label>
-        </div>
-        <div class="col-auto">
-          <input type="email" class="form-control" id="exampleFormControlInput1"
-            placeholder="{{miPorfolio.encabezado.linkGmail.link}}">
-        </div>
-      </div>
-      <div class="row g-3 align-items-center">
-        <div class="col-auto">
-          <label for="inputPassword6" class="col-form-label">Link de Github</label>
-        </div>
-        <div class="col-auto">
-          <input type="email" class="form-control" id="exampleFormControlInput1"
-            placeholder="{{miPorfolio.encabezado.linkGithub.link}}">
-        </div>
-      </div>
-      <div class="botones">
-        <a class="boton" (click)="noEnviarMensaje()">Guardar cambios</a>
-        <a class="botonNo" (click)="noEnviarMensaje()">No</a>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)="editar(miPorfolio.id)">Guardar
+          cambios</button>
       </div>
     </div>
-
   </div>
-
 </div>

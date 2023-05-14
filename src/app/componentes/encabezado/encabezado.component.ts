@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { LoginComponent } from '../login/login.component';
 
 
 
@@ -14,14 +13,17 @@ export class EncabezadoComponent {
   miPorfolio:any;
 
   botton:boolean = false;
-  constructor(private datosPorfolio: PorfolioService, private datoEstilo: LoginComponent) { }
+  constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
+    this.cargaData();
+  }
 
-    this.datosPorfolio.obtenerdatos().subscribe(data=>{ 
-      this.miPorfolio=data;
+  public cargaData() {
+    this.datosPorfolio.getDatos("personas/traer").subscribe(respuesta => {
+      console.log(respuesta[0]);
+      this.miPorfolio = respuesta[0];
     });
-
   }
 
   onclick():void {

@@ -10,6 +10,8 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 export class ConocimientoComponent {
 
   varibleId: Number = 0;
+  mostrar:boolean=false;
+  admin:boolean=false;
 
   miPorfolio: any;
 
@@ -34,6 +36,7 @@ export class ConocimientoComponent {
 
   ngOnInit(): void {
     this.cargaData();
+    this.mostrarBoton();
   }
 
   public cargaData() {
@@ -41,6 +44,13 @@ export class ConocimientoComponent {
       this.miPorfolio = respuesta;
     });
   }
+
+  mostrarBoton(){
+    let pepe = this.datosPorfolio.validadors();
+    this.mostrar = pepe.vista;
+    this.admin = pepe.edicion;
+  }
+
   mostrarIdParaEliminar(id: Number) {
     this.varibleId = id;
     this.modalEdi.nativeElement.classList.add('show'); // agrega la clase 'show' al elemento modal
@@ -67,19 +77,20 @@ export class ConocimientoComponent {
     return lista;
   }
   agregar() {
-    this.objeto = { "nombre": this.nombre, "img": this.img, "tipo": this.tipo, "porcentaje": this.porcentaje }
+    if (this.admin==true) {
+      this.objeto = { "nombre": this.nombre, "img": this.img, "tipo": this.tipo, "porcentaje": this.porcentaje }
 
-    this.datosPorfolio.crearDatos("/Conocimientos/crear", this.objeto).subscribe(respuesta => {
-    });
-
+    this.datosPorfolio.crearDatos("Conocimientos/crear", this.objeto).subscribe(respuesta => {
+    });    
+    }
     window.location.reload();
+    
 
   }
   eliminar() {
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
-      console.log();
-      if (element.id == this.varibleId) {
+      if (element.id == this.varibleId && this.admin==true) {
         this.datosPorfolio.eliminarDatos("Conocimientos/borrar/" + this.varibleId).subscribe(respuesta => {
         });
       }
@@ -89,14 +100,14 @@ export class ConocimientoComponent {
   editar() {
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
-      if (element.id == this.varibleId) {
+      if (element.id == this.varibleId && this.admin==true) {
 
         if (this.nombre != "") element.nombre = this.nombre;
         if (this.img != "") element.img = this.img;
         if (this.tipo != "") element.tipo = this.tipo;
         if (this.porcentaje != 0) element.porcentaje = this.porcentaje;
 
-        this.datosPorfolio.editarDatos("/Conocimientos/editar/" + this.varibleId, element).subscribe(respuesta => {
+        this.datosPorfolio.editarDatos("Conocimientos/editar/" + this.varibleId, element).subscribe(respuesta => {
         });
       }
     }

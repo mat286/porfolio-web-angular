@@ -16,7 +16,7 @@
         <p class="descripcion">{{experiencia.info}}</p>
     </div>
 
-    <div class="iconos-proyecto">
+    <div *ngIf="validador" class="iconos-proyecto">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
             class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
             data-bs-target="#exampleModalE" (click)="mostrarIdEditar(experiencia.id)">

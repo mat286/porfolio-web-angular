@@ -40,29 +40,14 @@
         <div class="form-floating mb-3">
             <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
                 formControlName="password">
-            <label for="floatingPassword">Contraseña </label>
+            <label for="floatingPassword">Contraseña</label>
             <div *ngIf="Password?.errors && Password?.touched">
                 <p *ngIf="Password?.hasError('required')" class="error">
-                    El password es requerido.
+                    La Contraseña es requerida.
                 </p>
                 <p *ngIf="Password?.errors?.['minlength']" class="error">
-                    El password debe ser de 8 o más caracteres.
+                    La Contraseña debe ser de 8 o más caracteres.
                 </p>
-            </div>
-        </div>
-
-        <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                formControlName="passwordconfirm">
-            <label for="floatingPassword">Confirme Contraseña</label>
-            <div *ngIf="passwordconfirm?.errors && passwordconfirm?.touched">
-                <p *ngIf="passwordconfirmValid" class="error">
-                    No coinciden las contraseñas.
-                </p>
-                <p *ngIf="passwordconfirm?.hasError('required')" class="error">
-                    El passworddddd es requerido.
-                </p>
-
             </div>
         </div>
 

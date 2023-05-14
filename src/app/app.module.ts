@@ -21,6 +21,7 @@ import { CuentaNuevaComponent } from './componentes/login/cuenta-nueva/cuenta-nu
 import { CuentaExistenteComponent } from './componentes/login/cuenta-existente/cuenta-existente.component';
 import { ExperienciaUniComponent } from './componentes/contenido/experiencia/experiencia-uni/experiencia-uni.component';
 import { ConoUniComponent } from './componentes/contenido/conocimiento/cono-uni/cono-uni.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { ConoUniComponent } from './componentes/contenido/conocimiento/cono-uni/
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

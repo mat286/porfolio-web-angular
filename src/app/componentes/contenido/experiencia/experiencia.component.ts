@@ -1,8 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { Injectable } from '@angular/core';
-import { EventEmitter, Input, Output } from '@angular/core';
-import { experienciaFormato } from './inter';
+
 
 @Component({
   selector: 'app-experiencia',
@@ -12,6 +10,8 @@ import { experienciaFormato } from './inter';
 export class ExperienciaComponent {
 
   varibleId: Number = 0;
+  mostrar: boolean = false;
+  admin: boolean = false;
 
   @ViewChild('exampleModalE') modalEdi!: ElementRef;
   @ViewChild('exampleModaleliminar') modalEli!: ElementRef;
@@ -35,6 +35,7 @@ export class ExperienciaComponent {
 
   ngOnInit(): void {
     this.cargaData();
+    this.mostrarBoton();
   }
 
   public cargaData() {
@@ -44,15 +45,19 @@ export class ExperienciaComponent {
     });
   }
 
+  mostrarBoton() {
+    let pepe = this.datosPorfolio.validadors();
+    this.mostrar = pepe.vista;
+    this.admin = pepe.edicion;
+  }
+
   agregar() {
-
-    this.objeto = { "nombre": this.nombre, "puesto": this.puesto, "img": this.img, "inicio": this.inicio, "fin": this.fin, "info": this.info }
-
+    if (this.admin==true) {
+      this.objeto = { "nombre": this.nombre, "puesto": this.puesto, "img": this.img, "inicio": this.inicio, "fin": this.fin, "info": this.info }
     this.datosPorfolio.crearDatos("experiencias/crear", this.objeto).subscribe(respuesta => {
     });
-
+    }
     window.location.reload();
-
   }
 
   mostrarIdParaEliminar(id: Number) {
@@ -69,7 +74,7 @@ export class ExperienciaComponent {
   eliminar() {
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
-      if (element.id == this.varibleId) {
+      if (element.id == this.varibleId && this.admin==true) {
         this.datosPorfolio.eliminarDatos("experiencias/borrar/" + this.varibleId).subscribe(respuesta => {
         });
       }
@@ -79,8 +84,7 @@ export class ExperienciaComponent {
   editar() {
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
-      if (element.id == this.varibleId) {
-        console.log(element);
+      if (element.id == this.varibleId && this.admin==true) {
 
         if (this.nombre != "") element.nombre = this.nombre;
         if (this.puesto != "") element.puesto = this.puesto;

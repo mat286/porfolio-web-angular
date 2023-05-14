@@ -4,7 +4,7 @@
     </div>
     <div class="col-1">
         <h1 class="fotoLapizGeneral">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+            <svg *ngIf="mostrar" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                 class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
                 <path
@@ -17,7 +17,7 @@
 
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
-    <app-experiencia-uni *ngFor="let expe of miPorfolio" [experiencia]="expe"(editar)="mostrarIdParaEditar($event)"
+    <app-experiencia-uni *ngFor="let expe of miPorfolio" [experiencia]="expe" [validador]="mostrar" (editar)="mostrarIdParaEditar($event)"
     (eliminar)="mostrarIdParaEliminar($event)"
         style="margin-bottom: 50px;"></app-experiencia-uni>
 

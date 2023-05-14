@@ -11,6 +11,7 @@ export class ConoUniComponent {
   @Output() eliminar = new EventEmitter();
   @Output() editar = new EventEmitter();
   @Input() conocimientos: any;
+  @Input() validador: boolean=false;
 
   contenido: any;
 

@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
@@ -8,6 +9,11 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class AcercaComponent {
   miPorfolio: any;
+  mostrar:boolean=false;
+  admin:boolean=false;
+
+  mostrarSpinner = false;
+  
   img: String = "";
   urlCv: String = "";
   info: String = "";
@@ -16,6 +22,7 @@ export class AcercaComponent {
   }
   ngOnInit(): void {
     this.cargaData();
+    this.mostrarBoton();
   }
 
   public cargaData() {
@@ -24,19 +31,26 @@ export class AcercaComponent {
     });
   }
   enviarMensaje(id: String) {
-
-    if (this.miPorfolio.id = id) {
+    if (this.miPorfolio.id == id && this.admin == true) {
+      this.mostrarSpinner=true;
 
       if (this.img != "") this.miPorfolio.img = this.img;
       if (this.urlCv != "") this.miPorfolio.urlCv = this.urlCv;
       if (this.info != "") this.miPorfolio.info = this.info;
 
-      this.datosPorfolio.editarDatos("/sobremi/editar/" + this.miPorfolio.id, this.miPorfolio).subscribe(respuesta => {
+      this.datosPorfolio.editarDatos("sobremi/editar/" + this.miPorfolio.id, this.miPorfolio).subscribe(respuesta => {
       });
 
     }
+    this.mostrarSpinner=false;
     window.location.reload();
 
+  }
+
+  mostrarBoton(){
+    let pepe = this.datosPorfolio.validadors();
+    this.mostrar = pepe.vista;
+    this.admin = pepe.edicion;
   }
 
 }

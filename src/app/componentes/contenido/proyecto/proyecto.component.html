@@ -4,7 +4,7 @@
     </div>
     <div class="col-1">
         <h1 class="fotoLapizGeneral">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+            <svg *ngIf="mostrar" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                 class="bi bi-plus-circle-fill cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
                 <path
@@ -24,13 +24,14 @@
 
             <div class="col-8 informacion">
                 <h3>{{proye.nombre}}</h3>
+                <!-- <h5>{{proye.puesto}}</h5> -->
                 <p class="descripcion">{{proye.info}}</p>
                 <p class="descripcion">{{proye.fecha}}</p>
                 <p class="tecnologias">Tecnologías utilizadas:</p>
                 <div class="row">
                     <div class="col-8" style="padding-left: 0px;">
-                        <ul *ngFor="let herra of proye.herramientas">
-                            <li>{{herra}}</li>
+                        <ul *ngFor="let herra of mostrarHerramientas(proye.id)">
+                            <li>{{herra.nombre}}</li>
                         </ul>
                     </div>
                     <div class="col-4">
@@ -42,7 +43,7 @@
             </div>
 
             <div class="iconos-proyecto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                <svg *ngIf="mostrar" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-pencil-square cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
                     data-bs-target="#exampleModalE" (click)="mostrarId(proye.id)">
                     <path
@@ -51,7 +52,7 @@
                         d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                 </svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                <svg *ngIf="mostrar" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-trash3 cursorIco" viewBox="0 0 16 16" data-bs-toggle="modal"
                     data-bs-target="#exampleModaleliminar" (click)="mostrarId(proye.id)">
                     <path
@@ -77,30 +78,47 @@
             </div>
             <div class="modal-body" style="color: black;">
 
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo">
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="titulo" [(ngModel)]="nombre">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" [(ngModel)]="fecha">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Url</label>
+                        <input type="text" class="form-control" id="Institucion" [(ngModel)]="url">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Imagen</label>
+                        <input type="text" class="form-control" id="img" [(ngModel)]="img">
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Url</label>
-                    <input type="text" class="form-control" id="Institucion" [(ngModel)]="url">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Herramientas" aria-label="Herramientas"
+                        aria-describedby="button-addon2" [(ngModel)]="herramientasCarga">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                        (click)="agregarHerra()">Agregar</button>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon3"
+                        (click)="eliminarHerra()">Eliminar</button>
                 </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Imagen</label>
-                    <input type="text" class="form-control" id="img" [(ngModel)]="img">
+                <div class="input-group mb-3">
+                    <div>
+                        <ul *ngFor='let herra of listaHerraAgregar'>
+                            <li>{{herra}}</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Fecha</label>
-                    <input type="date" class="form-control" id="fecha" [(ngModel)]="fecha">
-                </div>
-
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Informacion</label>
                     <input type="text" class="form-control" id="info" [(ngModel)]="info">
                 </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -121,30 +139,47 @@
 
             <div class="modal-body" style="color: black;">
 
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo">
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="titulo" [(ngModel)]="nombre">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" [(ngModel)]="fecha">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Url</label>
+                        <input type="text" class="form-control" id="Institucion" [(ngModel)]="url">
+                    </div>
+                    <div class="col-6">
+                        <label for="formGroupExampleInput" class="form-label">Imagen</label>
+                        <input type="text" class="form-control" id="img" [(ngModel)]="img">
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Url</label>
-                    <input type="text" class="form-control" id="Institucion" [(ngModel)]="url">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Herramientas" aria-label="Herramientas"
+                        aria-describedby="button-addon2" [(ngModel)]="herramientasCarga">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                        (click)="agregarHerra()">Agregar</button>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon3"
+                        (click)="eliminarHerra()">Eliminar</button>
                 </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Imagen</label>
-                    <input type="text" class="form-control" id="img" [(ngModel)]="img">
+                <div class="input-group mb-3">
+                    <div>
+                        <ul *ngFor='let herra of listaHerraAgregar'>
+                            <li>{{herra}}</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Fecha</label>
-                    <input type="date" class="form-control" id="fecha" [(ngModel)]="fecha">
-                </div>
-
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Informacion</label>
                     <input type="text" class="form-control" id="info" [(ngModel)]="info">
                 </div>
+
             </div>
 
             <div class="modal-footer">
