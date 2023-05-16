@@ -21,7 +21,6 @@ export class EncabezadoComponent {
 
   public cargaData() {
     this.datosPorfolio.getDatos("personas/traer").subscribe(respuesta => {
-      console.log(respuesta[0]);
       this.miPorfolio = respuesta[0];
     });
   }

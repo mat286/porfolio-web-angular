@@ -1,8 +1,8 @@
-import { Component, Input  } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cuenta-existente',
@@ -11,49 +11,43 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class CuentaExistenteComponent {
 
-  @Input() mostrar:String="";
+  @Input() mostrar: String = "";
   form: FormGroup;
-  constructor(private formBuilder: FormBuilder, private datosPorfolio: PorfolioService) {
+  constructor(private formBuilder: FormBuilder, private datosPorfolio: PorfolioService,private router: Router) {
 
     this.form = this.formBuilder.group({
-      contrasena: ['', [Validators.required, Validators.minLength(8)]], 
+      contrasena: ['', [Validators.required, Validators.minLength(8)]],
       nombre: ['', [Validators.required]],
     });
-      
-
   }
 
   ngOnInit(): void {
 
-    /* console.log(this.datosPorfolio.loginV); */
-
-  }   
+  }
 
   public get nombre(): any {
     return this.form.get("nombre");
   }
   onEnviar(event: Event) {
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
+
     event.preventDefault;
-    this.datosPorfolio.iniciarSesion(this.form.value).subscribe(data=>{
+    this.datosPorfolio.iniciarSesion(this.form.value).subscribe(data => {
       this.datosPorfolio.infouser(data);
-    })
+    });
 
     if (this.form.valid) {
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formuario!");
-      /*       alert(`hola ${this.form.nombre}como estas?`); */
+      alert(`hola ${this.form.value.nombre} tenes permisos para realizar cambios?`);
+      this.mostrar="none";
+      this.router.navigate(['/Educacion']);
     } else {
-      // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched();
     }
 
   }
-  get Password(){
+  get Password() {
     return this.form.get("contrasena");
   }
-  get PasswordValid(){
+  get PasswordValid() {
     return this.Password?.touched && !this.Password?.valid;
   }
 

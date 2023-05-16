@@ -16,7 +16,7 @@
 </div>
 <div class="padding" style="border-top: 5px solid rgb(133, 133, 133);">
 
-  <div class="row conocimiento-filtro">
+  <!-- <div class="row conocimiento-filtro">
 
     <div class="col-5 container-fluid">
       <div class="form-check form-switch" style="margin-bottom: 20px;">
@@ -66,7 +66,53 @@
           alto</label>
       </div>
     </div>
+  </div> -->
+
+  <div class="container-fluid conocimiento-filtro">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-check form-switch" style="margin-bottom: 20px;">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+            [(ngModel)]="lenguajeProgrmacion" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Lenguaje de Programación</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+            [(ngModel)]="habilidadesBlandas">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Habilidades Blandas</label>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-check form-switch" style="margin-bottom: 20px;">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
+            [(ngModel)]="herramientas" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked2">Herramientas</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+            [(ngModel)]="framework" checked>
+          <label class="form-check-label" for="flexSwitchCheckDefault">Framework</label>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-check form-switch" style="margin-bottom: 20px;">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2"
+            [(ngModel)]="Basico" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked2">Nivel Bajo</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+            [(ngModel)]="Avanzado" checked>
+          <label class="form-check-label" for="flexSwitchCheckDefault">Nivel Alto</label>
+        </div>
+      </div>
+    </div>
   </div>
+
+
   <app-cono-uni *ngFor="let conocimientos of filtro()" [conocimientos]="conocimientos" [validador]="mostrar"
     (editar)="mostrarIdParaEditar($event)" (eliminar)="mostrarIdParaEliminar($event)"></app-cono-uni>
 
@@ -185,3 +231,9 @@
   </div>
 </div>
 
+<!-- Spinners -->
+<div class="text-center alerta" *ngIf="Loading">
+  <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

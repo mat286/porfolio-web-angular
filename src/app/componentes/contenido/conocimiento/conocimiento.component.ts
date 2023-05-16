@@ -32,6 +32,8 @@ export class ConocimientoComponent {
   @ViewChild('exampleModalE') modalEdi!: ElementRef;
   @ViewChild('exampleModaleliminar') modalEli!: ElementRef;
 
+  Loading:boolean=false;
+
   constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
@@ -77,19 +79,24 @@ export class ConocimientoComponent {
     return lista;
   }
   agregar() {
+    this.Loading=true;
     if (this.admin==true) {
       this.objeto = { "nombre": this.nombre, "img": this.img, "tipo": this.tipo, "porcentaje": this.porcentaje }
 
     this.datosPorfolio.crearDatos("Conocimientos/crear", this.objeto).subscribe(respuesta => {
     });    
     }
-    setTimeout(function () {
+    setTimeout( () => {
+      this.Loading=false;
+    }, 2000);
+    setTimeout( () => {
       window.location.reload();
-    }, 4000);
+    }, 2000);
     
 
   }
   eliminar() {
+    this.Loading=true;
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
       if (element.id == this.varibleId && this.admin==true) {
@@ -97,11 +104,15 @@ export class ConocimientoComponent {
         });
       }
     }
-    setTimeout(function () {
+    setTimeout( () => {
+      this.Loading=false;
+    }, 2000);
+    setTimeout( () => {
       window.location.reload();
-    }, 4000);
+    }, 2000);
   }
   editar() {
+    this.Loading=true;
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
       if (element.id == this.varibleId && this.admin==true) {
@@ -115,9 +126,12 @@ export class ConocimientoComponent {
         });
       }
     }
-    setTimeout(function () {
+    setTimeout( () => {
+      this.Loading=false;
+    }, 2000);
+    setTimeout( () => {
       window.location.reload();
-    }, 4000);
+    }, 2000);
   }
 
 }

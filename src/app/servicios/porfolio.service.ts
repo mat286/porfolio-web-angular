@@ -18,7 +18,7 @@ export class PorfolioService {
 
   private urlBa=API_URL;
 
-  user = { "vista": true, "edicion": true };
+  user = { "vista": false, "edicion": false };
 
   constructor(private http: HttpClient, private cookieService: CookieService) {
     this.cookieValue = this.cookieService.get('miCookie');
@@ -34,7 +34,6 @@ export class PorfolioService {
   }
 
   public getDatos(url: string): Observable<any> {
-    console.log(this.urlBa+url);
     return this.http.get(this.urlBa+url);
   }
 
@@ -60,6 +59,10 @@ export class PorfolioService {
 
   iniciarSesion(credenciale: any): Observable<any> {
     return this.http.post(this.urlBa+"user/login", credenciale);
+  }
+
+  crearSesion(credenciale: any): Observable<any> {
+    return this.http.post(this.urlBa+"user/crear", credenciale);
   }
 
   public validadors() {

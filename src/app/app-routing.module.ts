@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'Proyecto', component: ProyectoComponent},
   {path: 'Contacto', component: ContactoComponent},
   {path: '', redirectTo: '/inicio', pathMatch: 'full'},
-  {path: '**', redirectTo: 'https://porfolio-784e6.web.app'}
+  {path: '**', redirectTo: '/inicio'}
 ];
 
 @NgModule({

@@ -12,7 +12,7 @@ export class AcercaComponent {
   mostrar:boolean=false;
   admin:boolean=false;
 
-  Loading:boolean;
+  Loading:any;
   
   img: String = "";
   urlCv: String = "";
@@ -32,9 +32,7 @@ export class AcercaComponent {
     });
   }
   enviarMensaje(id: String) {
-    console.log(this.Loading)
     this.Loading = true;
-    console.log(this.Loading);
     if (this.miPorfolio.id == id && this.admin == true) {
 
       if (this.img != "") this.miPorfolio.img = this.img;
@@ -45,11 +43,13 @@ export class AcercaComponent {
       });
 
     }
-    setTimeout(function () {
-      
+    setTimeout( () => {
+      this.Loading=false;
+    }, 2000);
+    setTimeout( () => {
       window.location.reload();
-    }, 4000);
-    this.Loading=false;
+    }, 2000);
+    
 
   }
 
