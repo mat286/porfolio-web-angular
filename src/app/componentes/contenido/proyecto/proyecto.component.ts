@@ -27,6 +27,7 @@ export class ProyectoComponent {
   idProyecto: string = "";
 
   idUltimo: any;
+  Loading = false;
 
   objeto = { "nombre": "", "url": "", "img": "", "fecha": "", "info": "" }
   objetoHe = { "nombre": "", "idProyecto": "" }
@@ -65,6 +66,7 @@ export class ProyectoComponent {
   }
 
   eliminar() {
+    this.Loading = true;
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
       if (element.id == this.varibleId && this.admin == true) {
@@ -84,7 +86,7 @@ export class ProyectoComponent {
 
     setTimeout(function () {
       window.location.reload();
-    }, 6000);
+    }, 10000);
   }
 
   borrarHerra(id: string) {
@@ -104,6 +106,7 @@ export class ProyectoComponent {
   }
 
   agregar() {
+    this.Loading = true;
     if (this.admin == true) {
       this.objeto = { "nombre": this.nombre, "url": this.url, "img": this.img, "fecha": this.fecha, "info": this.info }
       this.datosPorfolio.crearDatos("proyectos/crear", this.objeto).subscribe(response => {
@@ -114,7 +117,7 @@ export class ProyectoComponent {
     }
     setTimeout(function () {
       window.location.reload();
-    }, 10000);
+    }, 15000);
 
   }
 
@@ -129,6 +132,7 @@ export class ProyectoComponent {
   }
 
   editar() {
+    this.Loading = true;
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
       if (element.id == this.varibleId && this.admin == true) {
@@ -164,11 +168,9 @@ export class ProyectoComponent {
         });
       }
     }
-
-
-    /* setTimeout(function () {
+    setTimeout(function () {
       window.location.reload();
-    }, 10000); */
+    }, 15000);
   }
 
   agregarHerra() {

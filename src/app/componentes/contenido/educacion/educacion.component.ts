@@ -21,6 +21,8 @@ export class EducacionComponent {
   info: string = "";
   institucion: string = "";
 
+  Loading=false;
+
   objeto = { "titulo": "", "institucion": "", "img": "", "tipo": "", "inicio": "", "fin": "", "info": "" }
 
   constructor(private datosPorfolio: PorfolioService) { }
@@ -44,6 +46,7 @@ export class EducacionComponent {
 
 
   agregar() {
+    this.Loading = true;
     if (this.admin==true) {
       this.objeto = { "titulo": this.titulo, "institucion": this.institucion, "img": this.img, "tipo": this.tipo, "inicio": this.inicio, "fin": this.fin, "info": this.info }
     this.datosPorfolio.crearDatos("Educaciones/crear", this.objeto).subscribe(respuesta => {
@@ -56,10 +59,11 @@ export class EducacionComponent {
   }
 
   eliminar() {
+    this.Loading = true;
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
       if (element.id == this.varibleId &&this.admin==true) {
-        this.datosPorfolio.eliminarDatos("/Educaciones/borrar/" + this.varibleId).subscribe(respuesta => {
+        this.datosPorfolio.eliminarDatos("Educaciones/borrar/" + this.varibleId).subscribe(respuesta => {
         });
       }
     }
@@ -72,6 +76,7 @@ export class EducacionComponent {
     this.varibleId = id;
   }
   editar() {
+    this.Loading = true;
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
       if (element.id == this.varibleId && this.admin==true) {
@@ -84,7 +89,7 @@ export class EducacionComponent {
         if (this.institucion != "") element.institucion = this.institucion;
         if (this.info != "") element.info = this.info;
 
-        this.datosPorfolio.editarDatos("/Educaciones/editar/" +this.varibleId, element).subscribe(respuesta => {
+        this.datosPorfolio.editarDatos("Educaciones/editar/" +this.varibleId, element).subscribe(respuesta => {
         });
       }
     }

@@ -19,12 +19,11 @@
 
         <div class="row proyecto" *ngFor="let proye of miPorfolio">
             <div class="col-4">
-                <img [src]="proye.img" class="proyectoImg" alt="Imagen del proyecto">
+                <img [src]="proye.img" class="proyectoImg maximoDeCel" alt="Imagen del proyecto">
             </div>
 
-            <div class="col-8 informacion">
+            <div class="col-8 informacion maximoDeCel">
                 <h3>{{proye.nombre}}</h3>
-                <!-- <h5>{{proye.puesto}}</h5> -->
                 <p class="descripcion">{{proye.info}}</p>
                 <p class="descripcion">{{proye.fecha}}</p>
                 <p class="tecnologias">Tecnologías utilizadas:</p>
@@ -209,5 +208,12 @@
                 <button type="button" class="btn btn-primary" (click)='eliminar()'>Eliminar</button>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- Spinners -->
+<div class="text-center alerta" *ngIf="Loading">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
     </div>
 </div>

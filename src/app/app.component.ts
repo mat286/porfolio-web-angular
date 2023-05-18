@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { PorfolioService } from "./servicios/porfolio.service";
 
 
 @Component({
@@ -8,12 +9,20 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = 'portafolioangular';
+  Loading = true;
+  constructor(private datosPorfolio: PorfolioService) {
 
-  mostrarSpinner = true;
+  }
+
+
   ngOnInit() {
-    // Simulamos una carga de página con un timeout de 3 segundos
-    setTimeout(() => {
-      this.mostrarSpinner = false;
-    }, 3000);
+    this.datosPorfolio.getDatos("sobremi/traer").subscribe(respuesta => {
+      if (respuesta!="") {
+        setTimeout(() => {
+          this.Loading = false;
+        }, 2000);
+      }
+    });
+    
   }
 }

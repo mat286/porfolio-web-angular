@@ -1,16 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    /* background: url("https://img2.wallspic.com/previews/4/1/4/6/6/166414/166414-en_blanco_y_negro-geometria-neumaticos_para_automoviles-parrilla-malla-550x310.jpg"); */
-
     font-family: Arial, sans-serif;
     font-size: 16px;
-
-    max-width: 1200px;
+    max-width: 1300px;/* 1200 */
     margin: 0 auto;
     border: 1px solid #ccc;
-
-
     background-color: #191919;
     color: #fff;
     line-height: 1.5;
@@ -619,6 +614,9 @@ footer {
     }
 
     .contenteee {
+        width: 100%;
+    }
+    .maximoDeCel {
         width: 100%;
     }
 

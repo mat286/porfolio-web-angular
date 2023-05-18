@@ -27,6 +27,7 @@ export class ExperienciaComponent {
   objeto = { "nombre": "", "puesto": "", "img": "", "inicio": "", "fin": "", "info": "" }
 
   experi: any;
+  Loading=false;
 
 
   miPorfolio: any;
@@ -51,6 +52,7 @@ export class ExperienciaComponent {
   }
 
   agregar() {
+    this.Loading = true;
     if (this.admin==true) {
       this.objeto = { "nombre": this.nombre, "puesto": this.puesto, "img": this.img, "inicio": this.inicio, "fin": this.fin, "info": this.info }
     this.datosPorfolio.crearDatos("experiencias/crear", this.objeto).subscribe(respuesta => {
@@ -73,6 +75,7 @@ export class ExperienciaComponent {
     document.body.classList.add('modal-open');
   }
   eliminar() {
+    this.Loading = true;
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
       if (element.id == this.varibleId && this.admin==true) {
@@ -85,6 +88,7 @@ export class ExperienciaComponent {
     }, 4000);
   }
   editar() {
+    this.Loading = true;
     for (let i = 0; i < this.miPorfolio.length; i++) {
       const element = this.miPorfolio[i];
       if (element.id == this.varibleId && this.admin==true) {
