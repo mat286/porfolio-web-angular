@@ -619,6 +619,9 @@ footer {
     .maximoDeCel {
         width: 100%;
     }
+    .fotoss{
+        margin-bottom: 0px;
+    }
 
     .barra{
         display: none;

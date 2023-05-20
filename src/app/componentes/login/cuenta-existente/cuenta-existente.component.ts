@@ -13,7 +13,7 @@ export class CuentaExistenteComponent {
 
   @Input() mostrar: String = "";
   form: FormGroup;
-  constructor(private formBuilder: FormBuilder, private datosPorfolio: PorfolioService,private router: Router) {
+  constructor(private formBuilder: FormBuilder, private datosPorfolio: PorfolioService, private router: Router) {
 
     this.form = this.formBuilder.group({
       contrasena: ['', [Validators.required, Validators.minLength(8)]],
@@ -36,11 +36,14 @@ export class CuentaExistenteComponent {
     });
 
     if (this.form.valid) {
-      alert(`hola ${this.form.value.nombre} tenes permisos para realizar cambios?`);
-      this.mostrar="none";
-      this.router.navigate(['/Educacion']);
+      alert(`hola ${this.form.value.nombre} tenes permisos para realizar cambios`);
+      this.mostrar = "none";
+      this.router.navigate(['/inicio']);
+
+
     } else {
       this.form.markAllAsTouched();
+      alert(`hola ${this.form.value.nombre} no tenes permisos para realizar cambios`);
     }
 
   }

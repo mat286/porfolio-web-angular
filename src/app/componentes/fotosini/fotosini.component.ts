@@ -9,11 +9,11 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 export class FotosiniComponent {
   miPorfolio: any;
 
-  mostrar: boolean = false;
-  admin: boolean = false;
+  mostrar: boolean;
+  admin: boolean;
 
   foto = ["./assets/fotos/imagen1.jpg", "https://www.campusmvp.es/recursos/image.axd?picture=/2019/3T/front-vs-back-campusmvp.png",
-    "./assets/fotos/utn.jpg", "https://static.vecteezy.com/system/resources/previews/002/792/944/original/cloud-computing-circuit-future-technology-concept-background-free-vector.jpg"
+    "./assets/fotos/utn.jpg", "https://concepto.de/wp-content/uploads/2015/03/software-1-e1550080087611-800x400.jpg"
   ];
   fotov: any;
 
@@ -24,7 +24,11 @@ export class FotosiniComponent {
   info: string = "";
 
 
-  constructor(private datosPorfolio: PorfolioService) { }
+  constructor(private datosPorfolio: PorfolioService) {
+    this.mostrar = false;
+    this.admin = false;
+
+  }
 
   ngOnInit(): void {
     this.cargaData();
@@ -38,13 +42,12 @@ export class FotosiniComponent {
   }
 
   editar(id: string) {
-    if (this.miPorfolio.id == id && this.admin==true) {
+    if (this.miPorfolio.id == id && this.admin == true) {
 
       if (this.fotoPersona != "") this.miPorfolio.fotoPersona = this.fotoPersona;
       if (this.urlInstagram != "") this.miPorfolio.urlInstagram = this.urlInstagram;
       if (this.urlLinkedin != "") this.miPorfolio.urlLinkedin = this.urlLinkedin;
       if (this.urlGithub != "") this.miPorfolio.urlGithub = this.urlGithub;
-      if (this.info != "") this.miPorfolio.info = this.info;
 
       this.datosPorfolio.editarDatos("personas/editar/" + id, this.miPorfolio).subscribe(respuesta => {
       });

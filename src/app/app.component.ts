@@ -10,17 +10,21 @@ import { PorfolioService } from "./servicios/porfolio.service";
 export class AppComponent {
   title = 'portafolioangular';
   Loading = true;
+  tardar=false;
   constructor(private datosPorfolio: PorfolioService) {
 
   }
 
 
   ngOnInit() {
+    setTimeout(() => {
+      this.tardar = true;
+    }, 10000);//10000
     this.datosPorfolio.getDatos("sobremi/traer").subscribe(respuesta => {
       if (respuesta!="") {
         setTimeout(() => {
           this.Loading = false;
-        }, 2000);
+        }, 2000);//2000
       }
     });
     

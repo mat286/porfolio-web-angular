@@ -18,8 +18,8 @@
 
 
         <div class="row proyecto" *ngFor="let proye of miPorfolio">
-            <div class="col-4">
-                <img [src]="proye.img" class="proyectoImg maximoDeCel" alt="Imagen del proyecto">
+            <div class="col-4 maximoDeCel">
+                <img [src]="proye.img" class="proyectoImg" alt="Imagen del proyecto">
             </div>
 
             <div class="col-8 informacion maximoDeCel">
@@ -33,7 +33,7 @@
                             <li>{{herra.nombre}}</li>
                         </ul>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 maximoDeCel">
                         <a href="{{proye.url}}" class="boton">Ver proyecto</a>
                     </div>
 

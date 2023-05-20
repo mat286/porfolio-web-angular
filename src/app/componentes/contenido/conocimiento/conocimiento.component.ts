@@ -87,11 +87,8 @@ export class ConocimientoComponent {
     });    
     }
     setTimeout( () => {
-      this.Loading=false;
-    }, 2000);
-    setTimeout( () => {
       window.location.reload();
-    }, 2000);
+    }, 4000);
     
 
   }
@@ -105,11 +102,8 @@ export class ConocimientoComponent {
       }
     }
     setTimeout( () => {
-      this.Loading=false;
-    }, 2000);
-    setTimeout( () => {
       window.location.reload();
-    }, 2000);
+    }, 4000);
   }
   editar() {
     this.Loading=true;
@@ -127,11 +121,8 @@ export class ConocimientoComponent {
       }
     }
     setTimeout( () => {
-      this.Loading=false;
-    }, 2000);
-    setTimeout( () => {
       window.location.reload();
-    }, 2000);
+    }, 4000);
   }
 
 }

@@ -259,6 +259,7 @@
     },
     "footer": {
         "contacto": "Para cualquier tipo de consulta, escribime a mi correo electrónico: riveramateo10432@gmail.com",
-        "copy": "2023 Facundo Mateo Rivera. Todos los derechos reservados."
+        "copy": "2023 Facundo Mateo Rivera. Todos los derechos reservados.",
+        "fecha":""
     }
 }

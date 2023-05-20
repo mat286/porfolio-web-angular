@@ -8,19 +8,21 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class PiedepaginaComponent {
 
-  fecha:any;
 
-  miPorfolio:any;
+
+  miPorfolio: any;
   constructor(private datosPorfolio: PorfolioService) { }
 
   ngOnInit(): void {
-
-    this.datosPorfolio.obtenerdatos().subscribe(data=>{ 
-      this.miPorfolio=data.footer;
+    this.datosPorfolio.getDatos("personas/traer").subscribe(respuesta => {
+      console.log(respuesta[0].info)
+      this.miPorfolio = respuesta[0].info;
     });
 
-    this.fecha = this.datosPorfolio.fechaActual();
-
   }
+
+
+
+
 
 }
